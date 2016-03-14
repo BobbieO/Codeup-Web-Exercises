@@ -1,0 +1,76 @@
+.title {
+    text-decoration: underline;
+    color: #7d00b3;
+}
+
+body {
+    padding-top: 50px;
+}
+
+.box {
+    border: 1px solid black;
+    /*border-radius: 10px;*/
+    /*specifies content area ht and wth*/
+    height: 50px;
+    width: 50px;
+    /*area bw content and border*/
+    padding: 10.5px;
+    /*area between boxes*/
+    margin: 50px;
+    /*text styling*/
+    font-weight: bold;
+    color: white;
+}
+
+.ribbon {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+
+}
+
+.arrow img {
+    bottom: 100px;
+    left: 40px;
+    position: relative;
+}
+
+.red {
+    background-color: red;
+    float: left;
+}
+
+.orange {
+    background-color: orange;
+    float: left;
+}
+
+.yellow {
+    background-color: yellow;
+    float: left;
+}
+
+.green {
+    background-color: green;
+    float: left;
+    clear: both;
+}
+
+.blue {
+    background-color: blue;
+    float: left;
+}
+
+.purple {
+    background-color: purple;
+    float: left;
+}
+
+/*body {*/
+    /*Koko Caramel from uigradients.com/# */
+    /*background: #D1913C;  fallback for old browsers */
+    /*background: -webkit-linear-gradient(to left, #D1913C , #FFD194); /* Chrome 10-25, Safari 5.1-6 */*/
+    /*background: linear-gradient(to left, #D1913C , #FFD194);  W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+/*}*/
+
+
