@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resume</title>
+    <!-- google fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,700' rel='stylesheet' type='text/css'>
+
+    <!-- Bootstrap compiled minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <!-- my stylesheet goes here -->
+    <link rel="stylesheet" href="/css/resume.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+        <!-- Name and mobile toggle thing -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#top"><i class="fa fa-desktop"></i> Bobbie O'Connor</a> 
+            </div>
+        <!-- navbar and mobile collapse -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"> 
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active">
+                        <a href="#projects" data-toggle="tooltip" data-placement="bottom" title="Projects">
+                            <span class="glyphicon glyphicon-picture tooltiptext"></span>
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+
+                    <li class="active" data-toggle="tooltip" data-placement="bottom" title="Skills">
+                        <a href="#skills"><span class="glyphicon glyphicon-pencil"></span><span class="sr-only">(current)</span></a>
+                    </li>
+
+                    <!-- link to email -->
+                    <li class="active" data-toggle="tooltip" data-placement="bottom" title="Contact">
+                        <a href="#contact"><span class="glyphicon glyphicon-envelope"></span></a>
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container -->
+    </nav>
+
+    <!-- added sections to have delineated areas for content, and for anchor linking -->
+    <section class="top container-fluid">
+    <span class="anchor"><a id="top"></a></span>   
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center">
+                <div>
+                    <h1>Bobbie O'Connor</h1>
+                    <h4>Web Developer | my contact email here</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="about container-fluid">
+    <!-- added span class to add padding when internal links clicked. Thx Google! -->
+    <span class="anchor"><a id="about"></a></span>
+    
+        <div class="row"> 
+            <div class="col-md-6 col-md-offset-3 text-center">   
+                <div>
+                    <h2>About</h2>
+                    <!-- change to p and add css -->
+                    <p>
+                        I'm a web developer seeking a career change to an entry-level web programming position that will effectively use my 15+ years of problem solving skills, communications expertise, and client-focused service delivery.
+                    </p>
+
+                    <p data-toggle="tooltip" data-placement="bottom" title="Download Resume"><span class="glyphicon glyphicon-file"></span> Download a PDF Resume</p>
+                </div>
+            </div>
+        </div>
+    
+    </section>
+
+    <section class="projects">
+    <span class="anchor"><a id="projects"></a></span>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <div>
+                    <h2>Projects</h2>
+                <div>
+                <div class="row">
+                    <div class="col-md-3 project-icon">
+                        <img src="/img/flower1.jpg" alt="project1">
+                        <p class="box">Project One</p>
+                    </div>
+    
+                    <div class="col-md-3 project-icon">
+                        <img src="/img/flower2.jpg" alt="project2">
+                        <p class="box">Project Two</p>
+                    </div>
+                
+                    <div class="col-md-3 project-icon">
+                        <img src="/img/flower3.jpg" alt="project3">
+                        <p class="box">Project Three</p>
+                    </div>
+                
+                    <div class="col-md-3 project-icon">
+                        <img src="/img/flower4.jpg" alt="project4">
+                        <p class="box">Project Four</p>
+                    </div>
+                
+                    <div class="col-md-3 project-icon">
+                        <img src="/img/flower5.jpg" alt="project5">
+                        <p class="box">Project Five</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <section class="skills">
+    <span class="anchor"><a id="skills"></a></span>
+    <div class="container-fluid">  
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">  
+            <h2>Skills section</h2>
+                <div class="row">
+                    <div class="col-md-5 pull-left temp">
+                        <h4>Category Placeholder</h4>
+                    </div>
+    
+                    <div class="col-md-7 pull-left temp">
+                        <h4>Items Placeholder</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact">
+    <span class="anchor"><a id="contact"></a></span>
+    <div class="container-fluid"> 
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">    
+                <div>
+                    <h2>Contact Info</h2>
+                    <p>I'm available for full-time and freelance work, so reach out at contact@thissite.something!</p>
+            
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+
+    
+    <!-- jQuery from HostLib to enable Bootstrap stuff to work -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <!-- compiled and minified Javascript from Bootstrap -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script>
+        $(function () {
+          $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+</body>
+</html>

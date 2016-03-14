@@ -1,0 +1,44 @@
+/*delete this!!!!*/
+.temp {
+border: 1px dotted black;
+}
+/*delete that!!!*/
+
+body {
+    font-family: "Ubuntu", sans-serif;
+    color: #0e1113;
+    background-image: url(/img/grey.png);
+}
+
+.anchor {
+    padding-top: 80px;
+}
+
+.navbar {
+    background-color: #94aac2;
+}
+
+.navbar-header .navbar-brand {
+    color: white;
+}
+
+section {
+    border-bottom: 1px solid #d4dde6;
+}
+
+.glyphicon {
+    font-size: 1.5em;
+}
+
+h2 {
+    padding-bottom: 20px;
+}
+
+/*"Make sure to include this after the core bootstrap css" */
+.container-fluid {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    /*text-center html*/
+    /*text-align: center;*/
+}
+
