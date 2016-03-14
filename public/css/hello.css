@@ -1,0 +1,80 @@
+/*style to change header color and underline*/
+h1, h2 {
+    color: #632A50;
+    text-decoration: underline;
+}
+
+.margin {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*style for background image*/
+body {
+    background-color: #E5D9F2;
+    background-image: url(/img/cherryblossoms.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 75%;
+    padding-left: 20px;
+}
+
+/*full site text font*/
+body {
+    font-family: "Amaranth", sans-serif;
+    font-size: 2em;
+}
+
+/*list bullet changes*/
+ol>li {
+    list-style-type: none;
+}
+
+ul>li {
+    list-style-type: hiragana;
+}
+
+/*car img change to reduce contrast*/
+img {
+    opacity: 0.9;
+}
+
+/*table borders, color, style*/
+table, tr, th, td {
+    border: 3px solid #632A50;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2e7c9;
+}
+
+/*anchor tag styling*/
+a:link {
+    color: #5c374c;
+}
+
+a:visited {
+    color: #ce6a85;
+}
+
+a:hover {
+    color: #ff8c61;
+}
+
+a:active {
+    color: #faa275;
+}
+
+/*blockquote styling*/
+blockquote {
+    background-color: #a4def9;
+    border: 3px solid #7de0db;
+    border-radius: 5px;
+    padding-left: 10px;
+    width: 500px;
+}
+
