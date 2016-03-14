@@ -1,0 +1,57 @@
+.title {
+    color: #172111;
+    text-align: center;
+    font-family: "Lobster Two", sans-serif;
+    font-weight: bold;
+    font-size: 3em;
+}
+
+body {
+    background-image: url(/img/greentopstarburst.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 100%;
+}
+
+/*this arranges text boxes within each div-half */
+.left-half, .right-half {
+    float: left;
+    width: 50%;
+}
+
+/*boxes and text styling*/
+.frame {
+    border: 2px solid #a8ccab;
+    border-radius: 100px;
+    background-color: #e7f4e6;
+    /*specifies content area wth*/
+    width: 200px;
+    /*area bw content and border*/
+    padding: 30px;
+    /*area between boxes*/
+    margin: 20px;
+    color: #172111;
+    text-align: center; 
+    font-family: "Lobster Two", sans-serif;
+}
+
+/*box positioning*/
+.box2, .box5 {
+    margin-left: 200px;
+}
+
+.box3, .box4 {
+    margin-left: 400px;
+}
+
+.box1, .box6 {
+    margin-left: 20px;
+}
+
+div .invert:hover {
+    background-color: #172111;
+    color: #e7f4e6;
+}
+
+/*text colors #1e2b17, #495e45, or #172111*/
