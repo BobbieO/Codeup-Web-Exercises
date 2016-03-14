@@ -1,0 +1,58 @@
+body {
+    font-family: "Ubuntu", sans-serif;
+    /*to center project images*/
+    /*width: 100%;*/
+}
+
+nav {
+background: #5C258D; /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #5C258D , #4389A2); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #5C258D , #4389A2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+/*SHroom Haze from uigradients.com*/
+}
+
+h2>p {
+    margin-top: 30px;
+}
+
+.anchor {
+    padding-top: 80px;
+}
+
+.navbar-header .navbar-brand {
+    color: white;
+}
+
+.about, .projects {
+    background-color: #ecf3f5;
+}
+
+ .box {
+    text-align: center;
+}
+
+.icons {
+    background-color: #ffffff;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.project-icon {
+    /*list-style: none;*/
+    float: left;
+    margin: 10px;
+    /*temp to see where margins are*/
+    border: 1px solid black;
+    width: 20%;
+    text-align: center;
+}
+
+ .skills, .contact {
+    background-color: #eee9f3;
+}
+
+/*"Make sure to include this after the core bootstrap css" */
+.container-fluid {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
