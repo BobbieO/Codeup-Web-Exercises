@@ -10,8 +10,11 @@ body {
     background-image: url(/img/grey.png);
 }
 
-.anchor {
-    padding-top: 80px;
+.anchor a {
+    visibility: hidden;
+    display: block;
+    position: relative;
+    top: -80px;
 }
 
 .navbar {
@@ -22,9 +25,27 @@ body {
     color: white;
 }
 
-section {
-    border-bottom: 1px solid #d4dde6;
+hr.style { 
+  height: 30px; 
+  width: 75%;
+  border-style: solid; 
+  border-color: #d4dde6;
+  background-color: #d4dde6; 
+  /*for color to work in most browsers*/
+  border-width: 1px 0 0 0; 
+  border-radius: 20px; 
+} 
+hr.style:before { 
+  display: block; 
+  content: ""; 
+  height: 30px; 
+  margin-top: -31px; 
+  border-style: solid; 
+  border-color: #d4dde6; 
+  border-width: 0 0 1px 0; 
+  border-radius: 20px; 
 }
+
 
 .glyphicon {
     font-size: 1.5em;
@@ -34,11 +55,13 @@ h2 {
     padding-bottom: 20px;
 }
 
+.text-size {
+    font-size: 16px;
+}
+
 /*"Make sure to include this after the core bootstrap css" */
 .container-fluid {
     padding-top: 80px;
     padding-bottom: 80px;
-    /*text-center html*/
-    /*text-align: center;*/
 }
 
