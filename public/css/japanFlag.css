@@ -1,0 +1,37 @@
+.rectangle {
+    /*length*/
+    width: 750px;
+    /*height*/
+    height:500px;
+    border: 2px solid black;
+    background-color: #ffffff;
+}
+
+.rec-position {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    position: relative;
+}
+
+.circle {
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    background-color: #c41200;
+}
+
+.circ-position {
+    margin-top: 100px;
+    margin-left: 225px;
+    float: left;
+}
+
+
+
+/* "red sun disc centered on a white field" */
+/* red disc is centered, and is three-fifths height centered*/
+/* 2 units width by 3 units length flag field*/
+
+/*white color is #ffffff*/
+/*red is #ff0000 or #c41200*/
