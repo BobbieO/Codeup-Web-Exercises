@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+"use strict";
+
+// ignore these lines for now
+// just know that the variable 'color' will end up with a random value from the colors array
+var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+var color = colors[Math.floor(Math.random()*colors.length)];
+
+
+switch (color) {
+
+    // todo: create a case statement that will handle every color except indigo and violet
+    // todo: when a color is encountered log a message that tells the color, and an object of that color
+    //       example: Blue is the color of the sky.
+
+    case "red":
+        console.log("You picked red, like the color of strawberries.");
+        break;
+    case "orange":
+        console.log("You picked orange, like the color of traffic cones.");
+        break;
+    case "yellow":
+        console.log("You picked yellow, like the color of Big Bird.");
+        break;
+    case "green":
+        console.log("You picked green, like the color of emeralds.")
+        break;
+    case "blue":
+        console.log("You picked blue, like the color of sapphires.");
+        break;
+
+    // todo: create a default case that will catch indigo and violet
+    // todo: for the default case, log: I do not know anything by that color.
+
+    default:
+        console.log("I do not know anything for indigo or violet.");
+}
+
+
+</script>
+</body>
+</html>
