@@ -14,11 +14,11 @@ if (color == "red") {
 } else if (color == "orange") {
     console.log("You picked orange! Orange is the color of the fruit oranges.");
 } else if (color == "yellow") {
-    console.log("You picked yellow! Yellow is the color of bananas.")
+    console.log("You picked yellow! Yellow is the color of bananas.");
 } else if (color == "green") {
-    console.log("You picked green! Green is the color of the inside of kiwis.")
+    console.log("You picked green! Green is the color of the inside of kiwis.");
 } else if (color == "blue") {
-    console.log("You picked blue! Blue is the color of the sky on good days.")
+    console.log("You picked blue! Blue is the color of the sky on good days.");
 } else {
     console.log("You picked indigo or violet. I do not know anything by that color.");
 }
