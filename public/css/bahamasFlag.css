@@ -1,0 +1,33 @@
+.rectangle {
+    /*length*/
+    width: 750px;
+    /*height*/
+    height:500px;
+    border: 2px solid black;
+}
+
+.rec-position {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    position: relative;
+}
+
+.aqua {
+    background-color: #00ffd9;
+    width: 750px;
+    height: 175px;
+    /*margin-top: 50px;*/
+    margin-left: auto;
+    margin-right: auto;
+    float: left;
+}
+
+.text {
+    text-align: center;
+}
+
+
+    /*black triangle centered at left hoist
+    three horizontal aquamarine #00ffd9, yellow/gold #ffe600, aquamarine bands
+    CMYK--B: 100-0-15-0; Y: 0-10-80-0*/
