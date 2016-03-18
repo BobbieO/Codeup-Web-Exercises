@@ -13,6 +13,25 @@
     padding-left: 0px;
 }
 
+.white {
+  /*change color*/
+  background-color: purple;
+  float: left;
+  width: 187px;
+  height: 496px;
+  /*temp border*/
+  border: 1px solid black;
+}
+
+.red {
+  background-color: #F21830;
+  float: left;
+  width: 563px;
+  height: 496px;
+  /*temp border*/
+  border: 1px solid black;
+}
+
 .text {
     text-align: center;
 }
