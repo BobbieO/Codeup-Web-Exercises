@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Functions</title>
+</head>
+<body>
+<script type="text/javascript">
+
+(function () {
+    "use strict";
+
+    var myNameIs = 'Bobbie';
+
+    function sayHello(name) {
+    console.log("Hello " + name);
+    }
+
+    var random = Math.floor((Math.random()*100)+1);
+
+    function isOdd(random) {
+    var message  = "This number is " + random + ", and is ";
+    
+    message += (random % 2 != 0) ?  "odd." : " not odd.";
+    console.log(message);
+    }
+
+sayHello(myNameIs);
+isOdd(random);
+})();
+
+
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
