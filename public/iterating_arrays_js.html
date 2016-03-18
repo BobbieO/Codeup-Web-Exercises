@@ -29,8 +29,24 @@
     };
 
     names.forEach(function (name, index, array) {
-        console.log("The name is " + names + " using a forEach loop.");
+        console.log("The name is " + name + " using a forEach loop.");
     });
+
+    // extra practice
+    // List 10 movies titles in an array with your favorite movie in the array.
+    // Loop thru and console log title, when you get to your favorite movie change
+    // the message for that movie to "This is my favorite: Title".
+
+    var movies = ["Star Wars", "Galaxy Quest", "Die Hard", "Clue", "Guardians of the Galaxy", "Star Trek", "Ginger Snaps", "Cabin in the Woods", "Monty Python and the Holy Grail", "Rio Bravo"];
+
+    movies.forEach(function (movie, index, array) {
+        if (index === 1) {
+            console.log("This is my favorite: " + movie);
+        } else {
+            console.log("I like " + movie + ".")
+        }
+    });
+
     })();
 </script>
 </body>
