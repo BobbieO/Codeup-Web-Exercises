@@ -1,0 +1,25 @@
+.rectangle {
+    width: 750px;
+    height:500px;
+    border: 2px solid black;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    position: relative;
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.text {
+    text-align: center;
+}
+
+
+/* white 13/40 of flag area, red 27/40 of area.
+red: CMYK 0-90-80-5==#F21830;
+5 triangles serving as a severed line
+if flag length=100, base of triangle starts at 25 and point of triangle is 15 beyond that
+and height of flag is 60*/
