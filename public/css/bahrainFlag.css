@@ -19,8 +19,6 @@
   float: left;
   width: 187px;
   height: 496px;
-  /*temp border*/
-  border: 1px solid black;
 }
 
 .red {
@@ -28,12 +26,11 @@
   float: left;
   width: 563px;
   height: 496px;
-  /*temp border*/
-  border: 1px solid black;
 }
 
 .text {
     text-align: center;
+    clear: both;
 }
 
 
