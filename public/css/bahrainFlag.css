@@ -23,3 +23,26 @@ red: CMYK 0-90-80-5==#F21830;
 5 triangles serving as a severed line
 if flag length=100, base of triangle starts at 25 and point of triangle is 15 beyond that
 and height of flag is 60*/
+
+
+/*try this for line, but need to shift left or right instead of top
+#base {
+  background: red;
+  display: inline-block;
+  height: 55px;
+  margin-left: 20px;
+  margin-top: 55px;
+    position: relative;
+    width: 100px;
+}
+#base:before {
+  border-bottom: 35px solid red;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  content: "";
+  height: 0;
+  left: 0;
+  position: absolute;
+  top: -35px;
+  width: 0;
+}*/
