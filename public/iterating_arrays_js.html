@@ -17,10 +17,20 @@
 
 // todo:
 // Create log statements that will print each of the names array elements individually.
-    console.log("The first name is " + names[0] + ".");
-    console.log("The second name is " + names[1] + ".");
-    console.log("The third name is " + names[2] + ".");
-    console.log("The fourth name is " + names[3] + ".");
+    // console.log("The first name is " + names[0] + ".");
+    // console.log("The second name is " + names[1] + ".");
+    // console.log("The third name is " + names[2] + ".");
+    // console.log("The fourth name is " + names[3] + ".");
+
+// Modify the above to use a for loop, then an each loop
+
+    for (var i = 0; i < names.length; i++) {
+        console.log("The name is " + names[i] + " using a for loop.");
+    };
+
+    names.forEach(function (name, index, array) {
+        console.log("The name is " + names + " using a forEach loop.");
+    });
     })();
 </script>
 </body>
