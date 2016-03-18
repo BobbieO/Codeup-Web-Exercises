@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie Array Extra</title>
+</head>
+<body>
+<script type="text/javascript">
+(function() {
+"use strict";
+
+var favoriteMovies = ["Star Wars", "Galaxy Quest", "Die Hard", "Clue", "Guardians of the Galaxy", "Star Trek", "Ginger Snaps", "Cabin in the Woods", "Monty Python and the Holy Grail", "Rio Bravo", "Old Boy"];
+
+// Sort your favorite movies alphabetically
+favoriteMovies.sort();
+console.log(favoriteMovies);
+
+// Use .indexOf() to find your number one favorite movie
+var numOneFave = favoriteMovies.indexOf("Galaxy Quest");
+console.log(numOneFave);
+
+
+// Use .splice() to take that movie out of the array
+var removeFave = favoriteMovies.splice(numOneFave, 1);
+console.log(removeFave);
+
+// Put your favorite movie back in at the start of the array   FIX THIS ONE!!!!!!
+favoriteMovies.unshift(removeFave);
+console.log(favoriteMovies);
+
+// Repeat the above steps for your least favorite movie; put it at the end
+
+// Create a function to console.log() your favorite movies.
+    // DO NOT VIOLATE SCOPE! Pass your favoriteMovies array in as a parameter
+    // Your function should output:
+    // "My all time favorite movie is [your favorite movie here]"
+    // "My least favorite movie is [your least favorite movie here]"
+    // "Some other movies are [the rest of the movies array with comma space between them]"
+    // You should not output any movies twice.
+
+
+
+
+
+
+
+
+})();
+</script>
+</body>
+</html>
