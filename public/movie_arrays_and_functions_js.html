@@ -23,11 +23,19 @@ console.log(numOneFave);
 var removeFave = favoriteMovies.splice(numOneFave, 1);
 console.log(removeFave);
 
-// Put your favorite movie back in at the start of the array   FIX THIS ONE!!!!!!
-favoriteMovies.unshift(removeFave);
+// Put your favorite movie back in at the start of the array  
+favoriteMovies.unshift("Galaxy Quest");
 console.log(favoriteMovies);
 
 // Repeat the above steps for your least favorite movie; put it at the end
+var worstOne = favoriteMovies.indexOf("Old Boy");
+console.log(worstOne);
+
+var removeWorst = favoriteMovies.splice(worstOne, 1);
+console.log(removeWorst);
+
+favoriteMovies.push("Old Boy");
+console.log(favoriteMovies);
 
 // Create a function to console.log() your favorite movies.
     // DO NOT VIOLATE SCOPE! Pass your favoriteMovies array in as a parameter
@@ -37,11 +45,23 @@ console.log(favoriteMovies);
     // "Some other movies are [the rest of the movies array with comma space between them]"
     // You should not output any movies twice.
 
+console.log(favoriteMovies);
 
 
 
+favoriteMovies.forEach(function (movie, index, array) {
+    if (index=3) {
+        console.log("My all time favorite movie is " + "Galaxy Quest");
+    } else if (index=7) {
+        console.log("My least favorite movie is " + worstOne);
+    } else {
+        var restofem = favoriteMovies - numOneFave;
 
 
+        console.log("Some other movies are " + restofem.join(", "));
+    }
+
+});
 
 
 })();
