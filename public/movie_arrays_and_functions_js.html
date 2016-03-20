@@ -12,29 +12,24 @@ var favoriteMovies = ["Star Wars", "Galaxy Quest", "Die Hard", "Clue", "Guardian
 
 // Sort your favorite movies alphabetically
 favoriteMovies.sort();
-console.log(favoriteMovies);
 
 // Use .indexOf() to find your number one favorite movie
 var numOneFave = favoriteMovies.indexOf("Galaxy Quest");
-console.log(numOneFave);
-
 
 // Use .splice() to take that movie out of the array
 var removeFave = favoriteMovies.splice(numOneFave, 1);
-console.log(removeFave);
+console.log(favoriteMovies);
 
 // Put your favorite movie back in at the start of the array  
-favoriteMovies.unshift("Galaxy Quest");
+favoriteMovies.unshift(removeFave[0]);
 console.log(favoriteMovies);
 
 // Repeat the above steps for your least favorite movie; put it at the end
 var worstOne = favoriteMovies.indexOf("Old Boy");
-console.log(worstOne);
-
 var removeWorst = favoriteMovies.splice(worstOne, 1);
-console.log(removeWorst);
+console.log(favoriteMovies);
 
-favoriteMovies.push("Old Boy");
+favoriteMovies.push(removeWorst[0]);
 console.log(favoriteMovies);
 
 // Create a function to console.log() your favorite movies.
@@ -45,11 +40,8 @@ console.log(favoriteMovies);
     // "Some other movies are [the rest of the movies array with comma space between them]"
     // You should not output any movies twice.
 
-console.log(favoriteMovies);
 
-
-
-favoriteMovies.forEach(function (movie, index, array) {
+ favoriteMovies.forEach(function (movie, index, array) {
     if (index=3) {
         console.log("My all time favorite movie is " + "Galaxy Quest");
     } else if (index=7) {
@@ -62,6 +54,9 @@ favoriteMovies.forEach(function (movie, index, array) {
     }
 
 });
+
+
+
 
 
 })();
