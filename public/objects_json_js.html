@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSON Exercise</title>
+</head>
+<body>
+<script type="text/javascript">
+    (function() {
+    "use strict";
+
+    // 
+    // var person = {
+
+    //     "firstName": "Bobbie",
+    //     "lastName": "O\'Connor",
+
+    //     "sayHello": function() {
+    //         console.log("Hello " + this.firstName);
+    //     }
+
+    // }
+    // person.sayHello();
+
+    // books json object notation; flat data
+    var books = [
+
+    {
+        "title": "Grave Mercy",
+        "author": {
+            "firstName": "Robin",
+            "lastName": "LaFevre"
+        }
+    },
+    {
+        "title": "Graceling",
+        "author": {
+            "firstName": "Kristen",
+            "lastName": "Cashore"
+        }
+    },
+    {
+        "title": "Steelheart",
+        "author": {
+            "firstName": "Brandon",
+            "lastName": "Sanderson"
+        }
+    },
+    {
+        "title": "The Camelot Caper",
+        "author": {
+            "firstName": "Elizabeth",
+            "lastName": "Peters"
+        }
+    },
+    {
+        "title": "The Hunger Games",
+        "author": {
+            "firstName": "Suzanne",
+            "lastName": "Collins"
+        }
+    },
+    
+    ];
+
+    console.log(books)
+
+    books.forEach(function(book, index, array) {
+        console.log("Book #" + (index + 1));
+        console.log("Title: " + book.title);
+        console.log("Author: " + book.author.lastName + ", " + book.author.firstName);
+        console.log("-------");
+    });
+
+
+    })();
+</script>
+</body>
+</html>
