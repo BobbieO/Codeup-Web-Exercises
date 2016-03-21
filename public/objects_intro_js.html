@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Objects Into</title>
+</head>
+<body>
+<script>
+    (function() {
+    "use strict";
+
+    // Ex: create empty object
+    
+    // var player_1 = {};
+
+    // player_1.name = "Thor Ax";
+    // player_1.power = 100;
+    // player_1.speed = 100;
+    // player_1.defense = 20;
+
+    // create methods (functions)
+    // player_1.attack = function () {
+    //     console.log("Rawr!");
+    // };
+
+    // player_1.run = function () {
+    //     console.log("Run Away!");
+    // };
+
+    // player_1.injured = function() {
+    //     this.power--;
+    //     console.log(player_1.power);
+    // };
+
+    // player_1.drink = function() {
+    //     this.power++;
+    //     console.log(player_1.power);
+    // };
+
+    // player_1.attack();
+    // player_1.injured();
+    // player_1.run();
+    // player_1.injured();
+    // player_1.drink();
+
+
+
+// todo:
+// Create person object with firstName and lastName properties (set to your first and last name).
+// var person = todo;
+
+    var person = {};
+    person.firstName = "Bobbie";
+    person.lastName = "O\'Connor";
+
+// todo:
+// Add a say hello method to the person object that alerts hello using the firstName and lastName properties.
+    
+    person.sayHello = function () {
+        alert("Hello " + person.firstName + " " + person.lastName + "!")
+    };
+
+// Say hello from the person object.
+
+    person.sayHello();
+
+
+
+    })();
+</script>
+</body>
+</html>
