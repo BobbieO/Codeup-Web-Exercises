@@ -32,6 +32,7 @@ console.log(favoriteMovies);
 favoriteMovies.push(removeWorst[0]);
 console.log(favoriteMovies);
 
+
 // Create a function to console.log() your favorite movies.
     // DO NOT VIOLATE SCOPE! Pass your favoriteMovies array in as a parameter
     // Your function should output:
@@ -41,25 +42,26 @@ console.log(favoriteMovies);
     // You should not output any movies twice.
 
 
- favoriteMovies.forEach(function (movie, index, array) {
-    if (index=3) {
-        console.log("My all time favorite movie is " + "Galaxy Quest");
-    } else if (index=7) {
-        console.log("My least favorite movie is " + worstOne);
-    } else {
-        var restofem = favoriteMovies - numOneFave;
+function logMovies(favoriteMovies) {
+    var numOneFave = favoriteMovies.indexOf("Galaxy Quest");
+    var removeFave = favoriteMovies.splice(numOneFave, 1);
+    console.log(favoriteMovies);
+
+    var worstOne = favoriteMovies.indexOf("Old Boy");
+    var removeWorst = favoriteMovies.splice(worstOne, 1);
+    console.log(favoriteMovies);
+
+    var newList = favoriteMovies;
+    console.log(newList);
+
+    console.log("My all time favorite movie is " + numOneFave[0]);
+    console.log("My least favorite movie is " + worstOne[0]);
+    console.log("Some other movies are " + newList.join(", "));
+}
 
 
-        console.log("Some other movies are " + restofem.join(", "));
-    }
 
 });
-
-
-
-
-
-})();
 </script>
 </body>
 </html>
