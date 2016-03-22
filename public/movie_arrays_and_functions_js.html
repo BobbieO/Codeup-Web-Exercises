@@ -4,64 +4,71 @@
     <title>Movie Array Extra</title>
 </head>
 <body>
-<script type="text/javascript">
+
+<script>
+
 (function() {
-"use strict";
 
-var favoriteMovies = ["Star Wars", "Galaxy Quest", "Die Hard", "Clue", "Guardians of the Galaxy", "Star Trek", "Ginger Snaps", "Cabin in the Woods", "Monty Python and the Holy Grail", "Rio Bravo", "Old Boy"];
-
-// Sort your favorite movies alphabetically
-favoriteMovies.sort();
-
-// Use .indexOf() to find your number one favorite movie
-var numOneFave = favoriteMovies.indexOf("Galaxy Quest");
-
-// Use .splice() to take that movie out of the array
-var removeFave = favoriteMovies.splice(numOneFave, 1);
-console.log(favoriteMovies);
-
-// Put your favorite movie back in at the start of the array  
-favoriteMovies.unshift(removeFave[0]);
-console.log(favoriteMovies);
-
-// Repeat the above steps for your least favorite movie; put it at the end
-var worstOne = favoriteMovies.indexOf("Old Boy");
-var removeWorst = favoriteMovies.splice(worstOne, 1);
-console.log(favoriteMovies);
-
-favoriteMovies.push(removeWorst[0]);
-console.log(favoriteMovies);
+    "use strict";
 
 
-// Create a function to console.log() your favorite movies.
-    // DO NOT VIOLATE SCOPE! Pass your favoriteMovies array in as a parameter
-    // Your function should output:
-    // "My all time favorite movie is [your favorite movie here]"
-    // "My least favorite movie is [your least favorite movie here]"
-    // "Some other movies are [the rest of the movies array with comma space between them]"
-    // You should not output any movies twice.
+    var favoriteMovies = ["Star Wars", "Galaxy Quest", "Die Hard", "Clue", "Guardians of the Galaxy", "Star Trek", "Ginger Snaps", "Cabin in the Woods", "Monty Python and the Holy Grail", "Rio Bravo", "Old Boy"];
 
+    // Sort your favorite movies alphabetically
+    favoriteMovies.sort();
 
-function logMovies(favoriteMovies) {
+    // Use .indexOf() to find your number one favorite movie
     var numOneFave = favoriteMovies.indexOf("Galaxy Quest");
-    var removeFave = favoriteMovies.splice(numOneFave, 1);
-    console.log(favoriteMovies);
 
+    // Use .splice() to take that movie out of the array
+    var removeFave = favoriteMovies.splice(numOneFave, 1);
+    // console.log(favoriteMovies);
+
+    // Put your favorite movie back in at the start of the array  
+    favoriteMovies.unshift(removeFave[0]);
+    // console.log(favoriteMovies);
+
+    // Repeat the above steps for your least favorite movie; put it at the end
     var worstOne = favoriteMovies.indexOf("Old Boy");
     var removeWorst = favoriteMovies.splice(worstOne, 1);
-    console.log(favoriteMovies);
+    // console.log(favoriteMovies);
 
-    var newList = favoriteMovies;
-    console.log(newList);
-
-    console.log("My all time favorite movie is " + numOneFave[0]);
-    console.log("My least favorite movie is " + worstOne[0]);
-    console.log("Some other movies are " + newList.join(", "));
-}
+    favoriteMovies.push(removeWorst[0]);
+    // console.log(favoriteMovies);
 
 
+    // Create a function to console.log() your favorite movies.
+        // DO NOT VIOLATE SCOPE! Pass your favoriteMovies array in as a parameter
+        // Your function should output:
+        // "My all time favorite movie is [your favorite movie here]"
+        // "My least favorite movie is [your least favorite movie here]"
+        // "Some other movies are [the rest of the movies array with comma space between them]"
+        // You should not output any movies twice.
 
-});
+
+    function logMovies(favoriteMovies) {
+        var numOneFave = favoriteMovies.indexOf("Galaxy Quest");
+        var removeFave = favoriteMovies.splice(numOneFave, 1);
+        console.log(removeFave);
+
+        var worstOne = favoriteMovies.indexOf("Old Boy");
+        var removeWorst = favoriteMovies.splice(worstOne, 1);
+        console.log(favoriteMovies);
+
+        var newList = favoriteMovies;
+        console.log(newList);
+
+        console.log("My all time favorite movie is " + removeFave[0]);
+        console.log("My least favorite movie is " + removeWorst);
+        console.log("Some other movies are " + newList.join(", "));
+    }
+
+    logMovies(favoriteMovies);
+
+
+
+})();
+
 </script>
 </body>
 </html>
