@@ -57,15 +57,21 @@ var myComputer = {
     users: ["Bobbie"],
 
     showUsers: function() {
-        console.log(users);
+        console.log(this.users);
+        // needs to be .this to reference the object the fx is in
     },
 
     addUser: function(name) {
-        myComputer.users.push(name);
+        this.users.push(name);
+        // again, to reference the "users" within this object
     },
 
     removeUser: function(name) {
-        myComputer.users.pop(name);
+        var index = this.users.indexOf("Pat");
+        // finds particular index, in this case "Pat";
+        console.log(index);
+        // removes value at index 1, which is Pat;
+        this.users.splice(index, 1);
     }
 
 };
