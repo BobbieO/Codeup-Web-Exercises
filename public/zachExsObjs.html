@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Objects Objects Objects</title>
+</head>
+<body>
+<script type="text/javascript">
+(function() {
+"use strict";
+
+var codeupClassroom = {
+
+    classroom: 'big',
+    temp:      'too cold',
+
+    changeClassroom: function(){
+        this.classroom = 'small';
+        this.temp      = 'too hot';
+    },
+
+    consoleLogThis: function(){
+        console.log(this);
+    },
+
+    describeClassroom: function(beVerbose){
+        var msg = '';
+
+        if (beVerbose) {
+            msg += 'The classroom is the ' + this.classroom + ' classroom.\n';
+            msg += 'The temperature in here is ' + this.temp + '.';
+        } else {
+            msg += 'classroom: ' + this.classroom + '\n';
+            msg += 'temp: ' + this.temp;
+        }
+
+        console.log(msg);
+    }
+}
+
+codeupClassroom.consoleLogThis();
+// This classroom is the big classroom.
+codeupClassroom.describeClassroom(true);
+// The temperature is too cold.
+codeupClassroom.changeClassroom();
+// changes variable value to small, hot 
+codeupClassroom.describeClassroom(false);
+// classroom: small [new line]
+// temp: too hot
+
+
+// Create an object, myComputer. It should have a users property that is an array of usernames. For now the array should have just one element, your username.
+// Create a method showUsers that displays all of the names in the users property.
+// Create a method addUser that takes a name as a parameter and adds it to the list of users.
+// Create a method removeUser that takes a name as a parameter and removes that name from the users array;
+
+var myComputer = {
+    users: ["Bobbie"],
+
+    showUsers: function() {
+        console.log(users);
+    },
+
+    addUser: function(name) {
+        myComputer.users.push(name);
+    },
+
+    removeUser: function(name) {
+        myComputer.users.pop(name);
+    }
+
+};
+
+console.log(myComputer.users);
+myComputer.addUser("Pat");
+console.log(myComputer.users);
+myComputer.removeUser();
+console.log(myComputer.users);
+
+
+
+
+})();
+</script>
+</body>
+</html>
