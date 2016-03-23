@@ -34,35 +34,37 @@ getAttribute returns a string
         culpa qui officia deserunt mollit anim id est laborum.
     </p>
 
+    <button id="One">Number One</button>
+    <button id="Two">Number Two</button>
+    <button id="Three">Number Three</button>
+    <button id="Four">Number Four</button>
+
+
     <script>
+
         "use strict";
         (function() {
-            // TODO: Uncomment next line and get the main header element by id
+           
+            // Start of new stuff with Event Listener, taking old code and 
+            // putting into event listener buttons.
+
+        var changeMainHead = function(event) {
             var mainHeader = document.getElementById("main-header");
-            console.log(mainHeader);
 
-            // TODO: Set inner html of mainHeader to "JavaScript is Cool"
             mainHeader.innerHTML = "JavaScript is Cool";
-            console.log(mainHeader.innerHTML);
-            
+        }
+    
+        document.getElementById("One").addEventListener("click", changeMainHead);
 
-            // TODO: Uncomment the next line and get the sub header element by id
+        var changeSubHColor = function(event) {
             var subHeader = document.getElementById("sub-header");
-            console.log(subHeader);
-
-            // TODO: Set the text color of subHeader to blue
-
             subHeader.style.color = "#0000FF";
+        }
 
-            // TODO: Uncomment the next line and get all list items
+        document.getElementById("Two").addEventListener("click", changeSubHColor);
+
+        var listColors = function(event) {
             var listItems = document.getElementsByTagName("li");
-            console.log(listItems);
-
-            // TODO: Set text color on every other list item to grey (used salmon for visibility)
-            // TODO: Set text color of li with dbid = 1 to blue
-
-            // set a for loop to hit each item with the if/else if conditions. Again, listItems need [i] since it's an array of things being checked by loop.
-
             for (var i = 0; i < listItems.length; i++) {
                 var dbId = listItems[i].getAttribute("data-dbid");
                 if (dbId == "1") {
@@ -71,17 +73,18 @@ getAttribute returns a string
                     listItems[i].style.color = "salmon";
                 }
             }
+        }
 
-            // TODO: Uncomment the next line and get all elements with class name sub-paragraph
+        document.getElementById("Three").addEventListener("click", listColors);
+
+        var paraText = function(event) {
             var subParagraphs = document.getElementsByClassName("sub-paragraph");
-            console.log(subParagraphs);
-
-            // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-            // has to be a loop, bc it is technically an array. Also means [i] are needed!!
             for (var i = 0; i < subParagraphs.length; i++) {
                 subParagraphs[i].innerHTML = "Mission Accomplished!";
             }
-            
+        }
+
+        document.getElementById("Four").addEventListener("click", paraText);
 
             // Event Listener Examples:
             // var heading1 = document.getElementById("main-header");
@@ -106,10 +109,7 @@ getAttribute returns a string
             //      event.preventDefault();
 
             //      console.log(this);
-            // });
-
-
-            
+            // });          
 
         })();
     </script>
