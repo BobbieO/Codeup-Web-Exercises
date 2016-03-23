@@ -16,7 +16,7 @@ change the padding-top CSS property of the <body> to 40px -->
 </head>
 <body>
 
-    <h1 id="main-header">Extra Practice!</h1>
+    <h1 id="main-header" class="change-my-color">Extra Practice!</h1>
         <p id="change-my-text">Blah blah blah</p>
     <ul>
         <li data-dbid="1">Item 1</li>
@@ -58,7 +58,15 @@ function clear() {
 var changeText = document.getElementById("change-my-text");
 changeText.getAttribute("change-my-text", "hello, codeup!");
 
+var colorChange = document.getElementsByClassName("change-my-color");
+for (var i = 0; i < colorChange.length; i++) {
+    colorChange[i].style.color = "salmon";
+}
 
+var addClass = document.getElementsByTagName("p");
+for (var i = 0; i <colorChange.length; i++) {
+    addClass[i].setAttribute("class", "my-paragraph");
+}
 
 </script>
 </body>
