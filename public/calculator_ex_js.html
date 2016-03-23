@@ -5,24 +5,40 @@
         <title>Calculator</title>
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <!-- my css -->
         <link rel="stylesheet" href="/css/calculator.css">
     </head>
 <body>
 
 <div class="container-fluid calcPosition">
 
-    <div class="row">
+
+<!-- change inputs to a row with four columns in it, attach this box to a box that contains all number elements -->
+    <div class="row center">
         <div class="col-md-4 col-md-offset-4">
-            <div class="row center">
-                <div>
-                    <input type="text" id="leftOperand" name="leftOperand">
-                    <label for="leftOperand"></label>
-                
-                    <input type="text" id="midInput" name="midInput">
-                    <label for="midInput"></label>
-                
-                    <input type="text" id="rightOperand" name="rightOperand">
-                    <label for="rightOperand"></label>
+            <input type="text" id="leftOperand" name="leftOperand" readonly>
+            <label for="leftOperand"></label>
+        </div>
+
+        <div class="col-md-4 col-md-offset-4">
+            <input type="text" id="midInput" name="midInput" readonly>
+            <label for="midInput"></label>
+        </div>
+
+        <div class="col-md-4 col-md-offset-4">
+            <input type="text" id="rightOperand" name="rightOperand" readonly>
+            <label for="rightOperand"></label>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="row">
+                <div class="col-md-4 center">
+                    <button class="digit">1</button>
+                    <button class="digit">2</button>
+                    <button class="digit">3</button>
+                    <button class="operator" id="opPlus">+</button>
                 </div>
             </div>
         </div>
@@ -32,10 +48,10 @@
         <div class="col-md-8 col-md-offset-2">
             <div class="row">
                 <div class="col-md-4 center">
-                    <button>1</button>
-                    <button>2</button>
-                    <button>3</button>
-                    <button>+</button>
+                    <button class="digit">4</button>
+                    <button class="digit">5</button>
+                    <button class="digit">6</button>
+                    <button class="operator" id="opMinus">-</button>
                 </div>
             </div>
         </div>
@@ -45,10 +61,10 @@
         <div class="col-md-8 col-md-offset-2">
             <div class="row">
                 <div class="col-md-4 center">
-                    <button>4</button>
-                    <button>5</button>
-                    <button>6</button>
-                    <button>-</button>
+                    <button class="digit">7</button>
+                    <button class="digit">8</button>
+                    <button class="digit">9</button>
+                    <button class="operator" id="opMult">*</button>
                 </div>
             </div>
         </div>
@@ -58,23 +74,10 @@
         <div class="col-md-8 col-md-offset-2">
             <div class="row">
                 <div class="col-md-4 center">
-                    <button>7</button>
-                    <button>8</button>
-                    <button>9</button>
-                    <button>*</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="row">
-                <div class="col-md-4 center">
-                    <button>C</button>
-                    <button>0</button>
-                    <button>=</button>
-                    <button>/</button>
+                    <button id="opClear">C</button>
+                    <button class="digit">0</button>
+                    <button id="opEquals">=</button>
+                    <button class="operator" id="opDivide">/</button>
                 </div>
             </div>    
         </div>
@@ -92,6 +95,84 @@
 <script type="text/javascript">
 (function(){
 "use strict";
+
+var leftOperand = document.getElementById("leftOperand");
+var rightOperand = document.getElementById("rightOperand");
+var midInput = document.getElementById("midInput");
+
+var side = true;
+
+// if side = true, inputs into left box. If side = false, inputs into right box
+
+if (side == true) {
+    var digitInput = function(event) {
+    var num = this.innerHTML;
+    leftOperand.value = num;
+    }
+    var digits = document.getElementsByClassName("digit");
+
+    for (var i = 0; i < digits.length; i++) { 
+        digits[i].addEventListener("click", digitInput);
+        }
+} else if (side == true) {
+    var opInput = function(event) {
+    var operator = this.innerHTML;
+    midInput.value = operator;
+    }
+    var operators = document.getElementsByClassName("operator");
+
+    for (var i = 0; i < operators.length; i++) { 
+        operators[i].addEventListener("click", opInput);
+        side = false;
+    }
+} else {
+    var secondDigitInput = function(event) {
+    var num = this.innerHTML;
+    rightOperand.value = num;
+    }   
+    var digits = document.getElementsByClassName("digit");
+
+    for (var i = 0; i < digits.length; i++) { 
+    digits[i].addEventListener("click", secondDigitInput);
+    }
+}
+
+
+
+// var digitInput = function(event) {
+//     var num = this.innerHTML;
+//     leftOperand.value = num;
+// }
+// var digits = document.getElementsByClassName("digit");
+
+// for (var i = 0; i < digits.length; i++) { 
+//     digits[i].addEventListener("click", digitInput);
+// }
+
+
+// var opInput = function(event) {
+//     var operator = this.innerHTML;
+//     midInput.value = operator;
+// }
+// var operators = document.getElementsByClassName("operator");
+
+
+// for (var i = 0; i < operators.length; i++) { 
+//     operators[i].addEventListener("click", opInput);
+// }
+
+
+// var secondDigitInput = function(event) {
+//     var num = this.innerHTML;
+//     rightOperand.value = num;
+// }
+// var digits = document.getElementsByClassName("digit");
+
+// for (var i = 0; i < digits.length; i++) { 
+//     digits[i].addEventListener("click", secondDigitInput);
+// }
+
+
 
 
 })(); 
