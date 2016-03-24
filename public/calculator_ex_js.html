@@ -10,81 +10,69 @@
     </head>
 <body>
 
-<div class="container-fluid calcPosition">
-
-
-<!-- change inputs to a row with four columns in it, attach this box to a box that contains all number elements -->
-    <form class="center calcPosition">
-        <div>
-            <input type="text" id="leftOperand" name="leftOperand" readonly>
-            <label for="leftOperand"></label>
+<div class="container center">
+    <div id="bothboxes">
+        <div id="inputboxes">
+            <form>
+                <div>
+                    <input type="text" id="leftOperand" name="leftOperand" readonly>
+                    <label for="leftOperand"></label>
+                
+                    <input type="text" id="midInput" name="midInput" readonly>
+                    <label for="midInput"></label>
+                
+                    <input type="text" id="rightOperand" name="rightOperand" readonly>
+                    <label for="rightOperand"></label>
+                </div>
+            </form>
         </div>
 
-        <div>
-            <input type="text" id="midInput" name="midInput" readonly>
-            <label for="midInput"></label>
-        </div>
-
-        <div>
-            <input type="text" id="rightOperand" name="rightOperand" readonly>
-            <label for="rightOperand"></label>
-        </div>
-    </form>
-     
-
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+        <div id="numboxes">
             <div class="row">
-                <div class="col-md-4 center">
-                    <button class="digit">1</button>
-                    <button class="digit">2</button>
-                    <button class="digit">3</button>
-                    <button class="operator" id="opPlus">+</button>
+                <div class="col-xs-8 col-md-offset-2">
+                    <div class="row">
+                        <button class="digit">1</button>
+                        <button class="digit">2</button>
+                        <button class="digit">3</button>
+                        <button class="operator" id="opPlus">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-8 col-md-offset-2">
+                    <div class="row">
+                        <button class="digit">4</button>
+                        <button class="digit">5</button>
+                        <button class="digit">6</button>
+                        <button class="operator" id="opMinus">-</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-8 col-md-offset-2">
+                    <div class="row">
+                        <button class="digit">7</button>
+                        <button class="digit">8</button>
+                        <button class="digit">9</button>
+                        <button class="operator" id="opMult">*</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="row">
+                            <button id="opClear">C</button>
+                            <button class="digit">0</button>
+                            <button id="opEquals">=</button>
+                            <button class="operator" id="opDivide">/</button>
+                    </div>    
                 </div>
             </div>
         </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="row">
-                <div class="col-md-4 center">
-                    <button class="digit">4</button>
-                    <button class="digit">5</button>
-                    <button class="digit">6</button>
-                    <button class="operator" id="opMinus">-</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="row">
-                <div class="col-md-4 center">
-                    <button class="digit">7</button>
-                    <button class="digit">8</button>
-                    <button class="digit">9</button>
-                    <button class="operator" id="opMult">*</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="row">
-                <div class="col-md-4 center">
-                    <button id="opClear">C</button>
-                    <button class="digit">0</button>
-                    <button id="opEquals">=</button>
-                    <button class="operator" id="opDivide">/</button>
-                </div>
-            </div>    
-        </div>
-    </div>
-
-
+    </div>   
 </div>
 
 <!-- jQuery from HostLib to enable Bootstrap stuff to work -->
@@ -107,7 +95,7 @@ var wasOperatorUsed = false;
 var digitInput = function(event) {
     var num = this.innerHTML;
     // if operator has not been used, go to left box
-    if (!wasOperatorUsed) {
+    if (wasOperatorUsed == false) {
         leftOperand.value += num;
     } else {
     // if it has been used, go to right box
