@@ -14,22 +14,23 @@
 
 
 <!-- change inputs to a row with four columns in it, attach this box to a box that contains all number elements -->
-    <div class="row center">
-        <div class="col-md-4 col-md-offset-4">
+    <form class="center calcPosition">
+        <div>
             <input type="text" id="leftOperand" name="leftOperand" readonly>
             <label for="leftOperand"></label>
         </div>
 
-        <div class="col-md-4 col-md-offset-4">
+        <div>
             <input type="text" id="midInput" name="midInput" readonly>
             <label for="midInput"></label>
         </div>
 
-        <div class="col-md-4 col-md-offset-4">
+        <div>
             <input type="text" id="rightOperand" name="rightOperand" readonly>
             <label for="rightOperand"></label>
         </div>
-    </div>
+    </form>
+     
 
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
@@ -104,73 +105,73 @@ var side = true;
 
 // if side = true, inputs into left box. If side = false, inputs into right box
 
-if (side == true) {
-    var digitInput = function(event) {
+// if (side == true) {
+//     var digitInput = function(event) {
+//     var num = this.innerHTML;
+//     leftOperand.value = num;
+//     }
+//     var digits = document.getElementsByClassName("digit");
+
+//     for (var i = 0; i < digits.length; i++) { 
+//         digits[i].addEventListener("click", digitInput);
+//         }
+// } else if (side == true) {
+//     var opInput = function(event) {
+//     var operator = this.innerHTML;
+//     midInput.value = operator;
+//     }
+//     var operators = document.getElementsByClassName("operator");
+
+//     for (var i = 0; i < operators.length; i++) { 
+//         operators[i].addEventListener("click", opInput);
+//         side = false;
+//     }
+// } else {
+//     var secondDigitInput = function(event) {
+//     var num = this.innerHTML;
+//     rightOperand.value = num;
+//     }   
+//     var digits = document.getElementsByClassName("digit");
+
+//     for (var i = 0; i < digits.length; i++) { 
+//     digits[i].addEventListener("click", secondDigitInput);
+//     }
+// }
+
+
+
+var digitInput = function(event) {
     var num = this.innerHTML;
     leftOperand.value = num;
-    }
-    var digits = document.getElementsByClassName("digit");
+}
+var digits = document.getElementsByClassName("digit");
 
-    for (var i = 0; i < digits.length; i++) { 
-        digits[i].addEventListener("click", digitInput);
-        }
-} else if (side == true) {
-    var opInput = function(event) {
-    var operator = this.innerHTML;
-    midInput.value = operator;
-    }
-    var operators = document.getElementsByClassName("operator");
-
-    for (var i = 0; i < operators.length; i++) { 
-        operators[i].addEventListener("click", opInput);
-        side = false;
-    }
-} else {
-    var secondDigitInput = function(event) {
-    var num = this.innerHTML;
-    rightOperand.value = num;
-    }   
-    var digits = document.getElementsByClassName("digit");
-
-    for (var i = 0; i < digits.length; i++) { 
-    digits[i].addEventListener("click", secondDigitInput);
-    }
+for (var i = 0; i < digits.length; i++) { 
+    digits[i].addEventListener("click", digitInput);
 }
 
 
-
-// var digitInput = function(event) {
-//     var num = this.innerHTML;
-//     leftOperand.value = num;
-// }
-// var digits = document.getElementsByClassName("digit");
-
-// for (var i = 0; i < digits.length; i++) { 
-//     digits[i].addEventListener("click", digitInput);
-// }
+var opInput = function(event) {
+    var operator = this.innerHTML;
+    midInput.value = operator;
+}
+var operators = document.getElementsByClassName("operator");
 
 
-// var opInput = function(event) {
-//     var operator = this.innerHTML;
-//     midInput.value = operator;
-// }
-// var operators = document.getElementsByClassName("operator");
+for (var i = 0; i < operators.length; i++) { 
+    operators[i].addEventListener("click", opInput);
+}
 
 
-// for (var i = 0; i < operators.length; i++) { 
-//     operators[i].addEventListener("click", opInput);
-// }
+var secondDigitInput = function(event) {
+    var num = this.innerHTML;
+    rightOperand.value = num;
+}
+var digits = document.getElementsByClassName("digit");
 
-
-// var secondDigitInput = function(event) {
-//     var num = this.innerHTML;
-//     rightOperand.value = num;
-// }
-// var digits = document.getElementsByClassName("digit");
-
-// for (var i = 0; i < digits.length; i++) { 
-//     digits[i].addEventListener("click", secondDigitInput);
-// }
+for (var i = 0; i < digits.length; i++) { 
+    digits[i].addEventListener("click", secondDigitInput);
+}
 
 
 
