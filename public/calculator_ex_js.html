@@ -102,13 +102,11 @@ var rightOperand = document.getElementById("rightOperand");
 var midInput = document.getElementById("midInput");
 
 var wasOperatorUsed = false;
-var opOperation = null;
-var operator = null;
 
 // inputting number into boxes
 var digitInput = function(event) {
     var num = this.innerHTML;
-    // if operand has not been used, go to left box
+    // if operator has not been used, go to left box
     if (!wasOperatorUsed) {
         leftOperand.value += num;
     } else {
@@ -124,15 +122,13 @@ for (var i = 0; i < digits.length; i++) {
     digits[i].addEventListener("click", digitInput);
 }
 
-// inputting operand into mid box with check for box switching
+// inputting operator into mid box with check for box switching
 var opInput = function(event) {
-    opOperation = this.getAttribute("id");
-    operator = this.innerHTML;
-    midInput.value = operator;
+    midInput.value = this.innerHTML
     wasOperatorUsed = true;
 }
 
-// getting each operand value
+// getting each operator value
 var operators = document.getElementsByClassName("operator");
 
 for (var i = 0; i < operators.length; i++) { 
@@ -144,24 +140,41 @@ var equate = document.getElementById("opEquals");
 var opEqual = function(event) {
     var leftNum = parseInt(leftOperand.value);
     var rightNum = parseInt(rightOperand.value);
+    var result;
+    var operator = midInput.value;
     switch (operator) {
-        case "+": 
-            console.log(leftNum + rightNum);
+        case "+":
+            result = (leftNum + rightNum);
             break;
         case "-":
-            console.log(leftNum - rightNum);
+            result = (leftNum - rightNum);
             break;
         case "*":
-            console.log(leftNum * rightNum);
+            result = (leftNum * rightNum);
             break;
         case "/":
-            console.log(leftNum / rightNum);
+            result = (leftNum / rightNum);
             break;
     }
+    clearDisplay();
+    leftOperand.value = result;
 }
+
+// assigning click event to equals sign, needs to go after opEquals is defined
 equate.addEventListener("click", opEqual);
 
+// getting C value 
+var clear = document.getElementById("opClear");
 
+// to actually clear display
+var clearDisplay = function(event) {
+    leftOperand.value = "";
+    rightOperand.value = "";
+    midInput.value = "";
+    wasOperatorUsed = false;
+}
+// assigns click event to C button, needs to go after clearDisplay is defined
+clear.addEventListener("click", clearDisplay);
 
 })(); 
 </script>   
