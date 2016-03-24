@@ -101,78 +101,65 @@ var leftOperand = document.getElementById("leftOperand");
 var rightOperand = document.getElementById("rightOperand");
 var midInput = document.getElementById("midInput");
 
-var side = true;
+var wasOperatorUsed = false;
+var opOperation = null;
+var operator = null;
 
-// if side = true, inputs into left box. If side = false, inputs into right box
-
-// if (side == true) {
-//     var digitInput = function(event) {
-//     var num = this.innerHTML;
-//     leftOperand.value = num;
-//     }
-//     var digits = document.getElementsByClassName("digit");
-
-//     for (var i = 0; i < digits.length; i++) { 
-//         digits[i].addEventListener("click", digitInput);
-//         }
-// } else if (side == true) {
-//     var opInput = function(event) {
-//     var operator = this.innerHTML;
-//     midInput.value = operator;
-//     }
-//     var operators = document.getElementsByClassName("operator");
-
-//     for (var i = 0; i < operators.length; i++) { 
-//         operators[i].addEventListener("click", opInput);
-//         side = false;
-//     }
-// } else {
-//     var secondDigitInput = function(event) {
-//     var num = this.innerHTML;
-//     rightOperand.value = num;
-//     }   
-//     var digits = document.getElementsByClassName("digit");
-
-//     for (var i = 0; i < digits.length; i++) { 
-//     digits[i].addEventListener("click", secondDigitInput);
-//     }
-// }
-
-
-
+// inputting number into boxes
 var digitInput = function(event) {
     var num = this.innerHTML;
-    leftOperand.value = num;
+    // if operand has not been used, go to left box
+    if (!wasOperatorUsed) {
+        leftOperand.value += num;
+    } else {
+    // if it has been used, go to right box
+        rightOperand.value += num;
+    }
 }
+
+// getting each number value and adding click ability
 var digits = document.getElementsByClassName("digit");
 
 for (var i = 0; i < digits.length; i++) { 
     digits[i].addEventListener("click", digitInput);
 }
 
-
+// inputting operand into mid box with check for box switching
 var opInput = function(event) {
-    var operator = this.innerHTML;
+    opOperation = this.getAttribute("id");
+    operator = this.innerHTML;
     midInput.value = operator;
+    wasOperatorUsed = true;
 }
-var operators = document.getElementsByClassName("operator");
 
+// getting each operand value
+var operators = document.getElementsByClassName("operator");
 
 for (var i = 0; i < operators.length; i++) { 
     operators[i].addEventListener("click", opInput);
 }
 
-
-var secondDigitInput = function(event) {
-    var num = this.innerHTML;
-    rightOperand.value = num;
+// to do arithmetic, equals
+var equate = document.getElementById("opEquals");
+var opEqual = function(event) {
+    var leftNum = parseInt(leftOperand.value);
+    var rightNum = parseInt(rightOperand.value);
+    switch (operator) {
+        case "+": 
+            console.log(leftNum + rightNum);
+            break;
+        case "-":
+            console.log(leftNum - rightNum);
+            break;
+        case "*":
+            console.log(leftNum * rightNum);
+            break;
+        case "/":
+            console.log(leftNum / rightNum);
+            break;
+    }
 }
-var digits = document.getElementsByClassName("digit");
-
-for (var i = 0; i < digits.length; i++) { 
-    digits[i].addEventListener("click", secondDigitInput);
-}
-
+equate.addEventListener("click", opEqual);
 
 
 
