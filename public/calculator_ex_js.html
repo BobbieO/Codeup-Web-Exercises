@@ -32,9 +32,9 @@
             <div class="row">
                 <div class="col-xs-8 col-md-offset-2">
                     <div class="row">
-                        <button class="digit">1</button>
-                        <button class="digit">2</button>
-                        <button class="digit">3</button>
+                        <button class="digit">7</button>
+                        <button class="digit">8</button>
+                        <button class="digit">9</button>
                         <button class="operator" id="opPlus">+</button>
                     </div>
                 </div>
@@ -54,9 +54,9 @@
             <div class="row">
                 <div class="col-xs-8 col-md-offset-2">
                     <div class="row">
-                        <button class="digit">7</button>
-                        <button class="digit">8</button>
-                        <button class="digit">9</button>
+                        <button class="digit">1</button>
+                        <button class="digit">2</button>
+                        <button class="digit">3</button>
                         <button class="operator" id="opMult">*</button>
                     </div>
                 </div>
@@ -145,7 +145,7 @@ var opEqual = function(event) {
             result = (leftNum / rightNum);
             break;
         default:
-            result = ("Error");
+            result = ("Err0r");
     }
     clearDisplay();
     leftOperand.value = result;
