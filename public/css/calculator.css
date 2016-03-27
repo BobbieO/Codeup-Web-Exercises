@@ -60,7 +60,7 @@ button {
     border: 4px inset #99ca8e;
 }
 
-.digit, .operator, #opClear, #opEquals {
+.digit, .operator, .helper, #opClear, #opEquals {
     width: 25%;
     float: left;
 }

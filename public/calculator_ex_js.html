@@ -32,6 +32,15 @@
             <div class="row">
                 <div class="col-xs-8 col-md-offset-2">
                     <div class="row">
+                        <button class="helper" id="opClear">C</button>
+                        <button class="operator" id="opDivide">/</button>
+                        <button class="operator" id="opMult">*</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-8 col-md-offset-2">
+                    <div class="row">
                         <button class="digit">7</button>
                         <button class="digit">8</button>
                         <button class="digit">9</button>
@@ -57,7 +66,6 @@
                         <button class="digit">1</button>
                         <button class="digit">2</button>
                         <button class="digit">3</button>
-                        <button class="operator" id="opMult">*</button>
                     </div>
                 </div>
             </div>
@@ -65,10 +73,9 @@
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
                     <div class="row">
-                            <button id="opClear">C</button>
                             <button class="digit">0</button>
-                            <button id="opEquals">=</button>
-                            <button class="operator" id="opDivide">/</button>
+                            <button class="helper" id="decimal">.</button>
+                            <button class="helper" id="opEquals">=</button>
                     </div>    
                 </div>
             </div>
@@ -111,6 +118,13 @@ for (var i = 0; i < digits.length; i++) {
     digits[i].addEventListener("click", digitInput);
 }
 
+// getting decimal pt and adding click ability
+var decimal = document.getElementById("decimal");
+var inputDeci = function(event) {
+    digitInput.value += decimal.value;
+}
+decimal.addEventListener("click", digitInput);
+
 // inputting operator into mid box with check for box switching
 var opInput = function(event) {
     midInput.value = this.innerHTML
@@ -127,8 +141,8 @@ for (var i = 0; i < operators.length; i++) {
 // to do arithmetic, equals
 var equate = document.getElementById("opEquals");
 var opEqual = function(event) {
-    var leftNum = parseInt(leftOperand.value);
-    var rightNum = parseInt(rightOperand.value);
+    var leftNum = parseFloat(leftOperand.value);
+    var rightNum = parseFloat(rightOperand.value);
     var result;
     var operator = midInput.value;
     switch (operator) {
@@ -148,7 +162,7 @@ var opEqual = function(event) {
             result = ("Err0r");
     }
     clearDisplay();
-    leftOperand.value = result;
+    leftOperand.value = result.toFixed(2);
 }
 
 // assigning click event to equals sign, needs to go after opEquals is defined
