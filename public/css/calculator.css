@@ -21,7 +21,7 @@ input {
 }
 
 #numboxes {
-    width: 350px;
+    width: 300px;
     height: 425px;
     margin: auto;
 }
@@ -53,25 +53,35 @@ input {
 }
 
 button {
-    font-size: 40px;
+    font-size: 35px;
     border-radius: 8px;
     background-color: #48a034;
     color: #0a1e06;
     border: 4px inset #99ca8e;
 }
 
-.digit, .operator, .helper, #opClear, #opEquals {
+.half {
+    width: 50%;
+    float: left;
+}
+
+.quarter {
     width: 25%;
     float: left;
 }
 
+#opEquals {
+    width: 50%;
+    float: left;
+}
+
 #leftOperand, #rightOperand {
-    width: 110px;
+    width: 90px;
     padding-left: 10px;
 }
 
 #midInput {
-    width: 80px;
+    width: 70px;
     text-align: center;
 }
 

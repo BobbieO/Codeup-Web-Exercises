@@ -3,8 +3,6 @@
     <head>
         <meta charset= "utf-8">
         <title>Calculator</title>
-        <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
         <!-- my css -->
         <link rel="stylesheet" href="/css/calculator.css">
     </head>
@@ -29,64 +27,31 @@
         </div>
 
         <div id="numboxes">
-            <div class="row">
-                <div class="col-xs-8 col-md-offset-2">
-                    <div class="row">
-                        <button class="helper" id="opClear">C</button>
-                        <button class="operator" id="opDivide">/</button>
-                        <button class="operator" id="opMult">*</button>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-8 col-md-offset-2">
-                    <div class="row">
-                        <button class="digit">7</button>
-                        <button class="digit">8</button>
-                        <button class="digit">9</button>
-                        <button class="operator" id="opPlus">+</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-xs-8 col-md-offset-2">
-                    <div class="row">
-                        <button class="digit">4</button>
-                        <button class="digit">5</button>
-                        <button class="digit">6</button>
-                        <button class="operator" id="opMinus">-</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-xs-8 col-md-offset-2">
-                    <div class="row">
-                        <button class="digit">1</button>
-                        <button class="digit">2</button>
-                        <button class="digit">3</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-8 col-md-offset-2">
-                    <div class="row">
-                            <button class="digit">0</button>
-                            <button class="helper" id="decimal">.</button>
-                            <button class="helper" id="opEquals">=</button>
-                    </div>    
-                </div>
-            </div>
-        </div>
-    </div>   
+            <button class="half" id="opClear">C</button>
+            <button class="quarter" id="decimal">.</button>
+            <button class="operator quarter" id="opDivide">/</button>
+       
+            <button class="digit quarter">7</button>
+            <button class="digit quarter">8</button>
+            <button class="digit quarter">9</button>
+            <button class="operator quarter" id="opMult">*</button>
+            
+       
+            <button class="digit quarter">4</button>
+            <button class="digit quarter">5</button>
+            <button class="digit quarter">6</button>
+            <button class="operator quarter" id="opMinus">-</button>
+       
+            <button class="digit quarter">1</button>
+            <button class="digit quarter">2</button>
+            <button class="digit quarter">3</button>
+            <button class="operator quarter" id="opPlus">+</button>
+            
+            <button class="digit half">0</button>
+            <button class="quarter" id="opEquals">=</button>        
+        </div> 
+    </div>  
 </div>
-
-<!-- jQuery from HostLib to enable Bootstrap stuff to work -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-<!-- compiled and minified Javascript from Bootstrap -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 </body>
 
 <script type="text/javascript">
