@@ -144,6 +144,8 @@ var opEqual = function(event) {
         case "/":
             result = (leftNum / rightNum);
             break;
+        default:
+            result = ("Error");
     }
     clearDisplay();
     leftOperand.value = result;
