@@ -1,0 +1,74 @@
+
+<!-- api key -->
+<!-- AIzaSyDpmOh_cyHuMA_gbjEA1s860RFWqmg26Bc -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bobbie's Favorite Eats</title>
+    <meta charset="utf-8">
+    <!-- my stylesheet -->
+    <link rel="stylesheet" href="/css/css_google_maps.css">
+</head>
+<body>
+    <!-- div to hold map -->
+    <div id="map-canvas"></div>
+
+    <!-- Google Maps API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpmOh_cyHuMA_gbjEA1s860RFWqmg26Bc"></script>
+
+    <!-- Script to show address on map -->
+    <script type="text/javascript">
+    (function() {
+    "use strict";
+
+        // find first food address
+        var pasaLocation = "17160 IH 35 N, Schertz, TX 78154";
+
+        // to find lat/long values, make geocoder object
+        var geocoder = new google.maps.Geocoder();
+
+        // Geocode our address
+        geocoder.geocode({ "address": pasaLocation}, function(results, status) {
+
+            // Check for a successful result
+            if (status == google.maps.GeocoderStatus.OK) {
+
+                // Recenter the map over the address
+                map.setCenter(results[0].geometry.location);
+                console.log(results);
+            } else {
+
+                // Show an error message with the status if our request fails
+                alert("Geocoding was not successful - STATUS: " + status);
+                }
+        });
+
+        // Set our map options
+        var mapOptions = {
+            // Set the zoom level
+            zoom: 19,
+
+            // This sets the center of the map at our location
+            // as a "default" while java is fetching geocode addy
+            center: {
+                lat: 29.4260,
+                lng: 98.4861
+            }
+        };
+
+        // Render the map
+        var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+
+
+
+    })();
+    </script>
+</body>
+
+
+
+
+
+
+
