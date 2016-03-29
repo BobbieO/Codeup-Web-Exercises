@@ -36,26 +36,52 @@
 
                 // Recenter the map over the address
                 map.setCenter(results[0].geometry.location);
-                console.log(results);
+                
+                // set variables to find lat-long, and set marker
+                var latValue = results[0].geometry.location.lat();
+                var longValue = results[0].geometry.location.lng();
+                var pasaLatLong = {lat: latValue, lng: longValue};
+
+                var marker = new google.maps.Marker({
+                    position: pasaLatLong,
+                    map: map,
+                    title: "La Pasadita",
+                    animation: google.maps.Animation.DROP
+                });       
             } else {
 
                 // Show an error message with the status if our request fails
                 alert("Geocoding was not successful - STATUS: " + status);
                 }
+
+                marker.addListener("click", bounceMe);
+                function bounceMe() {
+                    if (marker.getAnimation() !== null) {
+                        marker.setAnimation(null);
+                    } else {
+                        marker.setAnimation(google.maps.Animation.BOUNCE);
+                    };
+            };
         });
 
         // Set our map options
         var mapOptions = {
             // Set the zoom level
-            zoom: 19,
+            zoom: 10,
 
             // This sets the center of the map at our location
             // as a "default" while java is fetching geocode addy
             center: {
-                lat: 29.4260,
-                lng: 98.4861
-            }
+                lat: 29.425656,
+                lng: -98.484984
+            },
         };
+
+
+        
+
+        
+
 
         // Render the map
         var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
