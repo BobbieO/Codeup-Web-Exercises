@@ -59,9 +59,9 @@
                     title: "La Pasadita",
                     animation: google.maps.Animation.DROP
                 });       
-
+                var pasaContent = "<div>" + "<h2 class='text'>La Pasadita</h2>" + "<p class='text'>Try the chicken entomatadas!</p>" + "</div>";
                 var infowindow = new google.maps.InfoWindow({
-                    content: "Try the chicken entomatadas!"
+                    content: pasaContent
                 });
 
                 marker.addListener("click", function() {
