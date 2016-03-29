@@ -29,10 +29,10 @@ body {
 .arrow-right {
   width: 0; 
   height: 0; 
-  border-top: 75px solid transparent;
-  border-bottom: 75px solid transparent;
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
   border-left: 100px solid white;
-  border-right: 75px solid transparent;
+  border-right: 50px solid transparent;
   display: inline-block;
 }
 
@@ -41,6 +41,11 @@ body {
     text-align: center;
     clear: both;
 }
+
+/*make row divs surrounding the white s-tri combos. Use absolute positioning,
+then position each row using absolute positioning targeting each, from top 
+(not margin-top). So, .row {abso}, .row nthchild(0, 1, 2 etc) { top
+  0, 100, 200, etc}*/
 
 
 /* white 13/40 of flag area, red 27/40 of area.
