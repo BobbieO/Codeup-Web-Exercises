@@ -7,10 +7,13 @@
 <head>
     <title>Bobbie's Favorite Eats</title>
     <meta charset="utf-8">
+    <!-- font -->
+    <link href='https://fonts.googleapis.com/css?family=Handlee' rel='stylesheet' type='text/css'>
     <!-- my stylesheet -->
     <link rel="stylesheet" href="/css/css_google_maps.css">
 </head>
 <body>
+    <h1 class="text">Bobbie's Favorite Restaurants</h1>
     <!-- div to hold map -->
     <div id="map-canvas"></div>
 
@@ -60,7 +63,7 @@
                 var infowindow = new google.maps.InfoWindow({
                     content: "Try the chicken entomatadas!"
                 });
-                
+
                 marker.addListener("click", function() {
                     bounceMe(this);
                     infowindow.open(map, marker);
