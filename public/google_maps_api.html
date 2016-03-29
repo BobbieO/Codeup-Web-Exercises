@@ -28,6 +28,14 @@
         // to find lat/long values, make geocoder object
         var geocoder = new google.maps.Geocoder();
 
+        function bounceMe(marker) {
+            if (marker.getAnimation() !== null) {
+                marker.setAnimation(null);
+            } else {
+                marker.setAnimation(google.maps.Animation.BOUNCE);
+            };
+        };
+
         // Geocode our address
         geocoder.geocode({ "address": pasaLocation}, function(results, status) {
 
@@ -48,20 +56,25 @@
                     title: "La Pasadita",
                     animation: google.maps.Animation.DROP
                 });       
+
+                var infowindow = new google.maps.InfoWindow({
+                    content: "Try the chicken entomatadas!"
+                });
+                
+                marker.addListener("click", function() {
+                    bounceMe(this);
+                    infowindow.open(map, marker);
+                });
+
+
+
             } else {
 
                 // Show an error message with the status if our request fails
                 alert("Geocoding was not successful - STATUS: " + status);
                 }
 
-                marker.addListener("click", bounceMe);
-                function bounceMe() {
-                    if (marker.getAnimation() !== null) {
-                        marker.setAnimation(null);
-                    } else {
-                        marker.setAnimation(google.maps.Animation.BOUNCE);
-                    };
-            };
+                // adds bounce on click to marker
         });
 
         // Set our map options
@@ -77,14 +90,10 @@
             },
         };
 
-
-        
-
-        
-
-
         // Render the map
         var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+
+
 
 
 
