@@ -24,17 +24,20 @@
 $(document).ready(function() {
     alert("Page is finished!");
 
-    $("li").css("font-size", "20px");
+    $("h1").click(function() {
+        $(this).css("background-color", "pink");
+    });
 
-    var heading = $("h1");
-    var list = $("li");
-    var para = $("p");
+    $("p").dblclick(function() {
+        $(this).css("font-size", "18px");
+    });
 
-    // $("h1").css("background-color", "yellow");
-    // $("li").css("background-color", "yellow");
-    // $("p").css("background-color", "yellow");
+    $("li").hover(function(){
+        $(this).css("color", "red");
+    }, function() {
+        $(this).css("color", "white");
+    });
 
-    $("h1, li, p").css("background-color", "yellow");
 
 
 });
@@ -46,6 +49,33 @@ $(document).ready(function() {
     $(xsomethingx) calls any jQuery function 
     $(".class-name");
     $("#id-name");
-    $("tagname");   
+    $("tagname"); 
+
+    previously:
+    var elements = document.getElementsByClassName("codeup");
+    for (var i = 0; i < elements.length; i++) {
+        //somecodehere
+        })
+    };
+
+    but now:
+    to "loop" through multiple elements:
+    var $elements = $(".codeup");
+    $elements.click(function() {
+        //somecode here
+    })  
+
+    for hover:
+    $elements.hover(function(){
+        $(this).css("color", "yellow");
+    }, function() {
+        $(this).css("color", "purple");
+    });
+    
+
+
+
+
+
 
     -->
