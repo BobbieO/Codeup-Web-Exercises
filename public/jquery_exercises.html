@@ -5,7 +5,7 @@
 </head>
 <body>
     <div>
-        <h1>This is the jQuery exercise</h1>
+        <h1 >This is the jQuery exercise</h1>
         <p class="codeup">We are learning about selectors</p>
 
         <p class=>You can use the following as selectors:</p>
@@ -24,7 +24,13 @@
 $(document).ready(function() {
     alert("Page is finished!");
 
-    $(".codeup").css("border", "1px solid red");
+    $("li").css("font-size", "20px");
+
+    var h1 = $("h1");
+    var li = $("li");
+    var p = $("p");
+
+    alert(h1.html());
 
 
 
