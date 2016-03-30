@@ -1,14 +1,12 @@
-
-<!-- api key -->
-<!-- AIzaSyDpmOh_cyHuMA_gbjEA1s860RFWqmg26Bc -->
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>Bobbie's Favorite Eats</title>
     <meta charset="utf-8">
+
     <!-- font -->
     <link href='https://fonts.googleapis.com/css?family=Handlee' rel='stylesheet' type='text/css'>
+
     <!-- my stylesheet -->
     <link rel="stylesheet" href="/css/css_google_maps.css">
 </head>
@@ -25,171 +23,26 @@
     (function() {
     "use strict";
 
-        // to find lat/long values, make geocoder object
-        var geocoder = new google.maps.Geocoder();
+        var locations = [
 
-        //food location variables
-        var pasaLocation = "17160 IH 35 N, Schertz, TX 78154";
-        var chestersLocation = "9980 Interstate 10 Frontage Rd, San Antonio, TX 78230";
-        var kirbyLocation = "123 Loop 1604 NE, San Antonio, TX 78232";
+            {
+                "name": "La Pasadita",
+                "address": "17160 IH 35 N, Schertz, TX 78154",
+                "content": "<div>" + "<h2 class='text'>La Pasadita</h2>" + "<p class='text'>Try the chicken entomatadas!</p>" + "</div>"
+            },
 
-        // marker animation
-        function bounceMe(marker) {
-            if (marker.getAnimation() !== null) {
-                marker.setAnimation(null);
-            } else {
-                marker.setAnimation(google.maps.Animation.BOUNCE);
-            };
-        };
+            {
+                "name": "Chester's Hamburger Co",
+                "address": "9980 Interstate 10 Frontage Rd, San Antonio, TX 78230",
+                "content": "<div>" + "<h2 class='text'>Chester's</h2>" + "<p class='text'>Cheeseburgers with sesame seed buns!</p>" + "</div>"
+            },
 
-        // locations json object--new since save
-        // var locations = [
-        //     {
-        //         "name": "La Pasadita",
-        //         "address": "17160 IH 35 N, Schertz, TX 78154",
-        //         "content": "<div>" + "<h2 class='text'>La Pasadita</h2>" + "<p class='text'>Try the chicken entomatadas!</p>" + "</div>"
-        //     },
-
-        //     {
-        //         "name": "Chester's Hamburger Co",
-        //         "address": "9980 Interstate 10 Frontage Rd, San Antonio, TX 78230",
-        //         "content": "<div>" + "<h2 class='text'>Chester's</h2>" + "<p class='text'>Cheeseburgers with sesame seed buns!</p>" + "</div>"
-        //     },
-
-        //     {
-        //         "name": "Kirby's Steakhouse",
-        //         "address": "123 Loop 1604 NE, San Antonio, TX 78232",
-        //         "content": "<div>" + "<h2 class='text'>Kirby's Steakhouse</h2>" + "<p class='text'>Nothing here is mediocre!</p>" + "</div>"
-        //     }
-        // ];
-
-        // condensing attempt, new since save
-        // geocoder.geocode({"address":locations[1]}, function(results, status) {
-        //     if (status == google.maps.GeocoderStatus.OK){
-                
-        //         var latValue = results[0].geometry.location.lat();
-        //         var longValue = results[0].geometry.location.lng();
-        //         var locationLatLong = {lat: latValue, lng: longValue};
-        //         var marker = new google.maps.Marker({
-        //             position: locationLatLong,
-        //             map: map,
-        //             title: locations.name,
-        //             animation: google.maps.Animation.DROP
-        //             });
-        //         var content = locations.content;
-        //         var infowindow = new google.maps.InfoWindow({
-        //             content: this.content
-        //         });
-
-        //         locations.forEach(function(address, index, array){
-        //             marker.addListener("click", function() {
-        //                 bounceMe(this);
-        //                 infowindow.open(map, marker);
-        //             });
-        //         });
-        //     } else {
-
-        //         alert("Geocoding was not successful - STATUS: " + status);
-        //     };       
-        // });
-
-
-
-        // THIS STUFF WORKS
-        // first location start
-        // Geocode our address
-        geocoder.geocode({ "address": pasaLocation}, function(results, status) {
-
-            // Check for a successful result
-            if (status == google.maps.GeocoderStatus.OK) {
-
-                // set variables to find lat-long, and set marker
-                var latValue = results[0].geometry.location.lat();
-                var longValue = results[0].geometry.location.lng();
-                var pasaLatLong = {lat: latValue, lng: longValue};
-
-                var marker = new google.maps.Marker({
-                    position: pasaLatLong,
-                    map: map,
-                    title: "La Pasadita",
-                    animation: google.maps.Animation.DROP
-                });       
-
-                // info window create and content
-                var pasaContent = "<div>" + "<h2 class='text'>La Pasadita</h2>" + "<p class='text'>Try the chicken entomatadas!</p>" + "</div>";
-                var infowindow = new google.maps.InfoWindow({
-                    content: pasaContent
-                });
-
-                 // adds bounce on click to marker
-                marker.addListener("click", function() {
-                    bounceMe(this);
-                    infowindow.open(map, marker);
-                });
-            } else {
-
-                // Show an error message with the status if our request fails
-                alert("Geocoding was not successful - STATUS: " + status);
-            }       
-        });
-
-        // code for second location start
-        geocoder.geocode({ "address": chestersLocation}, function(results, status) {
-            if (status == google.maps.GeocoderStatus.OK) {
-                
-                var latValue = results[0].geometry.location.lat();
-                var longValue = results[0].geometry.location.lng();
-                var chestersLatLong = {lat: latValue, lng: longValue};
-
-                var marker = new google.maps.Marker({
-                    position: chestersLatLong,
-                    map: map,
-                    title: "Chester's Hamburger Co.",
-                    animation: google.maps.Animation.DROP
-                });       
-                var chestersContent = "<div>" + "<h2 class='text'>Chester's</h2>" + "<p class='text'>Cheeseburgers with sesame seed buns!</p>" + "</div>";
-                var infowindow = new google.maps.InfoWindow({
-                    content: chestersContent
-                });
-
-                marker.addListener("click", function() {
-                    bounceMe(this);
-                    infowindow.open(map, marker);
-                });
-
-            } else {
-                alert("Geocoding was not successful - STATUS: " + status);
-                }
-        });
-
-        // code for third location start
-        geocoder.geocode({ "address": kirbyLocation}, function(results, status) {
-            if (status == google.maps.GeocoderStatus.OK) {
-                
-                var latValue = results[0].geometry.location.lat();
-                var longValue = results[0].geometry.location.lng();
-                var kirbyLatLong = {lat: latValue, lng: longValue};
-
-                var marker = new google.maps.Marker({
-                    position: kirbyLatLong,
-                    map: map,
-                    title: "Kirby's Steakhouse",
-                    animation: google.maps.Animation.DROP
-                });       
-                var kirbyContent = "<div>" + "<h2 class='text'>Kirby's Steakhouse</h2>" + "<p class='text'>Nothing here is mediocre!</p>" + "</div>";
-                var infowindow = new google.maps.InfoWindow({
-                    content: kirbyContent
-                });
-
-                marker.addListener("click", function() {
-                    bounceMe(this);
-                    infowindow.open(map, marker);
-                });
-
-            } else {
-                alert("Geocoding was not successful - STATUS: " + status);
-                }
-        });
+            {
+                "name": "Kirby's Steakhouse",
+                "address": "123 Loop 1604 NE, San Antonio, TX 78232",
+                "content": "<div>" + "<h2 class='text'>Kirby's Steakhouse</h2>" + "<p class='text'>Nothing here is mediocre!</p>" + "</div>"
+            }
+        ];
 
         // Set our map options
         var mapOptions = {
@@ -205,13 +58,53 @@
 
         // Render the map
         var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+
+        locations.forEach(function(restaurant, index){
+
+            var address = restaurant.address;
+            
+            // Geocode our address
+            var geocoder = new google.maps.Geocoder();
+
+            geocoder.geocode({"address": address}, function(results, status) {
+                
+                // Check for a successful result
+                if (status == google.maps.GeocoderStatus.OK){
+                    
+                    var marker = new google.maps.Marker({
+                        // position: results[0].geometry.location,
+                        position: results[0].geometry.location,
+                        map: map,
+                        title: restaurant.name,
+                        animation: google.maps.Animation.DROP
+                    });
+                
+                    // info window create and content, adds bounce function on click
+                    marker.addListener("click", function() {
+                        var content = restaurant.content;
+                        var infowindow = new google.maps.InfoWindow({
+                            content: content
+                        });
+                        bounceMe(this);
+                        infowindow.open(map, marker);
+                    });
+
+                } else {
+                    // Show an error message with the status if our request fails
+                    alert("Geocoding was not successful - STATUS: " + status);
+                };       
+            });
+        });
+
+        function bounceMe(marker) {
+            if (marker.getAnimation() !== null) {
+                marker.setAnimation(null);
+            } else {
+                marker.setAnimation(google.maps.Animation.BOUNCE);
+            }
+        }
+
     })();
     </script>
 </body>
-
-
-
-
-
-
 
