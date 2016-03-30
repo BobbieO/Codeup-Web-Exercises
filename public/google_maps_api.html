@@ -25,12 +25,14 @@
     (function() {
     "use strict";
 
-        // find first food address
-        var pasaLocation = "17160 IH 35 N, Schertz, TX 78154";
-
         // to find lat/long values, make geocoder object
         var geocoder = new google.maps.Geocoder();
 
+        //food location variables
+        var pasaLocation = "17160 IH 35 N, Schertz, TX 78154";
+        var chestersLocation = "9980 Interstate 10 Frontage Rd, San Antonio, TX 78230";
+
+        // code for first location start
         function bounceMe(marker) {
             if (marker.getAnimation() !== null) {
                 marker.setAnimation(null);
@@ -45,9 +47,6 @@
             // Check for a successful result
             if (status == google.maps.GeocoderStatus.OK) {
 
-                // Recenter the map over the address
-                map.setCenter(results[0].geometry.location);
-                
                 // set variables to find lat-long, and set marker
                 var latValue = results[0].geometry.location.lat();
                 var longValue = results[0].geometry.location.lng();
@@ -64,29 +63,55 @@
                     content: pasaContent
                 });
 
+                 // adds bounce on click to marker
+                marker.addListener("click", function() {
+                    bounceMe(this);
+                    infowindow.open(map, marker);
+                });
+            } else {
+
+                // Show an error message with the status if our request fails
+                alert("Geocoding was not successful - STATUS: " + status);
+            }       
+        });
+
+        // code for second location start
+        geocoder.geocode({ "address": chestersLocation}, function(results, status) {
+            if (status == google.maps.GeocoderStatus.OK) {
+                
+                var latValue = results[0].geometry.location.lat();
+                var longValue = results[0].geometry.location.lng();
+                var chestersLatLong = {lat: latValue, lng: longValue};
+
+                var marker = new google.maps.Marker({
+                    position: chestersLatLong,
+                    map: map,
+                    title: "Chester's",
+                    animation: google.maps.Animation.DROP
+                });       
+                var chestersContent = "<div>" + "<h2 class='text'>Chester's</h2>" + "<p class='text'>Cheeseburgers with sesame seed buns!</p>" + "</div>";
+                var infowindow = new google.maps.InfoWindow({
+                    content: chestersContent
+                });
+
                 marker.addListener("click", function() {
                     bounceMe(this);
                     infowindow.open(map, marker);
                 });
 
-
-
             } else {
-
-                // Show an error message with the status if our request fails
                 alert("Geocoding was not successful - STATUS: " + status);
                 }
-
-                // adds bounce on click to marker
         });
+
+
 
         // Set our map options
         var mapOptions = {
             // Set the zoom level
             zoom: 10,
 
-            // This sets the center of the map at our location
-            // as a "default" while java is fetching geocode addy
+            // This sets the center of the map at desired location
             center: {
                 lat: 29.425656,
                 lng: -98.484984
