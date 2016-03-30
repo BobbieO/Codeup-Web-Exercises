@@ -32,7 +32,7 @@
         var pasaLocation = "17160 IH 35 N, Schertz, TX 78154";
         var chestersLocation = "9980 Interstate 10 Frontage Rd, San Antonio, TX 78230";
 
-        // code for first location start
+        // marker animation
         function bounceMe(marker) {
             if (marker.getAnimation() !== null) {
                 marker.setAnimation(null);
@@ -41,6 +41,7 @@
             };
         };
 
+        // first location start
         // Geocode our address
         geocoder.geocode({ "address": pasaLocation}, function(results, status) {
 
@@ -58,6 +59,8 @@
                     title: "La Pasadita",
                     animation: google.maps.Animation.DROP
                 });       
+
+                // info window create and content
                 var pasaContent = "<div>" + "<h2 class='text'>La Pasadita</h2>" + "<p class='text'>Try the chicken entomatadas!</p>" + "</div>";
                 var infowindow = new google.maps.InfoWindow({
                     content: pasaContent
