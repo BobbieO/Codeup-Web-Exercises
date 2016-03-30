@@ -28,19 +28,22 @@
             {
                 "name": "La Pasadita",
                 "address": "17160 IH 35 N, Schertz, TX 78154",
-                "content": "<div>" + "<h2 class='text'>La Pasadita</h2>" + "<p class='text'>Try the chicken entomatadas!</p>" + "</div>"
+                "content": "<div>" + "<h2 class='text'>La Pasadita</h2>" + "<p class='text'>Try the chicken entomatadas!</p>" + "</div>",
+                "icon": "/img/burrito.png"
             },
 
             {
                 "name": "Chester's Hamburger Co",
                 "address": "9980 Interstate 10 Frontage Rd, San Antonio, TX 78230",
-                "content": "<div>" + "<h2 class='text'>Chester's</h2>" + "<p class='text'>Cheeseburgers with sesame seed buns!</p>" + "</div>"
+                "content": "<div>" + "<h2 class='text'>Chester's</h2>" + "<p class='text'>Cheeseburgers with sesame seed buns!</p>" + "</div>",
+                "icon": "/img/cheeseburger.png"
             },
 
             {
                 "name": "Kirby's Steakhouse",
                 "address": "123 Loop 1604 NE, San Antonio, TX 78232",
-                "content": "<div>" + "<h2 class='text'>Kirby's Steakhouse</h2>" + "<p class='text'>Nothing here is mediocre!</p>" + "</div>"
+                "content": "<div>" + "<h2 class='text'>Kirby's Steakhouse</h2>" + "<p class='text'>Nothing here is mediocre!</p>" + "</div>",
+                "icon": "/img/steak.png"
             }
         ];
 
@@ -70,13 +73,14 @@
                 
                 // Check for a successful result
                 if (status == google.maps.GeocoderStatus.OK){
-                    
+                    var image = restaurant.icon;
                     var marker = new google.maps.Marker({
                         // position: results[0].geometry.location,
                         position: results[0].geometry.location,
                         map: map,
                         title: restaurant.name,
-                        animation: google.maps.Animation.DROP
+                        animation: google.maps.Animation.DROP,
+                        icon: image
                     });
                 
                     // info window create and content, adds bounce function on click
