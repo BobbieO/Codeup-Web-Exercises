@@ -4,9 +4,17 @@
     <title></title>
 </head>
 <body>
+    <div>
+        <h1>This is the jQuery exercise</h1>
+        <p class="codeup">We are learning about selectors</p>
 
-
-
+        <p class=>You can use the following as selectors:</p>
+            <ul class="codeup">
+                <li>ID</li>
+                <li>Class</li>
+                <li>Element</li>
+            </ul>
+    </div>
 
 <script src="/js/jquery.js"></script>
 <script type="text/javascript">
@@ -15,6 +23,12 @@
     
 $(document).ready(function() {
     alert("Page is finished!");
+
+    $(".codeup").css("border", "1px solid red");
+
+
+
+
 });
 </script>
 </body>
