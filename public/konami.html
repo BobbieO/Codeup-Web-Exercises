@@ -9,12 +9,55 @@
     <script src="/js/jquery.js"></script>
     <script>
         "use strict";
+            
+        var userInput = [];
 
         $(document).keyup(function(event){
             console.log(event.keyCode);
+            
+            var codeArray = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13];
+
+            userInput.push(event.keyCode);
+            console.log(userInput);
+
+            var codeArrString = codeArray.join("");
+            var userInputString = userInput.join("");
+
+            if (userInputString===codeArrString) {
+                alert("You have added 30 lives!");
+            } 
         });
 
+
+        
         
     </script>
 </body>
 </html>
+
+
+
+
+
+<!-- 
+up arrow: 38;
+down arrow: 40;
+left arrow: 37;
+right arrow: 39;
+b: 66;
+a: 65;
+enter: 13;
+
+Konami Code: 38 38 40 40 37 39 37 39 66 65 13
+
+ -->
+
+
+
+
+<!-- Notes
+keypress() is alpha-numeric chars only; keydown() and keyup() are alphanumeric plus modifier and non-printing keys like arrows, shift, ctrl, etc.
+
+Keydown will also continue to fire the event if the key is pressed and held down. Keydown doesn't do that.
+
+ -->
