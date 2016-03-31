@@ -47,7 +47,9 @@
                 $("h1").text("You have added 30 lives!");
                 $(".dragon").html("<img src='/img/purpleDragon.png'>");
                 $(".wizard").html("<img src='/img/wizard-icon.png'>");
-            
+                $(".dragon").on("click", function() {
+                    $(".dragon img").css("margin-right", "+=2px")
+                });
             } 
         });
 
