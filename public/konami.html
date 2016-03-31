@@ -27,7 +27,7 @@
         var userInput = [];
 
         $(document).keyup(function(event){
-            console.log(event.keyCode);
+            // console.log(event.keyCode);
             
             var codeArray = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13];
 
@@ -47,12 +47,22 @@
                 $("h1").text("You have added 30 lives!");
                 $(".dragon").html("<img src='/img/purpleDragon.png'>");
                 $(".wizard").html("<img src='/img/wizard-icon.png'>");
-                $(".dragon").on("click", function() {
-                    $(".dragon img").css("margin-right", "+=2px")
-                });
             } 
+                
+            if (event.keyCode=='76') {
+                $(".dragon img").css("margin-right", "-=2px");
+            };
+            if (event.keyCode=='74') {
+                $(".dragon img").css("margin-right", "+=2px");
+            };
+            if (event.keyCode=='65') {
+                $(".wizard img").css("margin-left", "-=2px");
+            };
+            if (event.keyCode=='68') {
+                $(".wizard img").css("margin-left", "+=2px");
+            };
+
         });
-     
     </script>
 </body>
 </html>
