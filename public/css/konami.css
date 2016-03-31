@@ -7,3 +7,18 @@ body {
     font-family: "Monofett", sans-serif, serif;
     font-size: 4em;
 }
+
+.dragon {
+    display: inline-block;
+    width: 50%;
+    float: right;
+    text-align: right;
+    margin-top: 100px;
+    margin-right: 65px;
+}
+
+.wizard {
+    display: inline-block;
+    width: 50%;
+    float: left;
+}
