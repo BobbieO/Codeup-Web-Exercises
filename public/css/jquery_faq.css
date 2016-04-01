@@ -1,0 +1,9 @@
+body {
+    background-image: url(/img/);
+    background: no-repeat center fixed;
+    background-size: cover;
+}
+
+.invisible {
+    display: none;
+}

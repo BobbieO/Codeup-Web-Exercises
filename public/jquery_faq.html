@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>10 FAQs About National Parks</title>
+
+    <link rel="stylesheet" href="/css/jquery_faq.css">
+</head>
+<body>
+
+    <h1>10 FAQs About National Parks in Arizona</h1>
+        <dl>
+            <dt>Does Montezuma Castle park have bathrooms?</dt>
+            <dd class="invisible">Nope, plan ahead.</dd>
+
+            <dt>Can we climb up and go inside?</dt>
+            <dd class="invisible">No. It's crumbly, and liability insurance is a thing.</dd>
+
+            <dt>Can I keep a piece of the Petrified Forest for my very own?</dt>
+            <dd class="invisible">Only if you buy it in the gift shop. Otherwise, there's a Big Fine for stealing relics.</dd>
+            
+            <dt>Can I pet the squirrels and chipmunks in Arizona National Parks?</dt>
+            <dd class="invisible">I wouldn't. They can carry bubonic plague.</dd>
+            
+            <dt>How do you pronounce Saguaro?</dt>
+            <dd class="invisible">"Sa-WAH-ro"</dd>
+            
+            <dt>Will the Sunset Crater Volcano erupt while I'm there?</dt>
+            <dd class="invisible">Probably not.</dd>
+            
+            <dt>Can I climb to the top?</dt>
+            <dd class="invisible">No, others ruined the trail before you so now no one can climb it.</dd>
+            
+            <dt>Can I bring my dog to Casa Grande Ruins?</dt>
+            <dd class="invisible">Yes, but it's hot, so monitor your dog. Also, he/she should be well-trained.</dd>
+            
+            <dt>Can I off-road in Canyon de Chelly?</dt>
+            <dd class="invisible">Absolutely not.</dd>
+            
+            <dt>Will my cell phone work in the parks?</dt>
+            <dd class="invisible">Possibly. But you should look at the scenery instead.</dd>
+        </dl>
+
+    <a href="#" id="clicky">Click me for answers!</a>
+
+
+<script src="/js/jquery.js"></script>
+<script>
+(function(){
+"use strict";
+    
+    $(document).ready(function() {
+        $("#clicky").click(function(event){
+            event.preventDefault();
+            $(".invisible").toggleClass("invisible");
+        });
+    });
+   
+})();
+</script>
+</body>
+</html>
+
+
+
+
+
+<!-- NOTES
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <h1 id="codeup">Hello Codeup</h1>
+</body>
+</html>
+
+var heading = $(".codeup").html();
+console.log(heading)   /returns the html; .html both gets and sets the html.
+
+var heading = $(".codeup").html("Hello Guys");
+console.log(heading)   //replaces the current heading with class codeup 
+                        with "Hello Guys"
+
+$("#codeup").click(function() {
+    var heading = $(this).html();
+    console.log(heading);
+})                               //will console log Hello Codeup when the
+                                     Hello Codeup is clicked
+
+to shorten/optimize code, instead of having multiple calls to $(this), create
+    a variable to store $(this) and then assign attributes/changes to the one variable:
+
+        var $that = $(this);
+
+        $that.html();
+        $that.css("background-color", "#9990000);
+        $that.css ("color", "#9990000");
+
+
+ -->
