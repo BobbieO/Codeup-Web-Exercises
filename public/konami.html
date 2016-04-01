@@ -27,6 +27,11 @@
             
         var userInput = [];
 
+        // to play success sound
+        function playSound() {
+            $("#metroid")[0].play();
+        }
+
         $(document).keyup(function(event){
             
             // var to store Konami code
@@ -40,10 +45,6 @@
             var codeArrString = codeArray.join("");
             var userInputString = userInput.join("");
 
-            // to play success sound
-            function playSound() {
-                $("#metroid")[0].play();
-            }
 
             // to change intro screen to game screen upon successful entry
             if (userInputString===codeArrString) {
@@ -59,7 +60,7 @@
                 $(".dragon img").css("margin-right", "-=2px");
             };
             if (event.keyCode=='74') {
-                $(".dragon img").css("margin-right", "+=2px");
+                $(".dragon img").css("margin-right", "+=10px");
             };
             if (event.keyCode=='65') {
                 $(".wizard img").css("margin-left", "-=2px");
