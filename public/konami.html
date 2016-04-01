@@ -11,6 +11,7 @@
 
 <body>
     <h1 class="text">Konami Code</h1>
+        <div class="fireball"></div>
         <div class="road">
             <div class="wizard"></div>
             <div class="dragon"></div>
@@ -27,20 +28,24 @@
         var userInput = [];
 
         $(document).keyup(function(event){
-            // console.log(event.keyCode);
             
+            // var to store Konami code
             var codeArray = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13];
 
+            // var to store user input, 'concatenated' 
             userInput.push(event.keyCode);
             console.log(userInput);
 
+            // change to string for easier comparison
             var codeArrString = codeArray.join("");
             var userInputString = userInput.join("");
 
+            // to play success sound
             function playSound() {
                 $("#metroid")[0].play();
             }
 
+            // to change intro screen to game screen upon successful entry
             if (userInputString===codeArrString) {
                 playSound();
                 $("body").css("background", "url(/img/fantasyForest.png) no-repeat center fixed").css("background-size", "cover");
@@ -49,6 +54,7 @@
                 $(".wizard").html("<img src='/img/wizard-icon.png'>");
             } 
                 
+            // for character movements, only left-right
             if (event.keyCode=='76') {
                 $(".dragon img").css("margin-right", "-=2px");
             };
@@ -61,7 +67,6 @@
             if (event.keyCode=='68') {
                 $(".wizard img").css("margin-left", "+=2px");
             };
-
         });
     </script>
 </body>
