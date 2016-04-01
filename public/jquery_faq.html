@@ -81,7 +81,7 @@
     $(document).ready(function() {
         $("#clicky").click(function(event){
             event.preventDefault();
-            $(".hidden").toggleClass("invisible");
+            $(".hidden").toggle();
         });
 
         $("ul").each(function(index, element){
@@ -89,7 +89,7 @@
         });
 
         $("li").click(function(index, element) {
-            $("li").parent().addClass("invisible");
+            $("li").parent().hide();
         });
     });
    
