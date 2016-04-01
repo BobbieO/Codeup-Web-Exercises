@@ -18,7 +18,7 @@ body {
 }
 
 .square {
-  width: 25px;
+  width: 187.5px;
   height: 100px;
   background-color: white;
   float: left;
@@ -42,10 +42,27 @@ body {
     clear: both;
 }
 
-/*make row divs surrounding the white s-tri combos. Use absolute positioning,
-then position each row using absolute positioning targeting each, from top 
-(not margin-top). So, .row {abso}, .row nthchild(0, 1, 2 etc) { top
-  0, 100, 200, etc}*/
+.row {
+  position: absolute;
+}
+
+.row:nth-child(0) {
+  top: 0px;
+}
+
+.row:nth-child(1) {
+  top: 100px;
+}
+
+.row:nth-child(2) {
+  top: 200px;
+}
+.row:nth-child(3) {
+  top: 300px;
+}
+.row:nth-child(4) {
+  top: 400px;
+}
 
 
 /* white 13/40 of flag area, red 27/40 of area.
