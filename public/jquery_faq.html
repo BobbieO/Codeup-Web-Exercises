@@ -81,15 +81,15 @@
     $(document).ready(function() {
         $("#clicky").click(function(event){
             event.preventDefault();
-            $(".hidden").toggle();
+            $(".hidden").slideToggle();
         });
 
         $("ul").each(function(index, element){
             $(element).children("li").first().css("font-weight", "bold");
         });
 
-        $("li").click(function(index, element) {
-            $("li").parent().hide();
+        $("h3").click(function(index, element) {
+            $(this).next().slideToggle();
         });
     });
    
