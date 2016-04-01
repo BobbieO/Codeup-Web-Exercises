@@ -8,12 +8,6 @@ body {
     font-size: 4em;
 }
 
-.fireball img{
-    display: inline-block;
-    width: 50%;
-    float: right;
-}
-
 .dragon {
     display: inline-block;
     width: 50%;
