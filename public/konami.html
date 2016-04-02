@@ -10,9 +10,12 @@
 </head>
 
 <body>
-    <h1 class="text">Konami Code</h1>
-        <div class="fireball"></div>
+    <div>
+        <h1 class="text">Konami Code</h1>
+    </div>
+
         <div class="road">
+            <div class="fireball"></div>
             <div class="wizard"></div>
             <div class="dragon"></div>
         </div>
@@ -54,20 +57,36 @@
                 $(".dragon").html("<img src='/img/purpleDragon.png'>");
                 $(".wizard").html("<img src='/img/wizard-icon.png'>");
             } 
+
                 
             // for character movements, only left-right
+            
             if (event.keyCode=='76') {
-                $(".dragon img").css("margin-right", "-=2px");
+                $(".dragon img").css("margin-right", "-=10px");
             };
             if (event.keyCode=='74') {
                 $(".dragon img").css("margin-right", "+=10px");
             };
             if (event.keyCode=='65') {
-                $(".wizard img").css("margin-left", "-=2px");
+                $(".wizard img").css("margin-left", "-=4px");
             };
             if (event.keyCode=='68') {
-                $(".wizard img").css("margin-left", "+=2px");
+                $(".wizard img").css("margin-left", "+=4px");
             };
+
+
+            // not working
+            // var dragonRight = 76;
+
+            // if (userInput===dragonRight) {
+            //     $(".dragon img").animate({
+            //         right: "-=10px"
+            //     });
+            // };
+
+
+
+
         });
     </script>
 </body>
