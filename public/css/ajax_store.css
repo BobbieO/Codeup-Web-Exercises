@@ -1,0 +1,45 @@
+body {
+    background-image: url(/img/tools.jpg);
+    padding-top: 100px;
+}
+
+.container {
+    width: 50%;
+    background-color: #c0c0c0;
+    opacity: 0.9;
+    border-radius: 10px;
+    padding: 20px;
+    border: 2px solid #ddd;
+    box-shadow: 10px 10px 5px #262626;
+}
+
+.header {
+    text-align: center;
+    font-family: "Old Standard TT", serif, sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    margin: auto;
+    padding-bottom: 10px;
+}
+
+.fancy {
+    text-align: center;
+    font-family: "Old Standard TT", serif, sans-serif;
+    font-size: 24px;
+    margin: auto;
+}
+
+.fancy th {
+    text-align: center;
+}
+
+.btn {
+    background-color: #737373;
+    margin-top: 10px;
+    color: #ddd;
+    border: 1px solid #ddd;
+}
+
+#btn-div {
+    text-align: center;
+}
