@@ -1,13 +1,33 @@
 .main-heading {
-    margin-top: 40px;
-    color: #594b00;
+    margin-top: 80px;
+    margin-bottom: 40px;
+    /*color: #594b00;*/
+}
+
+.inner-text {
+    margin-left: 100px;
 }
 
 #map-canvas {
-            width: 770px;
             height: 481px;
-            margin: auto;
-            margin-top: 80px;
             color: #594b00;
             border: 7px double #a18700; 
+}
+
+.position {
+    
+    float: left;
+    border: 1px solid black;
+    text-align: center;
+    /*padding: 30px;*/
+    /*width: 256.6px;*/
+    margin-bottom: 50px;
+}
+
+.weather-block {
+    margin-top: 50px;
+}
+
+.bold {
+    font-weight: bold;
 }
