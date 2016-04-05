@@ -1,0 +1,13 @@
+.main-heading {
+    margin-top: 40px;
+    color: #594b00;
+}
+
+#map-canvas {
+            width: 770px;
+            height: 481px;
+            margin: auto;
+            margin-top: 80px;
+            color: #594b00;
+            border: 7px double #a18700; 
+}
