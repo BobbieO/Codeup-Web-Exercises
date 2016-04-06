@@ -100,21 +100,22 @@ $(document).ready(function() {
 
             $("#forecast").html("");
 
-
             data.list.forEach(function(element, index){
                 var weatherInfo = '';
 
                 $("#city").html(data.city.name).css("font-weight", "bold");
 
+                // this bit "concatenates" forecast info into a 'set'
                 weatherInfo += "<div class='col-md-4 position'>";
                 weatherInfo += "<h4>" + convertTimestamp(element.dt) + "</h4>";
-                weatherInfo += "<h3 class='bold'>" + element.temp.max + "&deg" + " / " + element.temp.min + "&deg" + "</h3>";
+                weatherInfo += "<h3 class='bold'>" + Math.round(element.temp.max) + "&#8457" + "  /  " + Math.round(element.temp.min) + "&#8457" + "</h3>";
                 weatherInfo += "<img src='http://openweathermap.org/img/w/" + element.weather[0].icon + ".png'>";
                 weatherInfo += "<p>" + "<span class='bold'>" +element.weather[0].main + "</span>" + ": " + element.weather[0].description + "</p>";
                 weatherInfo += "<p>" + "<span class='bold'>" + "Humidity: " + "</span>" + element.humidity + "%" + "</p>";
                 weatherInfo += "<p>" + "<span class='bold'>" + "Wind Speed: " + "</span>" + element.speed + " mph" + "</p>";
                 weatherInfo += "</div>";
 
+                // takes the above and puts in into id-forcast box
             $("#forecast").append(weatherInfo);
             });
         });
