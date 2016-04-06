@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     
     <!-- font -->
-    <!-- <link href= ### rel='stylesheet' type='text/css'> -->
+    <link href='https://fonts.googleapis.com/css?family=Tinos:400,700' rel='stylesheet' type='text/css'>
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -24,7 +24,7 @@
         <div id="map-canvas"></div>
         <div>
             <div class="weather-block">
-                <h2 id="city"></h2>
+                <h2 id="city">Drag the marker to find the weather anywhere!</h2>
                 <div>
                     <div id="forecast"></div>
                 </div>
@@ -51,7 +51,7 @@ $(document).ready(function() {
  // Set our map options
     var mapOptions = {
         // Set the zoom level
-        zoom: 10,
+        zoom: 4,
 
         // This sets the center start point of the map before being dragged
         center: {
@@ -80,22 +80,21 @@ $(document).ready(function() {
           hh = d.getHours(),
           h = hh,
           min = ('0' + d.getMinutes()).slice(-2),   // Add leading 0.
-          ampm = 'AM',
+          ampm = 'am',
           time;
-    ​
+
         if (hh > 12) {
           h = hh - 12;
-          ampm = 'PM';
+          ampm = 'pm';
         } else if (hh === 12) {
           h = 12;
-          ampm = 'PM';
+          ampm = 'pm';
         } else if (hh == 0) {
           h = 12;
         }
-    ​
+
         // ie: 2013-02-18, 8:35 AM
-        time = yyyy + '-' + mm + '-' + dd + ', ' + h + ':' + min + ' ' + ampm;
-    ​
+        time = mm + '-' + dd + '-' + yyyy + '   ' + h + ':' + min + ' ' + ampm;
         return time;
     }
 
@@ -122,11 +121,11 @@ $(document).ready(function() {
             data.list.forEach(function(element, index){
                 var weatherInfo = '';
 
-                $("#city").html(data.city.name);
+                $("#city").html(data.city.name).css("font-weight", "bold");
 
                 weatherInfo += "<div class='col-md-4 position'>";
-                weatherInfo += "<h3>" + convertTimestamp(element.dt) + "</h3>";
-                weatherInfo += "<h3>" + element.temp.max + "&deg" + " / " + element.temp.min + "&deg" + "</h3>";
+                weatherInfo += "<h4>" + convertTimestamp(element.dt) + "</h4>";
+                weatherInfo += "<h3 class='bold'>" + element.temp.max + "&deg" + " / " + element.temp.min + "&deg" + "</h3>";
                 weatherInfo += "<img src='http://openweathermap.org/img/w/" + element.weather[0].icon + ".png'>";
                 weatherInfo += "<p>" + "<span class='bold'>" +element.weather[0].main + "</span>" + ": " + element.weather[0].description + "</p>";
                 weatherInfo += "<p>" + "<span class='bold'>" + "Humidity: " + "</span>" + element.humidity + "%" + "</p>";
