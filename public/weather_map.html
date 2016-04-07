@@ -105,7 +105,7 @@ $(document).ready(function() {
 
                 $("#city").html(data.city.name).css("font-weight", "bold");
 
-                // this bit "concatenates" forecast info into a 'set'
+                // this bit concatenates-ish forecast info into a 'set'
                 weatherInfo += "<div class='col-md-4 position'>";
                 weatherInfo += "<h4>" + convertTimestamp(element.dt) + "</h4>";
                 weatherInfo += "<h3 class='bold'>" + Math.round(element.temp.max) + "&#8457" + "  /  " + Math.round(element.temp.min) + "&#8457" + "</h3>";
@@ -115,7 +115,7 @@ $(document).ready(function() {
                 weatherInfo += "<p>" + "<span class='bold'>" + "Wind Speed: " + "</span>" + element.speed + " mph" + "</p>";
                 weatherInfo += "</div>";
 
-                // takes the above and puts in into id-forcast box
+                // takes the above and puts in into id-forecast box
             $("#forecast").append(weatherInfo);
             });
         });
