@@ -36,43 +36,54 @@
             $("#metroid")[0].play();
         }
 
+        var index = 0;
+
         $(document).keyup(function(event){
             
             // var to store Konami code
             var codeArray = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13];
 
-            // var to store user input, 'concatenated' 
-            userInput.push(event.keyCode);
-            console.log(userInput);
-
-            // change to string for easier comparison
-            var codeArrString = codeArray.join("");
-            var userInputString = userInput.join("");
+            // for Konami entry fail notice
+            if (codeArray[index] == event.keyCode) {
+                index++;
+            } else {
+                $("h1").text("Nope! Try again.");
+                index = 0;
+            }
 
             // to change intro screen to game screen upon successful entry
-            if (userInputString===codeArrString) {
+            if (index == codeArray.length) {
+                index = 0;
                 playSound();
                 $("body").css("background", "url(/img/fantasyForest.png) no-repeat center fixed").css("background-size", "cover");
                 $("h1").text("You have added 30 lives!");
                 $(".dragon").html("<img src='/img/purpleDragon.png'>");
                 $(".wizard").html("<img src='/img/wizard-icon.png'>");
-            } 
-      
-            // for character movements, only left-right
+                $(document).off("keyup");
+                $(document).keyup(movements);
+            };
+        }); 
             
-            if (event.keyCode=='76') {
-                $(".dragon img").css("margin-right", "-=10px");
+
+            function movements(event) {
+
+                // var to store user input, 'concatenated' 
+                userInput.push(event.keyCode);
+
+                // for character movements, only left-right
+                if (event.keyCode=='76') {
+                    $(".dragon img").css("margin-right", "-=10px");
+                };
+                if (event.keyCode=='74') {
+                    $(".dragon img").css("margin-right", "+=10px");
+                };
+                if (event.keyCode=='65') {
+                    $(".wizard img").css("margin-left", "-=4px");
+                };
+                if (event.keyCode=='68') {
+                    $(".wizard img").css("margin-left", "+=4px");
+                };
             };
-            if (event.keyCode=='74') {
-                $(".dragon img").css("margin-right", "+=10px");
-            };
-            if (event.keyCode=='65') {
-                $(".wizard img").css("margin-left", "-=4px");
-            };
-            if (event.keyCode=='68') {
-                $(".wizard img").css("margin-left", "+=4px");
-            };
-        });
     </script>
 </body>
 </html>
