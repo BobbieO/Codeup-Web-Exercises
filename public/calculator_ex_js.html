@@ -63,6 +63,8 @@ var rightOperand = document.getElementById("rightOperand");
 var midInput = document.getElementById("midInput");
 
 var wasOperatorUsed = false;
+var leftDeciCheck = false;
+var rightDeciCheck = false;
 
 // inputting number into boxes
 var digitInput = function(event) {
@@ -83,12 +85,18 @@ for (var i = 0; i < digits.length; i++) {
     digits[i].addEventListener("click", digitInput);
 }
 
-// getting decimal pt and adding click ability
+//to add decimal to box, checking if already there or no
 var decimal = document.getElementById("decimal");
+decimal.addEventListener("click", function() {
+    if (wasOperatorUsed == false && leftDeciCheck == false) {
+        document.getElementById("leftOperand").value += this.innerHTML;
+        leftDeciCheck = true;
+    } else if (wasOperatorUsed == true && rightDeciCheck ==false) {
+        document.getElementById("rightOperand").value += this.innerHTML;
+        rightDeciCheck = true;
+    }
+});
 
-//piggybacking on digitInput function above.
-
-decimal.addEventListener("click", digitInput);
 
 // inputting operator into mid box with check for box switching
 var opInput = function(event) {
@@ -142,6 +150,9 @@ var clearDisplay = function(event) {
     rightOperand.value = "";
     midInput.value = "";
     wasOperatorUsed = false;
+    rightDeciCheck = false;
+    leftDeciCheck = false;
+
 }
 // assigns click event to C button, needs to go after clearDisplay is defined
 clear.addEventListener("click", clearDisplay);
