@@ -10,9 +10,12 @@ function randomize()
     //pick random index of adjectives array
     $randomAdj = array_rand($adjectives);
 
-    echo $adjectives[$randomAdj];
+    //pick random index of nouns arrays
+    $randomNoun = array_rand($nouns);
 
-    //pick random noun
+    //this returns adjective (to be inside function)
+    return $adjectives[$randomAdj];
+
     //combine them
     //output to page
 
