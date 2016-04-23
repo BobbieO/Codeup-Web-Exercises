@@ -5,14 +5,19 @@
 
         //small delay until text
         function delayedTalk() {
-            $(".wizTalk").text("We don't have time for menial tasks.").css("color", "white");
+            $(".wizTalk").fadeOut("slow");
         };
 
-        setTimeout(delayedTalk, 800);
-        
-        // function fadeText() {
+        setTimeout(delayedTalk, 1000);
 
-        // };
+        function order() {
+            $(".warTalk").text("Grab the scroll to receive your orders.").fadeIn("slow");
+        }
+        
+        setTimeout(order, 2000);
+        
+        
+
 
     });
 

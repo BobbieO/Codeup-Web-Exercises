@@ -10,8 +10,14 @@ body#background {
 .dialogue {
     display: inline-block;
     width: 50%;
-    color: transparent;
 }
+
+.text {
+    color: white;
+    font-size: 2em;
+
+}
+
 .wizTalk {
     float: left;
 }

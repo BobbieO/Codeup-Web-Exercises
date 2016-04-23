@@ -40,17 +40,17 @@ function randomize()
 <body id="background">
     <div class="container">
         <div>
-            <h1 class="showMe">Warrior, fetch me <?php echo (randomize());?>!</h1>
+            <h1 class="showMe text">Warrior, fetch me <?php echo (randomize());?>!</h1>
         </div>
         <div class="dialogue">
             <div>
-                <p class="wizTalk">TEST</p>
+                <p class="wizTalk text">We don't have time for menial tasks.</p>
             </div>
 
             <div></div>
 
             <div>
-                <p class="warTalk">TEST</p>
+                <p class="warTalk text"></p>
             </div>
         </div>
         <div class="position">
