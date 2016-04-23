@@ -35,16 +35,23 @@ function randomize()
     <title>Random Quest Generator</title>
     <!-- my css -->
     <link rel="stylesheet" type="text/css" href="/css/server-name-generator.css">
+
 </head>
 <body id="background">
     <div class="container">
         <div>
             <h1 class="showMe">Warrior, fetch me <?php echo (randomize());?>!</h1>
         </div>
-        <div>
+        <div class="dialogue">
+            <div>
+                <p class="wizTalk">TEST</p>
+            </div>
+
             <div></div>
-            <div></div>
-            <div></div>
+
+            <div>
+                <p class="warTalk">TEST</p>
+            </div>
         </div>
         <div class="position">
             <div class="objects"><span class="wizard"><img src="/img/questWizard.png"></span></div>
@@ -54,8 +61,8 @@ function randomize()
             <div class="objects"><span class="warrior"><img src="/img/warrior.png"></span></div>
         </div>
     </div>
-
-<script src="js/server-name-generator.js"></script>
+<script src="/js/jquery.js"></script>
+<script src="/js/server-name-generator.js"></script>
 </body>
 </html>
 

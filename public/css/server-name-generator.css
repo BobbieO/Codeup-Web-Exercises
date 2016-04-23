@@ -7,6 +7,19 @@ body#background {
     margin-top: 175px;
 }
 
+.dialogue {
+    display: inline-block;
+    width: 50%;
+    color: transparent;
+}
+.wizTalk {
+    float: left;
+}
+
+.warTalk {
+    float: right;
+}
+
 .objects {
     display: inline-block;
     width: 33%;
@@ -28,7 +41,7 @@ body#background {
 
 .miniScroll img{
     margin-left: 250px;
-    margin-bottom: 190px;
+    margin-bottom: 260px;
 
 }
 
