@@ -1,8 +1,23 @@
-body {
-    background: url(/img/scroll.jpg);
-    background-repeat: no-repeat;
+body#background {
+    background: url(/img/castleBackground.jpg) no-repeat 50% 50% fixed;
     background-size: cover;
-    background-color: papayawhip;
-    /*font-family: */
-    /*color: ;*/
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+
+.wizard {
+    
+}
+
+.warrior {
+  
+}
+
+.showMe {
+    opacity: 1;
 }

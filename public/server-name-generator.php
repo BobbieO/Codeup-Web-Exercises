@@ -36,14 +36,18 @@ function randomize()
     <!-- my css -->
     <link rel="stylesheet" type="text/css" href="/css/server-name-generator.css">
 </head>
-<body>
+<body id="background">
     <div>
-        <h1>Warrior, fetch me <?php echo (randomize());?>!</h1>
-    </div>
-    <div>
-        <div class="king"></div>
-        <div class="warrior"></div>
-    </div>
+        <div>
+            <h1 class="showMe">Warrior, fetch me <?php echo (randomize());?>!</h1>
+        </div>
+        <div class="container">
+            <div><span class="wizard"><img src="/img/questWizard.png"></span></div>
 
+            <div><span class="miniscroll"><img src="/img/rolledScroll.png"></span></div>
+
+            <div><span class="warrior"><img src="/img/warrior.png"></span></div>
+        </div>
+    </div>
 </body>
 </html>
