@@ -1,16 +1,20 @@
-// page loads with castle, king-bed, desk-miniScroll, warrior
+"use strict";
+(function)(){
+// page loads with castle, wizard, desk-miniScroll, warrior
 
-//small delay
+//small delay until text
+$(document).ready(function){
 
-//king speaks "tired, your task is on desk"
 
-//king text changes to "zzzz"
+}
 
-//animation on warrior moves to desk
+
+
+
 
 //text alert "click on scroll"
 
 //javascript changes view to big scroll background with php
     //generator thing
 
-    
+};

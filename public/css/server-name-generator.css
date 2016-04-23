@@ -3,21 +3,35 @@ body#background {
     background-size: cover;
 }
 
+.position {
+    margin-top: 175px;
+}
+
+.objects {
+    display: inline-block;
+    width: 33%;
+}
+
 .container {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-end;
+    text-align: center;
 }
 
-
-.wizard {
-    
+.wizard img {
+    margin-top: 200px;
+    margin-left: 200px;
 }
 
-.warrior {
-  
+.warrior img {
+  margin-left: 125px;
+
+}
+
+.miniScroll img{
+    margin-left: 250px;
+    margin-bottom: 190px;
+
 }
 
 .showMe {
-    opacity: 1;
+    opacity: 0;
 }

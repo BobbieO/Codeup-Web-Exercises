@@ -37,17 +37,27 @@ function randomize()
     <link rel="stylesheet" type="text/css" href="/css/server-name-generator.css">
 </head>
 <body id="background">
-    <div>
+    <div class="container">
         <div>
             <h1 class="showMe">Warrior, fetch me <?php echo (randomize());?>!</h1>
         </div>
-        <div class="container">
-            <div><span class="wizard"><img src="/img/questWizard.png"></span></div>
+        <div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="position">
+            <div class="objects"><span class="wizard"><img src="/img/questWizard.png"></span></div>
 
-            <div><span class="miniscroll"><img src="/img/rolledScroll.png"></span></div>
+            <div class="objects"><span class="miniScroll"><img src="/img/rolledScroll.png"></span></div>
 
-            <div><span class="warrior"><img src="/img/warrior.png"></span></div>
+            <div class="objects"><span class="warrior"><img src="/img/warrior.png"></span></div>
         </div>
     </div>
+
+<script src="js/server-name-generator.js"></script>
 </body>
 </html>
+
+
+
