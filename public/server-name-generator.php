@@ -10,17 +10,40 @@ function randomize()
     //pick random index of adjectives array
     $randomAdj = array_rand($adjectives);
 
-    //pick random index of nouns arrays
+    // //pick random index of nouns arrays
     $randomNoun = array_rand($nouns);
 
-    //this returns adjective (to be inside function)
-    return $adjectives[$randomAdj];
+    // //variables for holding the randomly generated adjective and noun values (to be inside function)
+    $fetchAdj = $adjectives[$randomAdj];
+    $fetchNoun = $nouns[$randomNoun];
 
-    //combine them
-    //output to page
-
+    //to generate random number
+    $number = rand(2, 100);
+    
+    //combine them with a space
+    return $number . " " . $fetchAdj . " " . $fetchNoun;
 }
 
-var_dump(randomize());
+//output to page, plug this into html
+// echo(randomize());
 
 ?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random Quest Generator</title>
+    <!-- my css -->
+    <link rel="stylesheet" type="text/css" href="/css/server-name-generator.css">
+</head>
+<body>
+    <div>
+        <h1>Warrior, fetch me <?php echo (randomize());?>!</h1>
+    </div>
+    <div>
+        <div class="king"></div>
+        <div class="warrior"></div>
+    </div>
+
+</body>
+</html>
