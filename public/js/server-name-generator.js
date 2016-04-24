@@ -17,7 +17,11 @@
             $(".miniScroll").hide();
             $(".wizard").hide();
             $(".warrior").hide();
-            $(".wizTalk").css("color", "transparent");
+            $(".wizTalk").css(
+                {
+                    "color": "transparent",
+                    "text-shadow": "0 0 transparent"
+                });
             $(".container").css(
                 {
                     "background-image": "url(/img/scroll.png)",

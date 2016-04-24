@@ -4,7 +4,7 @@ body#background {
 }
 
 .position {
-    margin-top: 100px;
+    margin-top: 75px;
 }
 
 .dialogue {
@@ -14,6 +14,7 @@ body#background {
 
 .wizTalk {
     color: #f7ece6;
+    text-shadow: 2px 2px #171413;
 }
 
 .text {
@@ -34,6 +35,12 @@ button {
     display: inline-block;
     margin-right: 350px;
     margin-bottom: 40px;
+    border-color: #171413;
+    color: #171413;
+    background-color: #f7ece6;
+    border-radius: 5px;
+    font-family: "Kaushan Script", cursive;
+    font-size: 1em;
 }
 
 .objects {
