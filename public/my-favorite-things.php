@@ -18,7 +18,7 @@ $favoriteThings = ["dogs", "pizza", "books", "key lime pie", "music", "science f
 <div>
     <h2>My Favorite Things</h2>
     <div>
-        <table>
+        <table class="shadow">
             <tr>
                 <th>Some of My Favorite Things, in No Particular Order</th>
             </tr>

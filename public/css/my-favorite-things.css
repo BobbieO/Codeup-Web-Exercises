@@ -7,14 +7,20 @@ body {
 h2 {
     text-align: center;
     margin-top: 100px;
+    text-shadow: 2px 2px #6e7678;
 }
 
 table, tr, th, td {
     border: 2px solid #0d0e0f;
     border-collapse: collapse;
+    border-radius: 5px;
     text-align: center;
     padding: 8px;
     margin: 0 auto;
+}
+
+.shadow {
+    box-shadow: 5px 5px 3px #606769;
 }
 
 tr:nth-child(even) {
