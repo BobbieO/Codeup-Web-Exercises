@@ -36,6 +36,9 @@ function randomize()
     <!-- my css -->
     <link rel="stylesheet" type="text/css" href="/css/server-name-generator.css">
 
+    <!-- font -->
+    <link href="/font/koreanCalligraphy.ttf" rel="stylesheet" type="text/css">
+
 </head>
 <body id="background">
     <div class="container">
