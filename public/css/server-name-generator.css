@@ -35,11 +35,11 @@ body#background {
 
 .wizard img {
     margin-top: 200px;
-    margin-left: 200px;
+    margin-left: 100px;
 }
 
 .warrior img {
-  margin-left: 125px;
+  /*margin-left: 125px;*/
 
 }
 
