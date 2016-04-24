@@ -29,9 +29,6 @@ function randomize()
     return $number . " " . $fetchPart . " from " . $fetchAdj . " " . $fetchNoun;
 }
 
-//output to page, plug this into html
-// echo(randomize());
-
 ?>
 
 <!DOCTYPE html>
@@ -48,10 +45,9 @@ function randomize()
 <body id="background">
     <div class="container">
 
-
         <div class="dialogue">
+            <!-- to output randomized stuff to proper spot on page -->
             <h1 class="showMe text">Fetch me <?php echo (randomize());?>!</h1>
-            
                 <p class="wizTalk text">We don't have time for menial tasks.</p>
         </div>
 
