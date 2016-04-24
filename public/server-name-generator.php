@@ -63,6 +63,12 @@ function randomize()
             <div class="objects"><span class="warrior"><img src="/img/warrior.png"></span></div>
         </div>
 
+        <div>
+            <p class="small">Some images from Perfect World International, arc &#153</p>
+            <button class="showMe">New Quest</button>
+            <button class="showMe">Turn In Quest</button>
+        </div>
+
     </div>
 <script src="/js/jquery.js"></script>
 <script src="/js/server-name-generator.js"></script>

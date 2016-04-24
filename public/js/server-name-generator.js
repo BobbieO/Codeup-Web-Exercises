@@ -10,7 +10,7 @@
             });
         };
 
-        setTimeout(delayedTalk, 2000);
+        setTimeout(delayedTalk, 5000);
 
         //click event to change background when clicking on scroll
         $(".miniScroll").click(function(event) {
