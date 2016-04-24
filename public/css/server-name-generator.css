@@ -12,18 +12,13 @@ body#background {
     width: 50%;
 }
 
-@font-face {
-    font-family: "Korean Calligraphy";
-    src: url(/font/koreanCalligraphy.ttf);
-}
-
 .wizTalk {
     color: #f7ece6;
 }
 
 .text {
     font-size: 2em;
-    font-family: "Korean Calligraphy", cursive;
+    font-family: "Kaushan Script", cursive;
 
 }
 
@@ -32,11 +27,13 @@ body#background {
     color: #f7ece6;
     display: inline-block;
     margin-right: 300px;
+    margin-bottom: 40px;
 }
 
 button {
     display: inline-block;
     margin-right: 350px;
+    margin-bottom: 40px;
 }
 
 .objects {

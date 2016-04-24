@@ -30,19 +30,12 @@
                     "opacity": "1",
                     "margin-top": "250px",
                 });
-        })
+            $("#attriBtn").addClass("position");
+        });
 
-
-
-
-
-
-
-
+        //click listener and to renew start again
+        $("#newQuest").click(function(event) {
+            location.reload();
+        });
     });
-//text alert "click on scroll"
-
-//javascript changes view to big scroll background with php
-    //generator thing
-
 })();

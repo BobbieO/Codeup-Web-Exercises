@@ -42,7 +42,7 @@ function randomize()
     <link rel="stylesheet" type="text/css" href="/css/server-name-generator.css">
 
     <!-- font -->
-    <link href="/font/koreanCalligraphy.ttf" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
 
 </head>
 <body id="background">
@@ -63,10 +63,9 @@ function randomize()
             <div class="objects"><span class="warrior"><img src="/img/warrior.png"></span></div>
         </div>
 
-        <div>
+        <div id="attriBtn">
             <p class="small">Some images from Perfect World International, arc &#153</p>
-            <button class="showMe">New Quest</button>
-            <button class="showMe">Turn In Quest</button>
+            <button id="newQuest">New Quest</button>
         </div>
 
     </div>
