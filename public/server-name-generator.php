@@ -2,10 +2,14 @@
 
 function randomize() 
 {
+    $bodyParts = ["hearts", "livers", "arms", "brains", "hides", "spleens", "pancreases", "kidneys", "stomachs", "heads", "legs"];
 
     $adjectives = ["hearty", "strong", "lovely", "diseased", "spotty", "mutated", "fast", "slow", "angry", "cuddly", "unusual", "smelly", "adorable", "intelligent", "hideous", "cute"];
 
-    $nouns = ["cows", "boars", "rats", "ogres", "rocs", "dragons", "dwarfs", "gnomes", "goblins", "undead", "elves", "bears", "fish"];
+    $nouns = ["cows", "boars", "rats", "ogres", "rocs", "dragons", "dwarves", "gnomes", "goblins", "undead", "elves", "bears", "elves"];
+
+    // pick random index of parts array
+    $randomPart = array_rand($bodyParts);
 
     //pick random index of adjectives array
     $randomAdj = array_rand($adjectives);
@@ -14,14 +18,15 @@ function randomize()
     $randomNoun = array_rand($nouns);
 
     // //variables for holding the randomly generated adjective and noun values (to be inside function)
+    $fetchPart = $bodyParts[$randomPart];
     $fetchAdj = $adjectives[$randomAdj];
     $fetchNoun = $nouns[$randomNoun];
 
     //to generate random number
-    $number = rand(2, 100);
+    $number = rand(2, 50);
     
     //combine them with a space
-    return $number . " " . $fetchAdj . " " . $fetchNoun;
+    return $number . " " . $fetchPart . " from " . $fetchAdj . " " . $fetchNoun;
 }
 
 //output to page, plug this into html
@@ -45,7 +50,7 @@ function randomize()
 
 
         <div class="dialogue">
-            <h1 class="showMe text">Warrior, fetch me <?php echo (randomize());?>!</h1>
+            <h1 class="showMe text">Fetch me <?php echo (randomize());?>!</h1>
             
                 <p class="wizTalk text">We don't have time for menial tasks.</p>
         </div>

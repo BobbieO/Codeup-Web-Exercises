@@ -28,7 +28,8 @@
             $(".showMe").css(
                 {
                     "opacity": "1",
-                    "margin-top": "250px"
+                    "margin-top": "250px",
+                    "color": "black"
                 });
         })
 
