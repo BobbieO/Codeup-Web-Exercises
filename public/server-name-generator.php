@@ -43,14 +43,11 @@ function randomize()
 <body id="background">
     <div class="container">
 
-        <div>
-            <h1 class="showMe text">Warrior, fetch me <?php echo (randomize());?>!</h1>
-        </div>
 
         <div class="dialogue">
-            <div>
+            <h1 class="showMe text">Warrior, fetch me <?php echo (randomize());?>!</h1>
+            
                 <p class="wizTalk text">We don't have time for menial tasks.</p>
-            </div>
         </div>
 
         <div class="position">
