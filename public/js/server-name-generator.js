@@ -3,19 +3,14 @@
     // page loads with castle, wizard, desk-miniScroll, warrior
     $(document).ready(function(){
 
-        //small delay until text
+        //text change
         function delayedTalk() {
             $(".wizTalk").fadeOut("slow");
+            $(".wizTalk").fadeIn("slow").text("Grab the scroll to receive your orders.");
         };
 
         setTimeout(delayedTalk, 1000);
 
-        function order() {
-            $(".warTalk").text("Grab the scroll to receive your orders.").fadeIn("slow");
-        }
-        
-        setTimeout(order, 2000);
-        
         
 
 

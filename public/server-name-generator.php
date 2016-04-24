@@ -42,20 +42,17 @@ function randomize()
 </head>
 <body id="background">
     <div class="container">
+
         <div>
             <h1 class="showMe text">Warrior, fetch me <?php echo (randomize());?>!</h1>
         </div>
+
         <div class="dialogue">
             <div>
                 <p class="wizTalk text">We don't have time for menial tasks.</p>
             </div>
-
-            <div></div>
-
-            <div>
-                <p class="warTalk text"></p>
-            </div>
         </div>
+
         <div class="position">
             <div class="objects"><span class="wizard"><img src="/img/questWizard.png"></span></div>
 
@@ -63,6 +60,7 @@ function randomize()
 
             <div class="objects"><span class="warrior"><img src="/img/warrior.png"></span></div>
         </div>
+
     </div>
 <script src="/js/jquery.js"></script>
 <script src="/js/server-name-generator.js"></script>
