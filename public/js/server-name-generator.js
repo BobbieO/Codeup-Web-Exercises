@@ -17,7 +17,7 @@
             $(".miniScroll").hide();
             $(".wizard").hide();
             $(".warrior").hide();
-            $(".wizTalk").css("color","transparent");
+            $(".wizTalk").css("color", "transparent");
             $(".container").css(
                 {
                     "background-image": "url(/img/scroll.png)",
@@ -29,7 +29,6 @@
                 {
                     "opacity": "1",
                     "margin-top": "250px",
-                    "color": "black"
                 });
         })
 

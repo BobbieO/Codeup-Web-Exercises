@@ -17,8 +17,11 @@ body#background {
     src: url(/font/koreanCalligraphy.ttf);
 }
 
+.wizTalk {
+    color: #f7ece6;
+}
+
 .text {
-    color: white;
     font-size: 2em;
     font-family: "Korean Calligraphy", cursive;
 
@@ -36,11 +39,6 @@ body#background {
 .wizard img {
     margin-top: 200px;
     margin-left: 100px;
-}
-
-.warrior img {
-  /*margin-left: 125px;*/
-
 }
 
 .miniScroll img{
