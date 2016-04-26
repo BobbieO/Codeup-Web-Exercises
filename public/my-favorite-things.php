@@ -22,9 +22,9 @@
                 <th>Some of My Favorite Things, in No Particular Order</th>
             </tr>
 
-            <?php foreach($favoriteThings as $favoriteItem) { ?>
-                <tr><td><?php echo $favoriteItem; ?></td></tr>
-            <?php } ?>
+            <?php foreach($favoriteThings as $favoriteItem) : ?>
+                <tr><td><?= $favoriteItem; ?></td></tr>
+            <?php endforeach; ?>
 
         </table>
     </div>
