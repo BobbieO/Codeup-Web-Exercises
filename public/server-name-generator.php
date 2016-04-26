@@ -47,7 +47,7 @@ function randomize()
 
         <div class="dialogue">
             <!-- to output randomized stuff to proper spot on page -->
-            <h1 class="showMe text">Fetch me <?php echo (randomize());?>!</h1>
+            <h1 class="showMe text">Fetch me <?= (randomize());?>!</h1>
                 <p class="wizTalk text">We don't have time for menial tasks.</p>
         </div>
 
