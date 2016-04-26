@@ -1,6 +1,6 @@
 <?php
 
-function randomize() 
+function pageController() 
 {
     $bodyParts = ["hearts", "livers", "arms", "brains", "hides", "spleens", "pancreases", "kidneys", "stomachs", "heads", "legs"];
 
@@ -24,17 +24,30 @@ function randomize()
 
     //to generate random number
     $number = rand(2, 50);
+
+    //to put message array into
+    $data = array();
     
-    //combine them with a space
-    return $number . " " . $fetchPart . " from " . $fetchAdj . " " . $fetchNoun;
+    //holds contatenated message in a data variable as an array with key of scrollMsg and value of the entire message.
+    $data = [
+        'scrollMsg' => $number . " " . $fetchPart . " from " . $fetchAdj . " " . $fetchNoun
+    ];
+
+    //return the variable
+    return $data;
 }
+
+//extract returns an array--both key and value--in this case the contents of $data.
+    //this allows the 'scrollMsg' key in the $data variable to be accessed in the html like a variable,
+    // which returns the value inside the php tags in the html.
+extract(pageController());
 
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Random Quest Generator</title>
+    <title>Random Quest Generator <?=$scrollTwo?></title>
     <!-- my css -->
     <link rel="stylesheet" type="text/css" href="/css/server-name-generator.css">
 
@@ -47,7 +60,7 @@ function randomize()
 
         <div class="dialogue">
             <!-- to output randomized stuff to proper spot on page -->
-            <h1 class="showMe text">Fetch me <?= (randomize());?>!</h1>
+            <h1 class="showMe text">Fetch me <?= $scrollMsg;?>!</h1>
                 <p class="wizTalk text">We don't have time for menial tasks.</p>
         </div>
 
