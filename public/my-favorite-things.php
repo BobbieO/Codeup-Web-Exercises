@@ -1,6 +1,12 @@
 <?php
 
-    $favoriteThings = ["dogs", "pizza", "books", "key lime pie", "winter"];
+function pageController() {
+
+    return["favoriteThings" => ["dogs", "pizza", "books", "key lime pie", "winter"]];
+}
+
+extract(pageController());
+
 ?>
 
 <!DOCTYPE html>
