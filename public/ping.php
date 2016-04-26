@@ -1,7 +1,7 @@
 <?php
 
 function pageController()
-{
+{   
     $count = !isset($_GET['count']) ? 0 : $_GET['count'];
     return ['count' => $count];
 }
@@ -14,16 +14,20 @@ extract(pageController());
 <html>
 <head>
     <meta charset = "UTF-8">
-    <title>Counter</title>
+    <title>Ping's Ping Pong</title>
 </head>
 <body>
 
 <div>
-    <h1><?= $count ?></h1>
+    <h1>Ping</h1>
 </div>
 
-<a href="?count=<?= $count + 1 ?>">Up</a>
-<a href="?count=<?= $count - 1 ?>">Down</a>
+<div>
+    <h2><?= $count ?></h2>
+</div>
+
+<a href="pong.php?count=<?= $count + 1 ?>">HIT</a>
+<a href="pong.php?count=0">MISS</a>
 
 </body>
 </html>
