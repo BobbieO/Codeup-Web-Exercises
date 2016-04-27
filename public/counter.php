@@ -2,7 +2,11 @@
 
 function pageController()
 {
-    $count = !isset($_GET['count']) ? 0 : $_GET['count'];
+    // $count = !isset($_GET['count']) ? 0 : $_GET['count'];
+
+
+    $count = $_GET['count'];
+
     return ['count' => $count];
 }
 
