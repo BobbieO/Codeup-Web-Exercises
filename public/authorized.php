@@ -1,4 +1,5 @@
 <?php
+require_once 'functions.php';
 
 //CONTINUE session
 session_start();
@@ -31,7 +32,7 @@ $logged_in_user = pageController();
 <body>
 
 <h1>Authorized</h1>
-<p>Welcome <?=$logged_in_user;?></p>
+<p>Welcome <?=escape($logged_in_user);?></p>
 
 <a href="/logout.php">Log Me Out</a>
   

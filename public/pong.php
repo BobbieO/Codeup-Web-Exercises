@@ -1,8 +1,9 @@
 <?php
 
+require_once 'functions.php';
 function pageController()
 { 
-    $count = !isset($_GET['count']) ? 0 : $_GET['count'];
+    $count = !inputHas('count') ? 0 : inputGet('count');
     return ['count' => $count];
 }
 
@@ -38,15 +39,15 @@ if ($rand % 6 == 0) {
                 <h1 class="text">Ping Pong</h1>
             </div>
             <div>
-                <h2 class="text">Score: <?= $count ?></h2>
+                <h2 class="text">Score: <?= escape($count) ?></h2>
             </div>
         </div>
     </div>
 
     <div class="row">
         <div class="col-md-6 text-center">
-            <a href="pong.php?count=<?= $count ?>">HIT</a>
-            <a href="pong.php?count=<?= $count ?>">MISS</a>
+            <a href="ping.php?count=<?= $count ?>">HIT</a>
+            <a href="ping.php?count=<?= $count ?>">MISS</a>
         </div>
     </div>
 

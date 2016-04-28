@@ -1,5 +1,7 @@
 <?php
 
+require_once 'functions.php';
+
 //start session
 session_start();
 
@@ -8,13 +10,12 @@ $sessionId = session_id();
 
 function pageController()
 {
-    $userName = isset($_POST['username']) ? $_POST['username'] : ' ';
-    $password = isset($_POST['password']) ? $_POST['password'] : ' ';
+    $userName = inputHas('username') ? $_POST['username'] : ' ';
+    $password = inputHas('password') ? $_POST['password'] : ' ';
 
     //check if sessions exists for user, redirect to Auth pg
     if(isset($_SESSION["logged_in_user"])) {
-        // header("Location: /authorized.php");
-        echo "Hey";
+        header("Location: /authorized.php");
         die();
     }
 

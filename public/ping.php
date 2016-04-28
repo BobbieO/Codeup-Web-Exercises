@@ -1,9 +1,11 @@
 <?php
 
+require_once 'functions.php';
 function pageController()
 {   
-    $count = !isset($_GET['count']) ? 0 : $_GET['count'];
+    $count = !inputHas('count') ? 0 : inputGet('count');
     return ['count' => $count];
+   
 }
 
 extract(pageController());
@@ -39,7 +41,7 @@ if ($rand % 6 == 0) {
             </div>
 
             <div>
-                <h2 class="text">Score: <?= $count ?></h2>
+                <h2 class="text">Score: <?= escape($count) ?></h2>
             </div>
         </div>
     </div>
