@@ -1,41 +1,19 @@
 <?php
-function pageController() {
-
-    function inputHas($key) {
-        if($key) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    function inputGet($key) {
-        if (isset($key['value'])) {
-            return $value;
-        } else {
-            return null;
-        }
-    }
-
-    function escape($input) {
-        return htmlspecialchars(strip_tags($input));
-    }
 
 
+function inputHas($key) {
+    $requestCheck = isset($_REQUEST[$key]);
+    return $requestCheck;
 }
-?>
 
+function inputGet($key) {
+    if (inputHas($key) == true) {
+        return $_REQUEST[$key];
+    } else {
+        return null;
+    }
+}
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Functions</title>
-</head>
-<body>
-      <? php require_once '/ping.php'; ?> 
-      <? php require_once '/pong.php'; ?> 
-      <? php require_once '/login.php'; ?> 
-
-</body>
-</html>
-
+function escape($input) {
+    return htmlspecialchars(strip_tags($input));
+}
