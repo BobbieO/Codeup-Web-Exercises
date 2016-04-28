@@ -1,25 +1,44 @@
 <?php
 
+//start session
+session_start();
+
+//give it an ID
+$sessionId = session_id();
+
 function pageController()
 {
     $userName = isset($_POST['username']) ? $_POST['username'] : ' ';
     $password = isset($_POST['password']) ? $_POST['password'] : ' ';
+
+    //check if sessions exists for user, redirect to Auth pg
+    if(isset($_SESSION["logged_in_user"])) {
+        // header("Location: /authorized.php");
+        echo "Hey";
+        die();
+    }
 
     // check to see if $_POST array is empty/if I submitted or not
     if(!empty($_POST)) {
 
         //if submitted==yes, and these conditions
         if($userName=="guest" && $password=="password") {
+
+            //assign session key logged-in-user to the username of the user
+            $_SESSION["logged_in_user"] = $userName;
+
+            //redirects
             header('Location: /authorized.php');
+
+            //ends code exchange
             die();
         } else {
             echo("Login Failed");
         }
     }
-
 }
 
-pageController();
+pageController()
 
 ?>
 
