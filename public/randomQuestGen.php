@@ -25,16 +25,41 @@
     <main>
         <div class="center container">
             <h1>Random Quest Generator</h1>
-            <p>Explanation Here</p>
+            <p>
+                This is an interactive web page using PHP, JavaScript, and jQuery for function, and CSS for styling.
+            </p>
+            <p>
+                This page features changing intro text to explain the task, using JavaScript and jQuery. A listener event registers the scroll click, which replaces the character and scroll images with a larger, open scroll image containing the php-generated random text. All text is hidden and revealed via JavaScript. A listener attached to the New Quest button reloads the page to begin the intro text again and generate a new random quest.
+            </p>
         </div>
-    </main>
 
+        <div>
+            <div class="container row">
+                <div class="col s6 instrImg">
+                <h3 class="center">Instructions</h2>
+                    <ol>
+                        <li>Wait for the characters to finish talking.</li>
+                        <li>Click the scroll to see your quest.</li>
+                        <li>A random numumber of varied items will appear on the scroll.</li>
+                        <li>Click New Quest to start again!</li>
+                    </ol>
+                </div>
+                <div class="col s6 instrImg">
+                    <h3 class="center">Click to View</h3>
+                    <div class="center">
+                        <a href="#" target="_blank"><img src="/img/screenShotRandQuest.png"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
     <footer>
         <?php include 'footer.php' ?>
     </footer>
 
-<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script src="js/index.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 
 <!-- Compiled and minified JavaScript -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>

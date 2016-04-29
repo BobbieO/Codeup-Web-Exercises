@@ -60,8 +60,8 @@
         <?php include 'footer.php' ?>
     </footer>
 
-<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script src="js/index.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 
 <!-- Compiled and minified JavaScript -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
