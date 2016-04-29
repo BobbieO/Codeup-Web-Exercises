@@ -24,6 +24,7 @@
 
         <ul id="nav-mobile" class="text right hide-on-med-and-down">
             <li><a href="/index.php">Contact Me</a></li>
+            <li><a href="/index.php">Resume</a></li>
 
             <!-- Dropdown Trigger -->
             <li><a class="dropdown-button" href="#!" data-activates="dropdownJava">JavaScript Projects<i class="material-icons right">arrow_drop_down</i></a></li>
