@@ -25,7 +25,33 @@
     <main>
         <div class="center container">
             <h1>Basic Calculator</h1>
-            <p>Explanation Here</p>
+            <p>
+                This calculator uses JavaScript and jQuery to complete basic addition, subtraction, multiplication, and division with whole number and decimals.
+            </p>
+
+            <p>
+                A click listener event is attached to each button and operator in order to enter it into the correct field. A function determines if the decimal has been entered, preventing it from being entered multiple times in the same field.
+        </div>
+
+        <div>
+            <div class="container row">
+                <div class="col s6 instrImg">
+                <h3 class="center">Calculator Instructions</h2>
+                    <ol>
+                        <li>Click on a number to enter it into the left field.</li>
+                        <li>Click on +, -, *, or / to enter an operator.</li>
+                        <li>Click on another number to enter it into the right field.</li>
+                        <li>Click on = to complete the calculation.</li>
+                        <li>Click on C to clear the fields and start over.</li>
+                    </ol>
+                </div>
+                <div class="col s6 instrImg">
+                    <h3 class="center">Click to View</h3>
+                    <div class="center">
+                        <a href="http://bobbieo.github.io/calculator.html" target="_blank"><img src="/img/screenShotCalc.png"></a>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
 
