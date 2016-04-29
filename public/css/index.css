@@ -49,6 +49,7 @@ footer.page-footer {
 img {
     border: 1px solid #191919;
     border-radius: 10px;
+    box-shadow: 4px 4px 3px #191919;
 }
 
 
