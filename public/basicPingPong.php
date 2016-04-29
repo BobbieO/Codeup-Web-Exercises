@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Random Quest Generator</title>
+    <title>Basic Ping Pong</title>
 
     <!-- font -->
     <link href='https://fonts.googleapis.com/css?family=Vidaloka' rel='stylesheet' type='text/css'>
@@ -24,7 +24,7 @@
 
     <main>
         <div class="intro container">
-            <h1>Random Quest Generator</h1>
+            <h1>Basic Ping Pong</h1>
             <p>Explanation Here</p>
         </div>
     </main>

@@ -37,3 +37,14 @@ nav .nav-wrapper {
 .text {
     color: #191919;
 }
+
+nav .brand-logo, nav ul a {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+footer.page-footer {
+    padding-bottom: 30px;
+}
+
+

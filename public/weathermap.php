@@ -25,7 +25,7 @@
     <main>
         <div class="intro container">
             <h1>Weather Map</h1>
-            <p>Explaination Here</p>
+            <p>Explanation Here</p>
         </div>
     </main>
 

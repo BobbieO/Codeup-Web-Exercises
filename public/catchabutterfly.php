@@ -25,7 +25,7 @@
     <main>
         <div class="intro container">
             <h1>Catch a Butterfly</h1>
-            <p>Explaination Here</p>
+            <p>Explanation Here</p>
         </div>
     </main>
 
