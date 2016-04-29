@@ -9,15 +9,14 @@ body {
 }
 
 h1 {
-    margin-top: 100px;
+    margin-top: 60px;
 }
 
 main {
     flex: 1 0 auto;
 }
 
-.intro {
-    /*width: 75%;*/
+.center {
     text-align: center;
 }
 
@@ -45,6 +44,11 @@ nav .brand-logo, nav ul a {
 
 footer.page-footer {
     padding-bottom: 30px;
+}
+
+img {
+    border: 1px solid #191919;
+    border-radius: 10px;
 }
 
 

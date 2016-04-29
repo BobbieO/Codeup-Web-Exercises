@@ -23,7 +23,7 @@
     </header>
 
     <main>
-        <div class="intro container">
+        <div class="center container">
             <h1>Basic Calculator</h1>
             <p>Explanation Here</p>
         </div>

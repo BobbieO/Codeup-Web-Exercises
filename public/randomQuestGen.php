@@ -23,7 +23,7 @@
     </header>
 
     <main>
-        <div class="intro container">
+        <div class="center container">
             <h1>Random Quest Generator</h1>
             <p>Explanation Here</p>
         </div>
