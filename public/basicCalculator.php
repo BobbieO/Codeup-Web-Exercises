@@ -30,7 +30,7 @@
             </p>
 
             <p>
-                A click listener event is attached to each button and operator in order to enter it into the correct field. A function determines if the decimal has been entered, preventing it from being entered multiple times in the same field.
+                A click listener event is attached to each button and operator in order to enter it into the correct field. A function determines if the decimal has been entered, preventing it from being entered multiple times in the same field. The C button clears all fields and resets the booleans in order to allow new input into the proper fields.
         </div>
 
         <div>
