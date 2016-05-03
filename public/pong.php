@@ -35,7 +35,7 @@ if ($rand % 6 == 0) {
 <div class="container">
 
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+        <div class="col-md-8 col-md-offset-2 text-center">
             <div>
                 <h1 class="text">Ping Pong</h1>
             </div>
@@ -50,6 +50,12 @@ if ($rand % 6 == 0) {
             <a href="ping.php?count=<?= $count ?>">HIT</a>
             <a href="ping.php?count=<?= $count ?>">MISS</a>
         </div>
+    </div>
+
+     <div class="row space">
+        <div class="col-md-4 text-right">
+        <img src="/img/ping.png">
+        <h3>Pong</h3>
     </div>
 
 </div>

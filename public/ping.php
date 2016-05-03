@@ -36,7 +36,7 @@ if ($rand % 6 == 0) {
 <div class="container">
 
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+        <div class="col-md-8 col-md-offset-2 text-center">
             <div>
                 <h1 class="text">Ping Pong</h1>
             </div>
@@ -53,6 +53,13 @@ if ($rand % 6 == 0) {
             <a href="pong.php?count=<?= $count ?>">MISS</a>
         </div>
     </div>
+
+    <div class="row space">
+        <div class="col-md-4 col-md-offset-4 text-left">
+        <img src="/img/pong.png">
+        <h3>Ping</h3>
+    </div>
+
 </div>
 
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
