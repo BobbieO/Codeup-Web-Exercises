@@ -10,17 +10,17 @@ class Auth
     public static function attempt($username, $password)
     {
         //generate new instance of Log
-        $Log = new Log;
+        $log = new Log;
 
         //if pass and user both correct, log success alert
         if($username == 'guest' && password_verify($password, self::$password)) {
             $_SESSION["logged_in_user"] = $username;
-            $Log->info("User {$username} logged in.");
+            $log->info("User {$username} logged in.");
             return true;
 
         //if not, log error alert
         } else {
-            $Log->error("User {$username} failed to log in!");
+            $log->error("User {$username} failed to log in!");
             return false;
         }    
     }
