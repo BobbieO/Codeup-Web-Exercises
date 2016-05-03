@@ -1,6 +1,7 @@
 <?php
 
-require_once 'functions.php';
+require_once '../Auth.php';
+require_once '../Input.php';
 
 //start session
 session_start();
@@ -10,11 +11,11 @@ $sessionId = session_id();
 
 function pageController()
 {
-    $userName = inputHas('username') ? $_POST['username'] : ' ';
-    $password = inputHas('password') ? $_POST['password'] : ' ';
+    $username = Input::has('username') ? Input::get('username') : ' ';
+    $password = Input::has('password') ? Input::get('password') : ' ';
 
     //check if sessions exists for user, redirect to Auth pg
-    if(isset($_SESSION["logged_in_user"])) {
+    if(Auth::check()) {
         header("Location: /authorized.php");
         die();
     }
@@ -23,10 +24,7 @@ function pageController()
     if(!empty($_POST)) {
 
         //if submitted==yes, and these conditions
-        if($userName=="guest" && $password=="password") {
-
-            //assign session key logged-in-user to the username of the user
-            $_SESSION["logged_in_user"] = $userName;
+        if(Auth::attempt($username, $password)) {
 
             //redirects
             header('Location: /authorized.php');
