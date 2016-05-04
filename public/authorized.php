@@ -3,8 +3,6 @@
 require_once '../Auth.php';
 require_once '../Input.php';
 
-//CONTINUE session
-session_start();
 
 function pageController()
 {
@@ -19,8 +17,8 @@ function pageController()
     Auth::user();
 }
 
-//assigning the pageController return result to a variable to call later
-$logged_in_user = pageController();
+//CONTINUE session
+session_start();
 
 ?>
 

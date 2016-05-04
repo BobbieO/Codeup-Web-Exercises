@@ -3,12 +3,6 @@
 require_once '../Auth.php';
 require_once '../Input.php';
 
-//start session
-session_start();
-
-//give it an ID
-$sessionId = session_id();
-
 function pageController()
 {
     $username = Input::has('username') ? Input::get('username') : ' ';
@@ -19,6 +13,8 @@ function pageController()
         header("Location: /authorized.php");
         die();
     }
+
+    $message = 'Please Log In';
 
     // check to see if $_POST array is empty/if I submitted or not
     if(!empty($_POST)) {
@@ -32,15 +28,22 @@ function pageController()
             //ends code exchange
             die();
         } else {
-            echo("Login Failed");
+            $message = "Login Failed";
         }
+
     }
+        return['message' => $message];
 }
 
-pageController()
+//start session
+session_start();
+
+//give it an ID
+$sessionId = session_id();
+
+extract(pageController());
 
 ?>
-
 
 <!DOCTYPE html>
 <html>
@@ -49,6 +52,8 @@ pageController()
     <title>POST Requests Form</title>
 </head>
 <body>
+
+    <p><?=$message;?></p>
 
     <form action="login.php" method="POST">
     
