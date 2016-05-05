@@ -32,6 +32,10 @@
             <p>
                 This game features a randomizer for fadeOut-fadeIn functions to illustrate which element is selected. A listener event registers user selection, which is then checked against the game selection. If it matches, a jQuery statement is generated to affirm success and to count game repetitions. If the user errors, a fail statement is generated. The start button functions as both game start, and as a game restart which clears the field.
             </p>
+
+            <p>
+                This game is mobile compatible in landscape view.
+            </p>
         </div>
 
         <div>
