@@ -30,7 +30,11 @@
             </p>
 
             <p>
-                This map features a Google Map with a draggable marker. A listener event registers the latitutde and longitude of the end location of the marker, which is then used to gather the weather via the Open Weather API. The information is then dynamically displayed below the map.
+                This map features a Google Map with a draggable marker. A listener event registers the latitutde and longitude of the end location of the marker, which is then used to gather the weather via the Open Weather API. The information is then dynamically displayed below the map. 
+            </p>
+
+            <p>
+                This application is mobile compatible.
             </p>
 
         </div>
