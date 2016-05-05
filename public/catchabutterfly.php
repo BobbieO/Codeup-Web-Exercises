@@ -34,7 +34,7 @@
             </p>
 
             <p>
-                CSS3 and Bootstrap are used for styling. The background was created using layering of  separate items: grass/field image, tree image, and flowers image. A custom cursor of a butterfly net appears when the cursor is moused over the target area of the screen, to increase game experience.
+                CSS3 and Bootstrap are used for styling. The background was created using layering of  separate items: grass/field image, tree image, and flowers image. A custom cursor of a butterfly net appears when the cursor is moused over the target area of the screen, to increase game experience. The game is mobile compatible in landscape view.
             </p>
         </div>
         <div>
