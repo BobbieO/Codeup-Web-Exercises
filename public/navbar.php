@@ -1,5 +1,6 @@
 <!-- Dropdown Structure -->
 <ul id="dropdownJava" class="dropdown-content">
+  <li><a href="/wizard.php">Wizard Vs Dragon</a></li>
   <li><a href="/catchabutterfly.php">Catch A Butterfly</a></li>
   <li><a href="/simpleSimon.php">Simple Simon</a></li>
   <li><a href="/weathermap.php">Weather Map</a></li>
