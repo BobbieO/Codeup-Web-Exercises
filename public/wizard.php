@@ -24,40 +24,36 @@
 
     <main>
         <div class="center container">
-            <h1>Catch a Butterfly</h1>
+            <h1>Wizard Vs Dragon</h1>
             <p>
-                A non-traditional whack-a-mole game using Bootstrap and CSS for styling, and JavaScript and jQuery for function.
+                An interactive web page using JavaScript and jQuery for function, and CSS and Bootstrap to assist in styling.
             </p>
 
             <p>
-                JavaScript and jQuery allow the target butterflies to appear and disappear each second during a 30 second timer. When clicked, the user's score increases by one point. Score and timer are both displayed on the screen via jQuery. Local storage is used to recall and retain previous score, in order to compare to the current score. If the current score is higher, it becomes the new high score and displaces the old high score.
+                JavaScript and jQuery allow the page appearance to change when the correct code is entered on the start screen. When entered, the page view changes to a fantasy scene via Javascript and jQuery, and a short audio file plays to indicate success. Key codes tied to a keydown event allow for character movement and actions, the instructions for which are each displayed on the screen. A randomizer determines which character carries out the shooting event.
             </p>
 
             <p>
-                CSS3 and Bootstrap are used for styling. The background was created using layering of  separate items: grass/field image, tree image, and flowers image. A custom cursor of a butterfly net appears when the cursor is moused over the target area of the screen, to increase game experience. 
-            </p>
-            
-            <p>
-                The game is mobile compatible in landscape view.
+                The page is not mobile compatible.
             </p>
         </div>
         <div>
             <div class="container row">
                 <div class="col s6 instrImg">
-                <h3 class="center">Game Instructions</h2>
+                <h3 class="center">Page Instructions</h2>
                     <ol>
-                        <li>Click "Start" to begin.</li>
-                        <li>Butterflies will appear and timer will start its countdown.</li>
-                        <li>Click the butterfly before it disappears.</li>
-                        <li>Each butterfly captured is worth one point.</li>
-                        <li>When the timer runs out, the game is over.</li>
-                        <li>Your personal best is stored and displayed as High Score. Try to beat it!</li>
+                        <li>Enter the Konami Code to start.</li>
+                        <li>If successful, a tone sounds and the scene changes.</li>
+                        <li>Use the "a" and "d" keys to move the wizard.</li>
+                        <li>Use the spacebar key to shoot.</li>
+                        <li>Either the wizard or the dragon will shoot a fireball.</li>
+                        <li>Someone explodes!</li>
                     </ol>
                 </div>
                 <div class="col s6 instrImg">
-                    <h3 class="center">Click to Play</h3>
+                    <h3 class="center">Click to View</h3>
                     <div class="center">
-                        <a href="http://bobbieo.github.io/catchabutterfly.html" target="_blank"><img src="/img/screenShotCaB.png"></a>
+                        <a href="http://bobbieo.github.io/wizard.html" target="_blank"><img src="/img/screenShotWizard.png"></a>
                     </div>
                 </div>
             </div>
