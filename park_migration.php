@@ -7,9 +7,6 @@ $dbc = new PDO('mysql:host=127.0.0.1;dbname=parks_db', 'parks_user', 'parks');
 // Tell PDO to throw exceptions on error
 $dbc->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-//require info from dbconnect
-REQUIRE 'db_connect.php';
-
 $query = 'DROP TABLE IF EXISTS national_parks';
 
 //run the above query
