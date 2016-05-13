@@ -1,0 +1,32 @@
+body {
+    background: url(/img/parks.jpg) no-repeat center fixed;
+    background-size: cover;
+    font-family: 
+}
+
+h2 {
+    text-align: center;
+    margin-top: 100px;
+    text-shadow: 2px 2px white;
+}
+
+table, tr, th, td {
+    border: 2px solid black;
+    border-collapse: collapse;
+    border-radius: 5px;
+    text-align: center;
+    padding: 8px;
+    margin: 0 auto;
+}
+
+.shadow {
+    box-shadow: 5px 5px 3px black;
+}
+
+tr:nth-child(even) {
+    background-color: papayawhip;
+}
+
+tr:nth-child(odd) {
+    background-color: linen;
+}
