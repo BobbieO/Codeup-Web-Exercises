@@ -26,7 +26,9 @@ function pageController($dbc) {
 
     <meta charset="utf-8">
     <title>National Parks</title>
-    <p>You are on page <?=$page;?> </p>
+
+    <!-- font -->
+    <link href='https://fonts.googleapis.com/css?family=Cantata+One' rel='stylesheet' type='text/css'>
 
     <!-- my css -->
     <link rel="stylesheet" type="text/css" href="/css/national_parks.css">
@@ -35,6 +37,7 @@ function pageController($dbc) {
 <body>
 
 <div>
+    <p>You are on page <?=$page;?> </p>
     <h2>National Parks of the United States</h2>
     <div>
         <table class="shadow">

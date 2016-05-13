@@ -1,7 +1,7 @@
 body {
-    background: url(/img/parks.jpg) no-repeat center fixed;
+    background: url(/img/parks.jpeg) no-repeat center fixed;
     background-size: cover;
-    font-family: 
+    font-family: 'Cantata One', serif;
 }
 
 h2 {
@@ -11,8 +11,8 @@ h2 {
 
 h2, p {
     margin-top: 100px;
-    color: papayawhip;
-    text-shadow: 2px 2px black;
+    color: #e7dad8;
+    text-shadow: 2px 2px #0d0706;
 }
 
 p {
@@ -20,7 +20,7 @@ p {
 }
 
 table, tr, th, td {
-    border: 2px solid black;
+    border: 2px solid #0d0706;
     border-collapse: collapse;
     border-radius: 5px;
     text-align: center;
@@ -29,15 +29,15 @@ table, tr, th, td {
 }
 
 .shadow {
-    box-shadow: 4px 4px 2px black;
+    box-shadow: 4px 4px 2px #0d0706;
 }
 
 tr:nth-child(even) {
-    background-color: papayawhip;
+    background-color: #e7dad8;
 }
 
 tr:nth-child(odd) {
-    background-color: linen;
+    background-color: #c5a49e;
 }
 
 .footer {
@@ -47,9 +47,9 @@ tr:nth-child(odd) {
 
 .btn {
     padding: 10px;
-    border: 2px solid black;
+    border: 2px solid #0d0706;
     border-radius: 5px;
-    box-shadow: 4px 4px 2px black;
-    background-color: papayawhip;
-    color: black;
+    box-shadow: 4px 4px 2px #0d0706;
+    background-color: #e7dad8;
+    color: #0d0706;
 }
