@@ -34,7 +34,7 @@
             </p>
 
             <p>
-                The page is not mobile compatible.
+                The page is best viewed on medium-sized screens with keyboard functionality.
             </p>
         </div>
         <div>
