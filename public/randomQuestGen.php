@@ -50,6 +50,10 @@
                         <a href="#" target="_blank"><img src="/img/screenShotRandQuest.png"></a>
                     </div>
                 </div>
+                <!-- commented out until projects moved to php supporting host -->
+                <!-- <div class="center">
+                    <a class="git" href="#" target="_blank">View code on GitHub</a>
+                </div> -->
             </div>
         </div>
 
