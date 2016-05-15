@@ -55,6 +55,9 @@
                         <a href="http://bobbieo.github.io/weather_map.html" target="_blank"><img src="/img/screenShotWeather.png"></a>
                     </div>
                 </div>
+                <div class="center">
+                    <a class="git" href="https://github.com/BobbieO/bobbieo.github.io/blob/master/weather_map.html" target="_blank">View code on GitHub</a>
+                </div>
             </div>
         </div>
 
