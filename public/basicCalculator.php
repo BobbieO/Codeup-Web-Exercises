@@ -52,6 +52,9 @@
                     </div>
                 </div>
             </div>
+            <div class="center">
+                <a class="git" href="https://github.com/BobbieO/bobbieo.github.io/blob/master/calculator.html" target="_blank">View code on GitHub</a>
+            </div>
         </div>
     </main>
 
