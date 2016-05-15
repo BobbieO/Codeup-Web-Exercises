@@ -34,7 +34,7 @@
             </p>
 
             <p>
-                This application is mobile compatible.
+                This application is compatible with all screen sizes.
             </p>
 
         </div>
