@@ -34,7 +34,7 @@
             </p>
 
             <p>
-                This game is mobile compatible in landscape view.
+                This game is compatible with all screen sizes.
             </p>
         </div>
 
