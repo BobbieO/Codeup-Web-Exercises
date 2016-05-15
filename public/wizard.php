@@ -26,7 +26,7 @@
         <div class="center container">
             <h1>Wizard Vs Dragon</h1>
             <p>
-                An interactive web page using JavaScript and jQuery for function, and CSS and Bootstrap to assist in styling.
+                An interactive web page using JavaScript and jQuery for function, and CSS3 and Bootstrap to assist in styling.
             </p>
 
             <p>
@@ -55,6 +55,9 @@
                     <div class="center">
                         <a href="http://bobbieo.github.io/wizard.html" target="_blank"><img src="/img/screenShotWizard.png"></a>
                     </div>
+                </div>
+                <div class="center">
+                    <a class="git" href="https://github.com/BobbieO/bobbieo.github.io/blob/master/wizard.html" target="_blank">View code on GitHub</a>
                 </div>
             </div>
         </div>
