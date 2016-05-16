@@ -5,6 +5,24 @@ REQUIRE '../Input.php';
 
 function pageController($dbc) {
 
+    $name = Input::has('name') ? Input::get('name') : ' ';
+    $location = Input::has('location') ? Input::get('location') : ' ';
+    $date_established = Input::has('date_established') ? Input::get('date_established') : ' ';
+    $area_in_acres = Input::has('area_in_acres') ? Input::get('area_in_acres') : ' ';
+    $description = Input::has('description') ? Input::get('description') : ' ';
+
+    if(!empty($_POST)) {
+        $stmt = $dbc->prepare('INSERT INTO national_parks (name, location, date_established, area_in_acres, description) 
+                        VALUES (:name, :location, :date_established, :area_in_acres, :description)');
+
+            $stmt->bindValue(':name', $name, PDO::PARAM_STR);
+            $stmt->bindValue(':location', $location, PDO::PARAM_STR);
+            $stmt->bindValue(':date_established', $date_established, PDO::PARAM_STR);
+            $stmt->bindValue(':area_in_acres', $area_in_acres, PDO::PARAM_STR);
+            $stmt->bindValue(':description', $description, PDO::PARAM_STR);
+            $stmt->execute();
+    }
+
     $data = [];
 
     $data['page'] = Input::has('page') ? Input::get('page') : 1;
@@ -13,7 +31,7 @@ function pageController($dbc) {
 
     $stmt = $dbc->prepare('SELECT * FROM national_parks LIMIT 4 OFFSET :offset');
 
-    $stmt->bindValue(':offset', 4, PDO::PARAM_INT);
+    $stmt->bindValue(':offset', $offset, PDO::PARAM_INT);
     $stmt->execute();
 
     
@@ -56,7 +74,7 @@ function pageController($dbc) {
             <?php foreach($parks as $park) : ?>
                 <tr><td><?= $park['name']; ?></td>
                 <td><?= $park['location']; ?></td>
-                <td><?= date_format(date_create($park['date_established']), 'm-d-Y' ); ?></td>
+                <td><?= $park['date_established']; ?></td>
                 <td><?= $park['area_in_acres']; ?></td>
                 <td><?= $park['description']; ?></td></tr>
             <?php endforeach; ?>
