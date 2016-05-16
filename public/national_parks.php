@@ -2,6 +2,7 @@
 
 REQUIRE '../db_connect.php';
 REQUIRE '../Input.php';
+REQUIRE_ONCE 'functions.php';
 
 function pageController($dbc) {
 
@@ -71,11 +72,11 @@ function pageController($dbc) {
             </tr>
 
             <?php foreach($parks as $park) : ?>
-                <tr><td class="bold"><?= $park['name']; ?></td>
-                <td><?= $park['location']; ?></td>
-                <td><?= $park['date_established']; ?></td>
-                <td><?= $park['area_in_acres']; ?></td>
-                <td><?= $park['description']; ?></td></tr>
+                <tr><td class="bold"><?= escape($park['name']); ?></td>
+                <td><?= escape($park['location']); ?></td>
+                <td><?= escape($park['date_established']); ?></td>
+                <td><?= escape($park['area_in_acres']); ?></td>
+                <td><?= escape($park['description']); ?></td></tr>
             <?php endforeach; ?>
         </table>
 
@@ -85,26 +86,26 @@ function pageController($dbc) {
                 <p>
                     <span class="margin">
                     <label for="name">Park Name</label>
-                    <input id="name" name="name" type="text" placeholder="Enter park name">
+                    <input id="name" name="name" type="text" placeholder="Enter park name" REQUIRED>
                     </span>
                 
                     <span class="margin">
                     <label for="location">Location</label>
-                    <input id="location" name="location" type="text" placeholder="Enter location">
+                    <input id="location" name="location" type="text" placeholder="Enter location" REQUIRED>
                     </span>
                 
                     <label for="date_established">Date Established</label>
-                    <input id="date_established" name="date_established" type="text" placeholder="YYYY-MM-DD format">
+                    <input id="date_established" name="date_established" type="text" placeholder="YYYY-MM-DD format" REQUIRED>
                     
                 </p>
                 <p>
                     <span class="margin">
                     <label for="area_in_acres">Acreage</label>
-                    <input id="area_in_acres" name="area_in_acres" type="text" placeholder="no commas">
+                    <input id="area_in_acres" name="area_in_acres" type="text" placeholder="no commas" REQUIRED>
                     </span>
                 
                     <label for="description">Description</label>
-                    <textarea id="description" name="description" placeholder="Tell us about it!"></textarea>
+                    <textarea id="description" name="description" placeholder="Tell us about it!" REQUIRED></textarea>
                 </p>
                 <p>
                     <input type="submit" value="Send Your Park Info!">
