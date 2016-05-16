@@ -7,29 +7,42 @@ body {
 h2 {
     font-size: 2em;
     text-align: center;
-}
-
-h2, p {
     margin-top: 100px;
     color: #e7dad8;
     text-shadow: 2px 2px #0d0706;
 }
 
-p {
+h3 {
+    color: #0d0706;
+}
+
+.pageNo {
     text-align: left;
+}
+
+table {
+    width: 80%;
+}
+
+form {
+    margin-top: 30px;
+    width: 60%;
+    background-color: #c5a49e;
+    border-radius: 2px;
+    margin: 30px auto;
 }
 
 table, tr, th, td {
     border: 2px solid #0d0706;
     border-collapse: collapse;
-    border-radius: 5px;
-    text-align: center;
     padding: 8px;
     margin: 0 auto;
 }
 
 .shadow {
     box-shadow: 4px 4px 2px #0d0706;
+    border: 2px solid #0d0706;
+    text-align: center;
 }
 
 tr:nth-child(even) {
@@ -42,7 +55,7 @@ tr:nth-child(odd) {
 
 .footer {
     text-align: center;
-    margin-top: 30px;
+    margin: 30px;
 }
 
 .btn {

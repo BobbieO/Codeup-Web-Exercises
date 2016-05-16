@@ -41,7 +41,7 @@ function pageController($dbc) {
 <body>
 
 <div>
-    <p>You are on page <?=$page;?> </p>
+    <p class="pageNo">You are on page <?=$page;?> </p>
     <h2>National Parks of the United States</h2>
     <div>
         <table class="shadow">
@@ -60,8 +60,33 @@ function pageController($dbc) {
                 <td><?= $park['area_in_acres']; ?></td>
                 <td><?= $park['description']; ?></td></tr>
             <?php endforeach; ?>
-
         </table>
+
+        <form method="POST">
+            <div class="form shadow">
+            <h3>Add a Park</h3>
+                <p>
+                    <label for="name">Park Name</label>
+                    <input id="name" name="name" type="text" placeholder="What is the park's name?">
+                
+                    <label for="location">Location</label>
+                    <input id="location" name="location" type="text" placeholder="Where is it?">
+                
+                    <label for="date_established">Date Established</label>
+                    <input id="date_established" name="date_established" type="text" placeholder="When was it established?">
+                </p>
+                <p>
+                    <label for="area_in_acres">Acreage</label>
+                    <input id="area_in_acres" name="area_in_acres" type="text" placeholder="How big is it (in acres, no commas)?">
+                
+                    <label for="description">Description</label>
+                    <textarea id="description" name="description" placeholder="Tell us a little about it!"></textarea>
+                </p>
+                <p>
+                    <input type="submit" value="Send Your Park Info!">
+                </p>
+            </div>
+        </form>
     </div>
 </div>
 
