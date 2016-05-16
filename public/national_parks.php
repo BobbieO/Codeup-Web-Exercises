@@ -34,7 +34,6 @@ function pageController($dbc) {
 
     $stmt->bindValue(':offset', $offset, PDO::PARAM_INT);
     $stmt->execute();
-
     
     $data['parks'] = $stmt->fetchALL(PDO::FETCH_ASSOC);
 
@@ -85,13 +84,13 @@ function pageController($dbc) {
             <h3 class="bold">Add a Park</h3>
                 <p>
                     <span class="margin">
-                    <label for="name">Park Name</label>
-                    <input id="name" name="name" type="text" placeholder="Enter park name" REQUIRED>
+                        <label for="name">Park Name</label>
+                        <input id="name" name="name" type="text" placeholder="Enter park name" REQUIRED>
                     </span>
                 
                     <span class="margin">
-                    <label for="location">Location</label>
-                    <input id="location" name="location" type="text" placeholder="Enter location" REQUIRED>
+                        <label for="location">Location</label>
+                        <input id="location" name="location" type="text" placeholder="Enter location" REQUIRED>
                     </span>
                 
                     <label for="date_established">Date Established</label>
@@ -100,8 +99,8 @@ function pageController($dbc) {
                 </p>
                 <p>
                     <span class="margin">
-                    <label for="area_in_acres">Acreage</label>
-                    <input id="area_in_acres" name="area_in_acres" type="text" placeholder="no commas" REQUIRED>
+                        <label for="area_in_acres">Acreage</label>
+                        <input id="area_in_acres" name="area_in_acres" type="text" placeholder="no commas" REQUIRED>
                     </span>
                 
                     <label for="description">Description</label>
@@ -131,9 +130,7 @@ function pageController($dbc) {
     <?php if($page < count($parks) ): ?>
         <a href="?page=<?= count($parks) ?>" class="btn btn-default">Last</a>
     <?php endif; ?>
-
 </footer>
-
 </body>
 </html>
 
