@@ -59,7 +59,7 @@ function pageController($dbc) {
 
 <div>
     <p class="pageNo">You are on page <?=$page;?> </p>
-    <h2>National Parks of the United States</h2>
+    <h1>National Parks of the United States</h1>
     <div>
         <table class="shadow">
             <tr class="bold">
