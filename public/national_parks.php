@@ -26,6 +26,13 @@ function pageController($dbc) {
 
     $data = [];
 
+    $stmt = $dbc->prepare('SELECT COUNT(*) FROM national_parks');
+    $stmt->execute();
+    $count = $stmt->fetchColumn();
+    $totalPages = ceil($count/4);
+
+    $data['totalPages'] = $totalPages;
+
     $data['page'] = Input::has('page') ? Input::get('page') : 1;
 
     $offset = ($data['page'] - 1) * 4; 
@@ -123,12 +130,12 @@ function pageController($dbc) {
         <a href="?page=<?= $page - 1 ?>" class="btn btn-default">Previous</a>
     <?php endif; ?>
 
-    <?php if($page < count($parks) ): ?>
+    <?php if($page < $totalPages ): ?>
         <a href="?page=<?= $page + 1 ?>" class="btn btn-default">Next</a>
     <?php endif; ?>
 
-    <?php if($page < count($parks) ): ?>
-        <a href="?page=<?= count($parks) ?>" class="btn btn-default">Last</a>
+    <?php if($page < $totalPages ): ?>
+        <a href="?page=<?= $totalPages ?>" class="btn btn-default">Last</a>
     <?php endif; ?>
 </footer>
 </body>
