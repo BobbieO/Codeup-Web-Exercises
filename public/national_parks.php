@@ -50,8 +50,7 @@ function pageController($dbc) {
     <title>National Parks</title>
 
     <!-- font -->
-    <link href='https://fonts.googleapis.com/css?family=Cantata+One' rel='stylesheet' type='text/css'>
-
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700' rel='stylesheet' type='text/css'>
     <!-- my css -->
     <link rel="stylesheet" type="text/css" href="/css/national_parks.css">
 
@@ -63,7 +62,7 @@ function pageController($dbc) {
     <h2>National Parks of the United States</h2>
     <div>
         <table class="shadow">
-            <tr>
+            <tr class="bold">
                 <th>Name</th>
                 <th>Location</th>
                 <th>Date Established</th>
@@ -82,20 +81,27 @@ function pageController($dbc) {
 
         <form method="POST">
             <div class="form shadow">
-            <h3>Add a Park</h3>
+            <h3 class="bold">Add a Park</h3>
                 <p>
+                    <span class="margin">
                     <label for="name">Park Name</label>
                     <input id="name" name="name" type="text" placeholder="What is the park's name?">
+                    </span>
                 
+                    <span class="margin">
                     <label for="location">Location</label>
                     <input id="location" name="location" type="text" placeholder="Where is it?">
+                    </span>
                 
                     <label for="date_established">Date Established</label>
                     <input id="date_established" name="date_established" type="text" placeholder="When was it established?">
+                    
                 </p>
                 <p>
+                    <span class="margin">
                     <label for="area_in_acres">Acreage</label>
                     <input id="area_in_acres" name="area_in_acres" type="text" placeholder="How big is it (in acres, no commas)?">
+                    </span>
                 
                     <label for="description">Description</label>
                     <textarea id="description" name="description" placeholder="Tell us a little about it!"></textarea>

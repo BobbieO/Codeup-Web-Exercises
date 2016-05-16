@@ -1,7 +1,7 @@
 body {
     background: url(/img/parks.jpeg) no-repeat center fixed;
     background-size: cover;
-    font-family: 'Cantata One', serif;
+    font-family: 'Droid Serif', serif;
 }
 
 h2 {
@@ -14,6 +14,14 @@ h2 {
 
 h3 {
     color: #0d0706;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.margin {
+    margin-right: 30px;
 }
 
 .pageNo {
