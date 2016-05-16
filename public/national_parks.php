@@ -60,7 +60,7 @@ function pageController($dbc) {
 </div>
 
 <footer class="footer"> 
-    <?php if($page>=2): ?> 
+    <?php if($page >= 2): ?> 
         <a href="?page=<?= $page - 1 ?>" class="btn btn-default">Previous</a>
     <?php endif; ?>
 
