@@ -65,7 +65,6 @@ function pageController($dbc) {
 <body>
 
 <div>
-    <p class="pageNo">You are on page <?=$page;?> </p>
     <h1>National Parks of the United States</h1>
     <div>
         <table class="shadow">
@@ -129,6 +128,9 @@ function pageController($dbc) {
     <?php if($page >= 2): ?> 
         <a href="?page=<?= $page - 1 ?>" class="btn btn-default">Previous</a>
     <?php endif; ?>
+
+    <button class="btn btn-default">Page <?=$page; ?></button>
+    
 
     <?php if($page < $totalPages ): ?>
         <a href="?page=<?= $page + 1 ?>" class="btn btn-default">Next</a>

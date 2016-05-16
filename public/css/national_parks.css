@@ -66,7 +66,7 @@ tr:nth-child(odd) {
     margin: 30px;
 }
 
-.btn {
+.btn, button {
     padding: 10px;
     border: 2px solid #0d0706;
     border-radius: 5px;
