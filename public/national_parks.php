@@ -71,7 +71,7 @@ function pageController($dbc) {
             </tr>
 
             <?php foreach($parks as $park) : ?>
-                <tr><td><?= $park['name']; ?></td>
+                <tr><td class="bold"><?= $park['name']; ?></td>
                 <td><?= $park['location']; ?></td>
                 <td><?= $park['date_established']; ?></td>
                 <td><?= $park['area_in_acres']; ?></td>
@@ -85,26 +85,26 @@ function pageController($dbc) {
                 <p>
                     <span class="margin">
                     <label for="name">Park Name</label>
-                    <input id="name" name="name" type="text" placeholder="What is the park's name?">
+                    <input id="name" name="name" type="text" placeholder="Enter park name">
                     </span>
                 
                     <span class="margin">
                     <label for="location">Location</label>
-                    <input id="location" name="location" type="text" placeholder="Where is it?">
+                    <input id="location" name="location" type="text" placeholder="Enter location">
                     </span>
                 
                     <label for="date_established">Date Established</label>
-                    <input id="date_established" name="date_established" type="text" placeholder="When was it established?">
+                    <input id="date_established" name="date_established" type="text" placeholder="YYYY-MM-DD format">
                     
                 </p>
                 <p>
                     <span class="margin">
                     <label for="area_in_acres">Acreage</label>
-                    <input id="area_in_acres" name="area_in_acres" type="text" placeholder="How big is it (in acres, no commas)?">
+                    <input id="area_in_acres" name="area_in_acres" type="text" placeholder="no commas">
                     </span>
                 
                     <label for="description">Description</label>
-                    <textarea id="description" name="description" placeholder="Tell us a little about it!"></textarea>
+                    <textarea id="description" name="description" placeholder="Tell us about it!"></textarea>
                 </p>
                 <p>
                     <input type="submit" value="Send Your Park Info!">
@@ -115,6 +115,10 @@ function pageController($dbc) {
 </div>
 
 <footer class="footer"> 
+    <?php if($page > 1): ?> 
+        <a href="/national_parks.php" class="btn btn-default">First</a>
+    <?php endif; ?>
+
     <?php if($page >= 2): ?> 
         <a href="?page=<?= $page - 1 ?>" class="btn btn-default">Previous</a>
     <?php endif; ?>
@@ -122,6 +126,11 @@ function pageController($dbc) {
     <?php if($page < count($parks) ): ?>
         <a href="?page=<?= $page + 1 ?>" class="btn btn-default">Next</a>
     <?php endif; ?>
+
+    <?php if($page < count($parks) ): ?>
+        <a href="?page=<?= count($parks) ?>" class="btn btn-default">Last</a>
+    <?php endif; ?>
+
 </footer>
 
 </body>
