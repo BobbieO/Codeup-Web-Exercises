@@ -46,13 +46,15 @@ function pageController($dbc) {
                 <th>Location</th>
                 <th>Date Established</th>
                 <th>Acreage</th>
+                <th>Description</th>
             </tr>
 
             <?php foreach($parks as $park) : ?>
                 <tr><td><?= $park['name']; ?></td>
                 <td><?= $park['location']; ?></td>
                 <td><?= date_format(date_create($park['date_established']), 'm-d-Y' ); ?></td>
-                <td><?= $park['area_in_acres']; ?></td></tr>
+                <td><?= $park['area_in_acres']; ?></td>
+                <td><?= $park['description']; ?></td></tr>
             <?php endforeach; ?>
 
         </table>
