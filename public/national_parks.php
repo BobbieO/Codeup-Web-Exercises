@@ -11,7 +11,11 @@ function pageController($dbc) {
 
     $offset = ($data['page'] - 1) * 4; 
 
-    $stmt = $dbc->query('SELECT * FROM national_parks LIMIT 4 OFFSET ' . $offset);
+    $stmt = $dbc->prepare('SELECT * FROM national_parks LIMIT 4 OFFSET :offset');
+
+    $stmt->bindValue(':offset', 4, PDO::PARAM_INT);
+    $stmt->execute();
+
     
     $data['parks'] = $stmt->fetchALL(PDO::FETCH_ASSOC);
 
