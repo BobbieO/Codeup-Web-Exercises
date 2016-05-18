@@ -8,7 +8,7 @@ class Model
     public function __set($name, $value)
     {
         //set key and value pairs
-        $this->attribute[$name] = $value;
+        $this->attributes[$name] = $value;
     }
 
     //magic getter to retrieve info
@@ -16,9 +16,9 @@ class Model
     {
         //if key exists, return value
         if(array_key_exists($name, $this->attributes)) {
-            return $this->attribute[$name];
+            return $this->attributes[$name];
         } 
-        return null;
+        return 'no key';
     }
 }
 
