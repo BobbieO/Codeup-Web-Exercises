@@ -24,6 +24,9 @@
 
     <main>
         <div class="center container">
+            <div class="right">
+                <i class="medium material-icons">navigate_next</i>
+            </div>
             <h1>Wizard Vs Dragon</h1>
             <p>
                 An interactive web page using JavaScript and jQuery for function, and CSS3 and Bootstrap to assist in styling.

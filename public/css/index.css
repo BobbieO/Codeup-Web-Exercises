@@ -22,6 +22,10 @@ main {
     flex: 1 0 auto;
 }
 
+.right {
+    text-align: right;
+}
+
 .center {
     text-align: center;
 }
