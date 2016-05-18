@@ -4,6 +4,8 @@ class Model
 {
     private $attributes = [];
 
+    protected static $table = '';
+
     //magic setter to populate attrib array
     public function __set($name, $value)
     {
@@ -20,6 +22,13 @@ class Model
         } 
         return 'no key';
     }
+
+    //function to return table name
+    public static function getTableName()
+    {
+        return static::$table;
+    }
+
 }
 
 
