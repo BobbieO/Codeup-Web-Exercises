@@ -35,7 +35,7 @@ class Input
         $potentialString = self::get($key);
 
         if(!is_string($potentialString)) {
-            throw Exception ('not a string');
+            throw new Exception('not a string');
         } else {
             return $potentialString;
         }   
@@ -45,11 +45,18 @@ class Input
     {
         $potentialNumber = self::get($key);
 
-        if(!is_int($potentialNumber)) {
-            throw Exception ('not a number');
-        } else {
-            return settype($potentialNumber, "integer");
-        }
+        if(!is_numeric($potentialNumber)) {
+            throw new Exception('not a number');
+        } 
+            
+            $findme = '.';
+        
+            if(strpos($potentialNumber, $findme) === false) 
+            {
+                return intval($potentialNumber);
+            } else {
+                return floatval($potentialNumber);
+            }    
     }
     
 
