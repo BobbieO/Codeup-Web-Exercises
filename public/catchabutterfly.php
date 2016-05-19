@@ -24,6 +24,9 @@
 
     <main>
         <div class="center container">
+            <div class="right">
+                <i class="medium material-icons">navigate_next</i>
+            </div>
             <h1>Catch a Butterfly</h1>
             <p>
                 A non-traditional whack-a-mole game using Bootstrap and CSS for styling, and JavaScript and jQuery for function.

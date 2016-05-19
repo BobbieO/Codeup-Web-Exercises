@@ -24,6 +24,9 @@
 
     <main>
         <div class="center container">
+            <div class="right">
+                <i class="medium material-icons">navigate_next</i>
+            </div>
             <h1>Simple Simon</h1>
             <p>
                 A basic simple simon game using JavaScript and jQuery for function, and Bootstrap CSS for styling.

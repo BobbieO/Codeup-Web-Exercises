@@ -25,7 +25,7 @@
     <main>
         <div class="center container">
             <div class="right">
-                <i class="medium material-icons">navigate_next</i>
+                <a href="/catchabutterfly.php"><i class="nav-arrow medium material-icons">navigate_next</i></a>
             </div>
             <h1>Wizard Vs Dragon</h1>
             <p>

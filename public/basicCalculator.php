@@ -24,6 +24,9 @@
 
     <main>
         <div class="center container">
+            <div class="right">
+                <i class="medium material-icons">navigate_next</i>
+            </div>
             <h1>Basic Calculator</h1>
             <p>
                 This calculator uses JavaScript and jQuery to complete basic addition, subtraction, multiplication, and division with whole number and decimals.

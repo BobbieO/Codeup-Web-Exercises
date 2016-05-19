@@ -24,6 +24,9 @@
 
     <main>
         <div class="center container">
+            <div class="right">
+                <i class="medium material-icons">navigate_next</i>
+            </div>
             <h1>Weather Map</h1>
             <p>
                 This is an interactive weather map using JavaScript and jQuery for function, and Bootstrap CSS for styling. The map integrates Google Maps API and Open Weather API together to retrieve the weather from any given location in the world.

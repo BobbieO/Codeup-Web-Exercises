@@ -24,6 +24,9 @@
 
     <main>
         <div class="center container">
+            <div class="right">
+                <i class="medium material-icons">navigate_next</i>
+            </div>
             <h1>Random Quest Generator</h1>
             <p>
                 This is an interactive web page using PHP, JavaScript, and jQuery for function, and CSS for styling.
