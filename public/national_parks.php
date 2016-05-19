@@ -1,16 +1,16 @@
 <?php
 
 REQUIRE '../db_connect.php';
-REQUIRE '../Input.php';
-REQUIRE_ONCE 'functions.php';
+REQUIRE '../library/Input.php';
+REQUIRE_ONCE '../library/functions.php';
 
 function pageController($dbc) {
 
-    $name = Input::has('name') ? Input::get('name') : ' ';
-    $location = Input::has('location') ? Input::get('location') : ' ';
-    $date_established = Input::has('date_established') ? Input::get('date_established') : ' ';
-    $area_in_acres = Input::has('area_in_acres') ? Input::get('area_in_acres') : ' ';
-    $description = Input::has('description') ? Input::get('description') : ' ';
+    $name = Input::has('name') ? Input::getString('name') : ' ';
+    $location = Input::has('location') ? Input::getString('location') : ' ';
+    $date_established = Input::has('date_established') ? Input::getString('date_established') : ' ';
+    $area_in_acres = Input::has('area_in_acres') ? Input::getNumber('area_in_acres') : ' ';
+    $description = Input::has('description') ? Input::getString('description') : ' ';
 
     if(!empty($_POST)) {
         $stmt = $dbc->prepare('INSERT INTO national_parks (name, location, date_established, area_in_acres, description) 
@@ -19,7 +19,7 @@ function pageController($dbc) {
             $stmt->bindValue(':name', $name, PDO::PARAM_STR);
             $stmt->bindValue(':location', $location, PDO::PARAM_STR);
             $stmt->bindValue(':date_established', $date_established, PDO::PARAM_STR);
-            $stmt->bindValue(':area_in_acres', $area_in_acres, PDO::PARAM_STR);
+            $stmt->bindValue(':area_in_acres', $area_in_acres, PDO::PARAM_INT);
             $stmt->bindValue(':description', $description, PDO::PARAM_STR);
             $stmt->execute();
     }
