@@ -2,7 +2,7 @@
 
 class Model 
 {
-    private $attributes = [];
+    protected $attributes = [];
 
     protected static $table = '';
 
