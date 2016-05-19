@@ -10,7 +10,6 @@ class Input
      */
     public static function has($key)
     {
-        // TODO: Fill in this function
         $requestCheck = isset($_REQUEST[$key]);
         return $requestCheck;
     }
@@ -24,14 +23,36 @@ class Input
      */
     public static function get($key, $default = null)
     {
-        // TODO: Fill in this function
         if (self::has($key) == true) {
             return $_REQUEST[$key];
         } else {
             return null;
         }
     }
+
+    public static function getString($key)
+    {
+        $potentialString = self::get($key);
+
+        if(!is_string($potentialString)) {
+            throw Exception ('not a string');
+        } else {
+            return $potentialString;
+        }   
+    }
+
+    public static function getNumber($key)
+    {
+        $potentialNumber = self::get($key);
+
+        if(!is_int($potentialNumber)) {
+            throw Exception ('not a number');
+        } else {
+            return settype($potentialNumber, "integer");
+        }
+    }
     
+
 
     ///////////////////////////////////////////////////////////////////////////
     //                      DO NOT EDIT ANYTHING BELOW!!                     //
