@@ -34,7 +34,7 @@ class Input
     {
         $potentialString = self::get($key);
 
-        if(!is_string($potentialString)) {
+        if(!is_string($potentialString) || is_numeric($potentialString)) {
             throw new Exception('not a string');
         } else {
             return $potentialString;
