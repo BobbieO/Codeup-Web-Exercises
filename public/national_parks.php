@@ -133,10 +133,13 @@ function pageController($dbc) {
                         <input id="location" name="location" type="text" placeholder="Enter location" REQUIRED
                         value="<?= (isset($_POST['location'])) ? $_POST['location']: ''; ?>">
                     </span>
-                
-                    <label for="date_established">Date Established</label>
-                    <input id="date_established" name="date_established" type="text" placeholder="YYYY-MM-DD format" REQUIRED
-                    value="<?= (isset($_POST['date_established'])) ? $_POST['date_established']: ''; ?>">
+                </p>
+                <p>
+                    <span class="margin">
+                        <label for="date_established">Date Established</label>
+                        <input id="date_established" name="date_established" type="text" placeholder="YYYY-MM-DD format" REQUIRED
+                        value="<?= (isset($_POST['date_established'])) ? $_POST['date_established']: ''; ?>">
+                    </span>
                     
                 </p>
                 <p>
