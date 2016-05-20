@@ -43,7 +43,7 @@
                     <ol>
                         <li>Wait for the characters to finish talking.</li>
                         <li>Click the scroll to see your quest.</li>
-                        <li>A random numumber of varied items will appear on the scroll.</li>
+                        <li>A random number of varied items will appear on the scroll.</li>
                         <li>Click New Quest to start again!</li>
                     </ol>
                 </div>
