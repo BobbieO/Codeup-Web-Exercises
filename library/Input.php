@@ -35,7 +35,7 @@ class Input
         $potentialString = self::get($key);
 
         if(!is_string($potentialString) || is_numeric($potentialString)) {
-            throw new Exception('not a string');
+            throw new Exception("Please enter text in {$key}.");
         } else {
             return $potentialString;
         }   
@@ -46,7 +46,7 @@ class Input
         $potentialNumber = self::get($key);
 
         if(!is_numeric($potentialNumber)) {
-            throw new Exception('not a number');
+            throw new Exception("Please enter a numeric value in {$key}.");
         } 
             
             $findme = '.';

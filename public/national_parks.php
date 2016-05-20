@@ -112,32 +112,42 @@ function pageController($dbc) {
             <?php endforeach; ?>
         </table>
 
+        <div class="errors">
+            <?php foreach($errors as $error) : ?>
+                <p><?= $error; ?></p>
+            <?php endforeach; ?>
+        </div>
+
         <form method="POST">
             <div class="form shadow">
             <h3 class="bold">Add a Park</h3>
                 <p>
                     <span class="margin">
                         <label for="name">Park Name</label>
-                        <input id="name" name="name" type="text" placeholder="Enter park name" REQUIRED>
+                        <input id="name" name="name" type="text" placeholder="Enter park name" REQUIRED
+                        value="<?= (isset($_POST['name'])) ? $_POST['name']: ''; ?>">
                     </span>
                 
                     <span class="margin">
                         <label for="location">Location</label>
-                        <input id="location" name="location" type="text" placeholder="Enter location" REQUIRED>
+                        <input id="location" name="location" type="text" placeholder="Enter location" REQUIRED
+                        value="<?= (isset($_POST['location'])) ? $_POST['location']: ''; ?>">
                     </span>
                 
                     <label for="date_established">Date Established</label>
-                    <input id="date_established" name="date_established" type="text" placeholder="YYYY-MM-DD format" REQUIRED>
+                    <input id="date_established" name="date_established" type="text" placeholder="YYYY-MM-DD format" REQUIRED
+                    value="<?= (isset($_POST['date_established'])) ? $_POST['date_established']: ''; ?>">
                     
                 </p>
                 <p>
                     <span class="margin">
                         <label for="area_in_acres">Acreage</label>
-                        <input id="area_in_acres" name="area_in_acres" type="text" placeholder="no commas" REQUIRED>
+                        <input id="area_in_acres" name="area_in_acres" type="text" placeholder="no commas" REQUIRED
+                        value="<?= (isset($_POST['area_in_acres'])) ? $_POST['area_in_acres']: ''; ?>">
                     </span>
                 
                     <label for="description">Description</label>
-                    <textarea id="description" name="description" placeholder="Tell us about it!" REQUIRED></textarea>
+                    <textarea id="description" name="description" placeholder="Tell us about it!" REQUIRED><?= (isset($_POST['description'])) ? $_POST['description']: ''; ?></textarea>
                 </p>
                 <p>
                     <input type="submit" value="Send Your Park Info!">
@@ -158,7 +168,6 @@ function pageController($dbc) {
 
     <button class="btn btn-default">Page <?=$page; ?></button>
     
-
     <?php if($page < $totalPages ): ?>
         <a href="?page=<?= $page + 1 ?>" class="btn btn-default">Next</a>
     <?php endif; ?>
