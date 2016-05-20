@@ -1,5 +1,9 @@
 <?php
 
+class InvalidArgumentException extends Exception {};
+class OutOfRangeException extends Exception {};
+
+
 class Input
 {
     /**
@@ -30,15 +34,19 @@ class Input
         }
     }
 
-    public static function getString($key)
+    public static function getString($key, $min = 1, $max = 255)
     {
         $potentialString = self::get($key);
+
+        if(!is_numeric($min) || !is_numeric($max) ) {
+            throw new InvalidArgumentException("Expected a number value for length.");
+        }
 
         if(!is_string($potentialString) || is_numeric($potentialString)) {
             throw new Exception("Please enter text in {$key}.");
         } else {
             return $potentialString;
-        }   
+        }  
     }
 
     public static function getNumber($key)
