@@ -33,7 +33,7 @@
             </p>
 
             <p>
-                JavaScript and jQuery allow the page appearance to change when the correct code is entered on the start screen. When entered, the page view changes to a fantasy scene via Javascript and jQuery, and a short audio file plays to indicate success. Key codes tied to a keydown event allow for character movement and actions, the instructions for which are each displayed on the screen. A randomizer determines which character carries out the shooting event.
+                JavaScript and jQuery allow the page appearance to change when the correct code is entered on the start screen. When entered, the page view changes to a fantasy scene via Javascript and jQuery, and a short audio file plays to indicate success. Key codes tied to a keydown event allow for character movement and actions, the instructions for which are each displayed on the screen. A randomizer determines which character carries out the shooting event. JavaScript and CSS3 then make a fireball appear near the designated character, and animates the fireball toward the opposing image. JavaScript then replaces that character image with an explosion image.
             </p>
 
             <p>
@@ -45,7 +45,7 @@
                 <div class="col s6 instrImg">
                 <h3 class="center">Page Instructions</h2>
                     <ol>
-                        <li>Enter the Konami Code to start.</li>
+                        <li>Enter the <a class="linkColor" href="https://en.wikipedia.org/wiki/Konami_Code" target="_blank">Konami Code</a> to start.</li>
                         <li>If successful, a tone sounds and the scene changes.</li>
                         <li>Use the "a" and "d" keys to move the wizard.</li>
                         <li>Use the spacebar key to shoot.</li>
@@ -60,7 +60,7 @@
                     </div>
                 </div>
                 <div class="center">
-                    <a class="git" href="https://github.com/BobbieO/bobbieo.github.io/blob/master/wizard.html" target="_blank">View code on GitHub</a>
+                    <a class="linkColor" href="https://github.com/BobbieO/bobbieo.github.io/blob/master/wizard.html" target="_blank">View code on GitHub</a>
                 </div>
             </div>
         </div>

@@ -25,7 +25,7 @@
     <main>
         <div class="center container">
             <div class="right">
-                <i class="medium material-icons">navigate_next</i>
+                <a href="/basicCalculator.php"><i class="nav-arrow medium material-icons">navigate_before</i></a>
             </div>
             <h1>Random Quest Generator</h1>
             <p>
@@ -53,10 +53,9 @@
                         <a href="#" target="_blank"><img src="/img/screenShotRandQuest.png"></a>
                     </div>
                 </div>
-                <!-- commented out until projects moved to php supporting host -->
-                <!-- <div class="center">
-                    <a class="git" href="#" target="_blank">View code on GitHub</a>
-                </div> -->
+                <div class="center">
+                    <a class="linkColor" href="#" target="_blank">View code on GitHub</a>
+                </div>
             </div>
         </div>
 

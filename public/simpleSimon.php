@@ -25,7 +25,8 @@
     <main>
         <div class="center container">
             <div class="right">
-                <i class="medium material-icons">navigate_next</i>
+                <a href="/catchabutterfly.php"><i class="nav-arrow medium material-icons">navigate_before</i></a>
+                <a href="/weathermap.php"><i class="nav-arrow medium material-icons">navigate_next</i></a>
             </div>
             <h1>Simple Simon</h1>
             <p>
@@ -63,7 +64,7 @@
                 </div>
             </div>
             <div class="center">
-                <a class="git" href="https://github.com/BobbieO/bobbieo.github.io/blob/master/simpleSimon.html" target="_blank">View code on GitHub</a>
+                <a class="linkColor" href="https://github.com/BobbieO/bobbieo.github.io/blob/master/simpleSimon.html" target="_blank">View code on GitHub</a>
             </div>
         </div>
 
