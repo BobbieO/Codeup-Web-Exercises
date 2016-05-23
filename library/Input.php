@@ -1,9 +1,5 @@
 <?php
 
-class InvalidArgumentException extends Exception {};
-class OutOfRangeException extends Exception {};
-
-
 class Input
 {
     /**
@@ -34,27 +30,48 @@ class Input
         }
     }
 
-    public static function getString($key, $min = 1, $max = 255)
+    public static function getString($key, $min = 5, $max = 255)
     {
         $potentialString = self::get($key);
 
-        if(!is_numeric($min) || !is_numeric($max) ) {
-            throw new InvalidArgumentException("Expected a number value for length.");
+        if(!is_numeric($min) || !is_numeric($max) || !is_string($potentialString) ) {
+            throw new InvalidArgumentException("Unexpected entry for {$key}.");
         }
 
-        if(!is_string($potentialString) || is_numeric($potentialString)) {
-            throw new Exception("Please enter text in {$key}.");
-        } else {
-            return $potentialString;
-        }  
+        if(!isset($potentialString)) {
+            throw new OutOfRangeException("Missing input in {$key}.");
+        } 
+
+        if(!is_string($potentialString)) {
+            throw new DomainException("Please enter text in {$key}.");
+        } 
+
+        if( strlen($potentialString) < $min || strlen($potentialString) > $max ) {
+            throw new LengthException("Your entry in {$key} has too few or too many letters.");
+        }
+
+        return $potentialString;
+
     }
 
-    public static function getNumber($key)
+    public static function getNumber($key, $min = 1, $max = 12)
     {
         $potentialNumber = self::get($key);
 
+        if(!isset($potentialNumber)) {
+            throw new OutOfRangeException("Missing Input in {$key}.");
+        }  
+
+        if(!is_numeric($min) || !is_numeric($max) || !is_numeric($potentialNumber) ) {
+            throw new InvalidArgumentException("Unexpected entry for {$key}.");
+        }
+
+        if($potentialNumber < $min || strlen($potentialNumber) > $max) {
+            throw new RangeException("Your entry in {$key} is too small or too big.");
+        }
+
         if(!is_numeric($potentialNumber)) {
-            throw new Exception("Please enter a numeric value in {$key}.");
+            throw new DomainException("Please enter a numeric value in {$key}.");
         } 
             
             $findme = '.';
@@ -64,7 +81,8 @@ class Input
                 return intval($potentialNumber);
             } else {
                 return floatval($potentialNumber);
-            }    
+            }  
+
     }
     
 
