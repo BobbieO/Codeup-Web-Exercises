@@ -1,5 +1,7 @@
 <?php
 
+REQUIRE_ONCE 'adlister_credentials.php';
+
 abstract class Model
 {
     /** @var PDO|null Connection to the database */
@@ -19,7 +21,8 @@ abstract class Model
     {
         self::dbConnect();
 
-        // @TODO: Initialize the $attributes property with the passed value
+        //Initialize the $attributes property with the passed value
+        $this->attributes = $attributes;
     }
 
     /**
@@ -30,7 +33,12 @@ abstract class Model
     protected static function dbConnect()
     {
         if (!self::$dbc) {
-            // @TODO: Connect to database
+            // Connect to database,
+            // Get new instance of PDO object
+            self::$dbc = new PDO('mysql:host='.DB_HOST.';dbname='.DB_NAME, DB_USER, DB_PASS);
+
+            // Tell PDO to throw exceptions on error
+            self::$dbc->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         }
     }
 
@@ -43,7 +51,11 @@ abstract class Model
      */
     public function __get($name)
     {
-        // @TODO: Return the value from attributes for $name if it exists, else return null
+        //Return the value from attributes for $name if it exists, else return null
+        if(array_key_exists($name, $this->attributes)) {
+            return $this->attributes[$name];
+        } 
+        return null;
     }
 
     /**
@@ -54,7 +66,8 @@ abstract class Model
      */
     public function __set($name, $value)
     {
-        // @TODO: Store name/value pair in attributes array
+        //Store name/value pair in attributes array
+        $this->attributes[$name] = $value;
     }
 
     /** Store the object in the database */
