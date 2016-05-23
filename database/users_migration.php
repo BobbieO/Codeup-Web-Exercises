@@ -1,7 +1,7 @@
 <?php
 
-REQUIRE 'adlister_credentials.php';
-REQUIRE 'db_connect.php';
+REQUIRE '../adlister_credentials.php';
+REQUIRE '../db_connect.php';
 
 $query = 'DROP TABLE IF EXISTS users';
 

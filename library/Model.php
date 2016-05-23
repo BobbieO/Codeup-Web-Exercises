@@ -1,6 +1,6 @@
 <?php
 
-REQUIRE_ONCE 'adlister_credentials.php';
+REQUIRE_ONCE '../adlister_credentials.php';
 
 abstract class Model
 {
@@ -76,9 +76,9 @@ abstract class Model
         //Ensure there are values in the attributes array before attempting to save
         //if the `id` is set this is an update, else it is a insert
         if(isset($this->attributes['id'])) {
-            update($this->attributes['id']);
+            $this->update();
         } else {
-            insert();
+            $this->insert();
         }
     }
 
