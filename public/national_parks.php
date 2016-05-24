@@ -188,13 +188,13 @@ function pageController($dbc) {
                 <div class="input-field col s6">
                     <label for="area_in_acres">Acreage</label>
                     <input id="area_in_acres" name="area_in_acres" type="text" placeholder="Numbers only, no punctuation" REQUIRED
-                    value="<?= (isset($_POST['area_in_acres'])) ? $_POST['area_in_acres']: ''; ?>">
+                        value="<?= (isset($_POST['area_in_acres'])) ? $_POST['area_in_acres']: ''; ?>">
                 </div>
             </div>
                  
             <div class="row input-field col s12">          
                 <label for="description">Description</label>
-                <textarea id="description" name="description" placeholder="Tell us about it!" REQUIRED><?= (isset($_POST['description'])) ? $_POST['description']: ''; ?></textarea>
+                <textarea class="margin" id="description" name="description" placeholder="Tell us about it!" REQUIRED><?= (isset($_POST['description'])) ? $_POST['description']: ''; ?></textarea>
             </div>
 
             <div class="row col s12">
