@@ -129,18 +129,18 @@ function pageController($dbc) {
         <div class="row">
             <table class="col s12 z-depth-1">
                 <tr class="bold">
-                    <th>Name</th>
-                    <th>Location</th>
-                    <th>Date Established</th>
-                    <th>Acreage</th>
-                    <th>Description</th>
+                    <th class="center-align">Name</th>
+                    <th class="center-align">Location</th>
+                    <th class="center-align">Date Established</th>
+                    <th class="center-align">Acreage</th>
+                    <th class="center-align">Description</th>
                 </tr>
 
                 <?php foreach($parks as $park) : ?>
-                    <tr><td class="bold"><?= escape($park['name']); ?></td>
-                    <td><?= escape($park['location']); ?></td>
-                    <td><?= escape($park['date_established']); ?></td>
-                    <td><?= escape($park['area_in_acres']); ?></td>
+                    <tr><td class="bold center-align"><?= escape($park['name']); ?></td>
+                    <td class="center-align"><?= escape($park['location']); ?></td>
+                    <td class="center-align"><?= escape($park['date_established']); ?></td>
+                    <td class="center-align"><?= escape($park['area_in_acres']); ?></td>
                     <td><?= escape($park['description']); ?></td></tr>
                 <?php endforeach; ?>
             </table>
