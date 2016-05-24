@@ -27,3 +27,21 @@ tr:nth-child(odd) {
     border: 1px solid;
     border-radius: 5px;
 }
+
+/* label color */
+.input-field label {
+ color: #1b5e20;
+}
+
+/* label focus color */
+.input-field input[type=text]:focus + label, .input-field textarea[type=text]:focus + label {
+ color: #33691e;
+}
+
+/* label underline focus color */
+.input-field input[type=text]:focus, .input-field textarea[type=text]:focus {
+ border-bottom: 1px solid #1b5e20;
+ box-shadow: 0 1px 0 0 #1b5e20;
+}
+
+

@@ -194,7 +194,7 @@ function pageController($dbc) {
                  
             <div class="row input-field col s12">          
                 <label for="description">Description</label>
-                <textarea class="margin" id="description" name="description" placeholder="Tell us about it!" REQUIRED><?= (isset($_POST['description'])) ? $_POST['description']: ''; ?></textarea>
+                <textarea class="materialize-textarea" id="description" name="description" placeholder="Tell us about it!" REQUIRED><?= (isset($_POST['description'])) ? $_POST['description']: ''; ?></textarea>
             </div>
 
             <div class="row col s12">
