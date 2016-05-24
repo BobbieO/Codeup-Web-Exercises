@@ -17,12 +17,12 @@ class User extends Model
         $stmt->bindValue(':email', $this->attributes['email'], PDO::PARAM_STR);
         $stmt->bindValue(':password', $this->attributes['password'], PDO::PARAM_STR);
 
-        $outcome = $stmt->execute();
+        $result = $stmt->execute();
         
 
         //After the insert, add the id back to the attributes array
         //        so the object properly represents a DB record
-        if($outcome) {
+        if($result) {
             $this->attributes['id'] = self::$dbc->lastInsertId();
         }
     }
@@ -54,18 +54,16 @@ class User extends Model
         // Get connection to the database
         self::dbConnect();
 
-        // @TODO: Create select statement using prepared statements
+        //select statement using prepared statements
         $stmt = self::$dbc->prepare('SELECT * FROM users WHERE id = :id');
 
-        //'iterate' through all the attributes to build the prepared query
-        $stmt->bindValue(':name', $self->attributes['name'], PDO::PARAM_STR);
-        $stmt->bindValue(':email', $self->attributes['email'], PDO::PARAM_STR);
-        $stmt->bindValue(':password', $self->attributes['password'], PDO::PARAM_STR);
-        $stmt->bindValue(':id', $self->attributes['id'], PDO::PARAM_INT);
+        //build the prepared query
+        $stmt->bindValue(':id', $id, PDO::PARAM_INT);
+        $stmt->execute();
 
-        // @TODO: Store the result in a variable named $result
-        $result = $stmt->execute();
-
+        //Store the result in a variable named $result
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+        
         // The following code will set the attributes on the calling object based on the result variable's contents
         $instance = null;
 
@@ -84,6 +82,26 @@ class User extends Model
     {
         self::dbConnect();
 
-        // @TODO: Learning from the find method, return all the matching records
+        //return all the matching records
+        $stmt = self::$dbc->prepare('SELECT * FROM users');
+        $stmt->execute();
+
+        //Store the result in a variable named $result
+        $result = $stmt->fetchALL(PDO::FETCH_ASSOC);
+
+        return $result;    
     }
+
+    public function delete()
+    {
+        self::dbConnect();
+
+        //delete a matching record
+        $stmt = self::$dbc->prepare('DELETE FROM users WHERE id = :id');
+
+         //build the prepared query
+        $stmt->bindValue(':id', $this->attributes['id'], PDO::PARAM_INT);
+        $stmt->execute();
+    }
+
 }
