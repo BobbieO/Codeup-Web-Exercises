@@ -106,8 +106,8 @@ function pageController($dbc) {
             </div>  
         </div>
         
-        <div>
-            <table class="z-depth-1">
+        <div class="row">
+            <table class="col s12 z-depth-1">
                 <tr class="bold">
                     <th>Name</th>
                     <th>Location</th>
@@ -127,37 +127,57 @@ function pageController($dbc) {
         </div>
     </div>
     <div class="section">
-        <div class="green-text text-darken-4 center-align">
-            <?php foreach($errors as $error) : ?>
-                <p><?= $error; ?></p>
-            <?php endforeach; ?>
+        <div class="row col s12">
+            <div class="green-text text-darken-4 center-align">
+                <?php foreach($errors as $error) : ?>
+                    <p><?= $error; ?></p>
+                <?php endforeach; ?>
+            </div>
         </div>
 
         <div>
             <form method="POST">
-            <h3 class="green-text text-darken-4 center-align">Add a Park</h3>
+
+            <div class="row col s12">
+                <h3 class="green-text text-darken-4 center-align">Add a Park</h3>
+            </div>
+
                 <p> 
-                    <label for="name">Park Name</label>
-                    <input id="name" name="name" type="text" placeholder="Enter park name" REQUIRED
-                    value="<?= (isset($_POST['name'])) ? $_POST['name']: ''; ?>">
-                
-                    <label for="location">Location</label>
-                    <input id="location" name="location" type="text" placeholder="Enter location" REQUIRED
-                    value="<?= (isset($_POST['location'])) ? $_POST['location']: ''; ?>">
-                
-                    <label for="date_established">Date Established</label>
-                    <input id="date_established" name="date_established" type="text" placeholder="YYYY-MM-DD format" REQUIRED
-                    value="<?= (isset($_POST['date_established'])) ? $_POST['date_established']: ''; ?>">
-                 
-                    <label for="area_in_acres">Acreage</label>
-                    <input id="area_in_acres" name="area_in_acres" type="text" placeholder="Numbers only, no punctuation" REQUIRED
-                    value="<?= (isset($_POST['area_in_acres'])) ? $_POST['area_in_acres']: ''; ?>">
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <label for="name">Park Name</label>
+                            <input id="name" name="name" type="text" placeholder="Enter park name" REQUIRED
+                                value="<?= (isset($_POST['name'])) ? $_POST['name']: ''; ?>">
+                        </div>
                     
+                        <div class="input-field col s6">
+                            <label for="location">Location</label>
+                            <input id="location" name="location" type="text" placeholder="Enter location" REQUIRED
+                                value="<?= (isset($_POST['location'])) ? $_POST['location']: ''; ?>">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <div class="input-field col s6">
+                                <label for="date_established">Date Established</label>
+                                <input id="date_established" name="date_established" type="text" placeholder="YYYY-MM-DD format" REQUIRED
+                                    value="<?= (isset($_POST['date_established'])) ? $_POST['date_established']: ''; ?>">
+                            </div>
+                        </div>
+                        
+                        <div class="input-field col s6">
+                            <label for="area_in_acres">Acreage</label>
+                            <input id="area_in_acres" name="area_in_acres" type="text" placeholder="Numbers only, no punctuation" REQUIRED
+                            value="<?= (isset($_POST['area_in_acres'])) ? $_POST['area_in_acres']: ''; ?>">
+                        </div>
+                    </div>
+                            
                     <label for="description">Description</label>
                     <textarea id="description" name="description" placeholder="Tell us about it!" REQUIRED><?= (isset($_POST['description'])) ? $_POST['description']: ''; ?></textarea>
                 </p>
                 <p>
-                    <input class="btn btn-default green darken-4 z-depth-1" type="submit" value="Add Your Park!">
+                    <input class="btn btn-default green darken-4 z-depth-1" type="submit" value="Add">
                 </p>
             </form>
         </div> 
