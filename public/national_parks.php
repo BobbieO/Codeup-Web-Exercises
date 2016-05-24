@@ -105,6 +105,26 @@ function pageController($dbc) {
                 <h1 class="green-text text-darken-4">National Parks of the United States</h1>
             </div>  
         </div>
+
+        <div class="section center-align">
+            <?php if($page > 1): ?> 
+                <a href="/index.php" class="btn btn-default green darken-4 z-depth-2">First</a>
+            <?php endif; ?>
+
+            <?php if($page >= 2): ?> 
+                <a href="?page=<?= $page - 1 ?>" class="btn btn-default green darken-4 z-depth-2">Previous</a>
+            <?php endif; ?>
+
+            <button class="btn btn-default green darken-4 z-depth-2">Page <?=$page; ?></button>
+            
+            <?php if($page < $totalPages ): ?>
+                <a href="?page=<?= $page + 1 ?>" class="btn btn-default green darken-4 z-depth-2">Next</a>
+            <?php endif; ?>
+
+            <?php if($page < $totalPages ): ?>
+                <a href="?page=<?= $totalPages ?>" class="btn btn-default green darken-4 z-depth-2">Last</a>
+            <?php endif; ?>
+        </div>
         
         <div class="row">
             <table class="col s12 z-depth-1">
@@ -184,27 +204,6 @@ function pageController($dbc) {
     </div> 
 </div>
 
-<div class="section">
-    <footer class="center-align"> 
-        <?php if($page > 1): ?> 
-            <a href="/index.php" class="btn btn-default green darken-4 z-depth-2">First</a>
-        <?php endif; ?>
-
-        <?php if($page >= 2): ?> 
-            <a href="?page=<?= $page - 1 ?>" class="btn btn-default green darken-4 z-depth-2">Previous</a>
-        <?php endif; ?>
-
-        <button class="btn btn-default green darken-4 z-depth-2">Page <?=$page; ?></button>
-        
-        <?php if($page < $totalPages ): ?>
-            <a href="?page=<?= $page + 1 ?>" class="btn btn-default green darken-4 z-depth-2">Next</a>
-        <?php endif; ?>
-
-        <?php if($page < $totalPages ): ?>
-            <a href="?page=<?= $totalPages ?>" class="btn btn-default green darken-4 z-depth-2">Last</a>
-        <?php endif; ?>
-    </footer>
-</div>
 
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <!-- Compiled and minified JavaScript -->
