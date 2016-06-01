@@ -18,24 +18,11 @@
 
 </head>
 <body>
-    <header>
-        <?php include 'navbar.php' ?>
-        <?php include 'header.php' ?>
-    </header>
-    <main>
-
+    
     <div class="center container">
-        <p class="bigger">Welcome to my site!</p>
-        <p class="bigger">
-            I'm a San Antonio-based web developer using both front-end and back-end technologies. I'm currently working with HTML5, CSS3, JavaScript and jQuery, and PHP. 
-        </p>
+        <h1>This site has moved to Blog.dev!</h1>
     <div>
-
-    </main>
-    <footer>
-        <?php include 'footer.php' ?>
-    </footer>
-
+    
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 
 <!-- Compiled and minified JavaScript -->
