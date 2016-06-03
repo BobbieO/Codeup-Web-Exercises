@@ -85,3 +85,21 @@ extract(pageController());
 
 
 
+<!-- NOTES -->
+
+
+<!-- FOR AJAX THING
+
+grab all of stuff in pageController EXCEPT for the return$data statement;
+
+paste in the homecontroller inside a public function "jsonTest" or whatever
+will return:  return Response::json($data)
+
+Then make a Route::get etc in the routes file pointing to method on homecontroller
+
+Then write Javascript on the view page:
+
+    $ajax('/jsonTest').done(function($data)) {
+        console.log(data); *this will change to whatever it is supposed to do*
+    } -->
+
